@@ -71,54 +71,74 @@ export const TeamPage: React.FC<TeamPageProps> = ({
           ))}
         </div>
 
-        {/* Clean, Modern & Balanced Team Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        {/* Clean, Modern & Balanced Compact Team Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
           {filteredMembers.map((member) => (
             <div
               key={member.id}
               onClick={() => onSelectMember(member)}
-              className="agency-card overflow-hidden cursor-pointer flex flex-col justify-between group hover:border-blue-500/60 transition-all"
+              className="agency-card p-5 cursor-pointer flex flex-col justify-between group hover:border-blue-500/60 transition-all text-left"
             >
-              <div>
-                {/* Portrait Aspect Ratio */}
-                <div className="relative aspect-[3/4] overflow-hidden bg-slate-950">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                    loading="lazy"
-                  />
-                  <div className="absolute top-2.5 left-2.5">
-                    <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-slate-950/80 text-blue-400 border border-slate-800 font-bold backdrop-blur-md">
-                      {member.category}
-                    </span>
+              <div className="space-y-4">
+                {/* Compact Header: Avatar + Category Tag */}
+                <div className="flex items-start justify-between gap-3">
+                  <div className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-xl overflow-hidden border border-blue-500/30 bg-slate-900 shrink-0 group-hover:scale-105 transition-transform duration-300">
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      className="w-full h-full object-cover"
+                      loading="lazy"
+                    />
                   </div>
+                  
+                  <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-blue-950/80 text-blue-400 border border-blue-800/60 font-semibold uppercase tracking-wider">
+                    {member.category}
+                  </span>
                 </div>
 
-                {/* Info */}
-                <div className="p-5 space-y-1.5 text-left">
-                  <span className="text-[11px] font-mono text-blue-400 font-semibold block uppercase">
+                {/* Info & Content */}
+                <div className="space-y-1.5">
+                  <span className="text-[10px] font-mono text-slate-400 uppercase tracking-wide block">
                     {member.department}
                   </span>
 
-                  <h3 className="text-lg font-bold text-white group-hover:text-blue-400 transition-colors">
+                  <h3 className="text-base sm:text-lg font-bold text-white group-hover:text-blue-400 transition-colors">
                     {member.name}
                   </h3>
 
-                  <p className="text-xs font-medium text-slate-300">
+                  <p className="text-xs font-semibold text-blue-300/90">
                     {member.role}
                   </p>
+
+                  <p className="text-xs text-slate-300/90 line-clamp-3 leading-relaxed pt-1 font-normal">
+                    {member.bio}
+                  </p>
+                </div>
+
+                {/* Skills Preview */}
+                <div className="flex flex-wrap gap-1 pt-1">
+                  {member.skills.slice(0, 2).map((skill, idx) => (
+                    <span
+                      key={idx}
+                      className="text-[10px] px-2 py-0.5 rounded bg-slate-900 border border-slate-800 text-slate-400 font-mono"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                  {member.skills.length > 2 && (
+                    <span className="text-[10px] px-1.5 py-0.5 rounded bg-slate-900 text-slate-500 font-mono">
+                      +{member.skills.length - 2}
+                    </span>
+                  )}
                 </div>
               </div>
 
               {/* Card Footer */}
-              <div className="p-5 pt-0">
-                <div className="pt-3 border-t border-slate-800/80 flex items-center justify-between text-xs">
-                  <span className="text-slate-500 font-mono">0{member.order} / 07</span>
-                  <span className="text-blue-400 font-semibold inline-flex items-center gap-1 group-hover:translate-x-0.5 transition-transform">
-                    Profile <ArrowUpRight className="w-3.5 h-3.5" />
-                  </span>
-                </div>
+              <div className="pt-4 mt-4 border-t border-slate-800/80 flex items-center justify-between text-xs">
+                <span className="text-slate-500 font-mono text-[11px]">0{member.order} / 07</span>
+                <span className="text-blue-400 font-semibold inline-flex items-center gap-1 group-hover:translate-x-0.5 transition-transform text-xs">
+                  Details <ArrowUpRight className="w-3.5 h-3.5" />
+                </span>
               </div>
             </div>
           ))}

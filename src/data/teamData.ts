@@ -96,7 +96,7 @@ export const teamData: TeamMember[] = [
     tagline: "Shaping Timeless Visual Systems & Brand Stories",
     bio: "Directing brand identity systems, typography, corporate guidelines, and multi-channel creative storytelling that command market recognition.",
     extendedBio: "Amani oversees all visual assets produced at Siribrand. From vector logo architecture to luxury packaging and editorial design, he ensures brand consistency across every physical and digital medium.",
-    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1000&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1000&auto=format&fit=crop",
     skills: [
       "Art Direction",
       "Brand Identity Systems",
