@@ -144,24 +144,7 @@ export const TeamPage: React.FC<TeamPageProps> = ({
           ))}
         </div>
 
-        {/* Bottom Direct CTA Bar */}
-        <div className="mt-16 p-8 rounded-2xl bg-gradient-to-r from-blue-950/60 to-slate-900 border border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-6">
-          <div className="space-y-1 text-center sm:text-left">
-            <h3 className="text-xl font-bold text-white">
-              Want to work directly with our leadership team?
-            </h3>
-            <p className="text-xs text-slate-300">
-              Schedule a strategic brand or technology consultation with Sweetbert Macha & Peter Joseph.
-            </p>
-          </div>
 
-          <button
-            onClick={() => onOpenContact('Leadership Consultation Request')}
-            className="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold uppercase tracking-wider whitespace-nowrap shadow-lg shadow-blue-600/30 transition-all"
-          >
-            <span>Book Consultation</span>
-          </button>
-        </div>
       </div>
     </div>
   );

@@ -12,39 +12,8 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact }) => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#02050c] text-slate-400 pt-16 pb-10 border-t border-slate-800">
+    <footer className="bg-[#02050c] text-slate-400 pt-12 pb-10 border-t border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Top Direct Action Bar */}
-        <div className="pb-10 border-b border-slate-800 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-          <div>
-            <span className="text-xs font-mono font-bold uppercase tracking-wider text-blue-400 block mb-1">
-              #WeForecastRealities
-            </span>
-            <h3 className="text-2xl sm:text-3xl font-bold text-white">
-              Ready to elevate your brand in Tanzania & beyond?
-            </h3>
-          </div>
-
-          <div className="flex flex-wrap items-center gap-3">
-            <a
-              href="https://wa.me/255692590012"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-4 py-2.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold flex items-center gap-1.5 transition-all"
-            >
-              <MessageSquare className="w-4 h-4" />
-              <span>WhatsApp Us</span>
-            </a>
-            <button
-              onClick={() => onOpenContact()}
-              className="px-4 py-2.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold flex items-center gap-1.5 transition-all shadow-md shadow-blue-600/30"
-            >
-              <span>Start A Project</span>
-              <ArrowUpRight className="w-4 h-4" />
-            </button>
-          </div>
-        </div>
-
         {/* Links Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 py-12 border-b border-slate-800">
           {/* Brand & Address */}
