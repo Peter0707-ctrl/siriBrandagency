@@ -98,17 +98,17 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact }) => {
   const activeMedia = previewData[selectedPreview];
 
   return (
-    <section className="relative w-full pt-28 pb-16 bg-[#030712] border-b border-slate-800">
+    <section className="relative w-full pt-24 pb-14 sm:pt-28 sm:pb-16 bg-[#030712] border-b border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Top 2-Column Direct Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-          {/* Left Column: Modern Dynamic Animated Headline */}
-          <div className="lg:col-span-6 space-y-6">
+        {/* Top 2-Column Balanced Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          {/* Left Column: Modern Balanced Dynamic Headline */}
+          <div className="lg:col-span-6 space-y-5">
             
-            {/* Dynamic Modern Headline */}
-            <div className="min-h-[170px] sm:min-h-[200px] flex flex-col justify-center">
+            {/* Dynamic Headline with Premium Balanced Scale */}
+            <div className="min-h-[130px] sm:min-h-[155px] flex flex-col justify-center">
               <h1
-                className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white tracking-tight leading-[1.15] transition-all duration-500 transform ${
+                className={`text-2xl sm:text-3xl md:text-4xl lg:text-[40px] xl:text-[44px] font-bold text-white tracking-tight leading-[1.2] transition-all duration-500 transform ${
                   isFading ? 'opacity-0 -translate-y-2' : 'opacity-100 translate-y-0'
                 }`}
               >
@@ -116,20 +116,20 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact }) => {
                 <span className="bg-gradient-to-r from-blue-400 via-sky-300 to-cyan-400 bg-clip-text text-transparent">
                   {currentPhrase.highlight}
                 </span> <br />
-                <span>{currentPhrase.line2}</span>
+                <span className="text-slate-100">{currentPhrase.line2}</span>
               </h1>
             </div>
 
             {/* Clear Modern Supporting Copy */}
-            <p className="text-base sm:text-lg text-slate-300 leading-relaxed max-w-xl font-normal">
+            <p className="text-sm sm:text-base text-slate-300 leading-relaxed max-w-lg font-normal">
               Tunasaidia biashara, taasisi na brand za kibinafsi nchini Tanzania kujenga brand imara, kufikia hadhira sahihi, na kukuza biashara kidijitali kupitia mbinu za kisasa za ubunifu na teknolojia.
             </p>
 
             {/* Direct Action Buttons - Clean & Streamlined */}
-            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-1">
               <button
                 onClick={onOpenContact}
-                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold uppercase tracking-wider transition-all shadow-md shadow-blue-600/30"
+                className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold uppercase tracking-wider transition-all shadow-md shadow-blue-600/30"
               >
                 <span>Start a Project</span>
                 <ArrowUpRight className="w-3.5 h-3.5" />
@@ -137,7 +137,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact }) => {
 
               <a
                 href="#services"
-                className="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white text-xs font-semibold border border-slate-800 transition-all"
+                className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white text-xs font-semibold border border-slate-800 transition-all"
               >
                 <span>Explore 10 Services</span>
                 <ChevronRight className="w-3.5 h-3.5 text-blue-400" />
@@ -145,7 +145,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact }) => {
             </div>
 
             {/* Quick Guarantees */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 text-xs text-slate-400 pt-2">
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 text-xs text-slate-400 pt-1">
               <div className="flex items-center gap-1.5">
                 <CheckCircle2 className="w-3.5 h-3.5 text-blue-400" />
                 <span>Full-Service Agency</span>
@@ -163,7 +163,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact }) => {
 
           {/* Right Column: Full Image Background Showcase Card */}
           <div className="lg:col-span-6">
-            <div className="relative rounded-2xl overflow-hidden border border-slate-800 shadow-2xl min-h-[380px] sm:min-h-[440px] flex flex-col justify-between float-card group bg-slate-950">
+            <div className="relative rounded-2xl overflow-hidden border border-slate-800 shadow-2xl min-h-[340px] sm:min-h-[380px] lg:min-h-[400px] flex flex-col justify-between float-card group bg-slate-950">
               
               {/* High-Resolution Clear Background Image */}
               <img
@@ -177,13 +177,13 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact }) => {
               <div className="absolute inset-0 bg-gradient-to-t from-[#030712] via-[#030712]/30 to-slate-950/60 pointer-events-none" />
 
               {/* Top Bar: Category Switcher & Tag */}
-              <div className="relative z-10 p-4 sm:p-5 flex flex-wrap items-center justify-between gap-3">
+              <div className="relative z-10 p-3.5 sm:p-4 flex flex-wrap items-center justify-between gap-2.5">
                 <div className="inline-flex items-center gap-1 p-1 bg-slate-950/80 backdrop-blur-md rounded-xl border border-slate-700/60 text-xs font-semibold">
                   {(['branding', 'video', 'web', 'events'] as const).map((key) => (
                     <button
                       key={key}
                       onClick={() => setSelectedPreview(key)}
-                      className={`px-3 py-1 rounded-lg text-center capitalize transition-all ${
+                      className={`px-2.5 py-1 rounded-lg text-center capitalize transition-all ${
                         selectedPreview === key
                           ? 'bg-blue-600 text-white shadow-md'
                           : 'text-slate-300 hover:text-white'
@@ -194,30 +194,30 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact }) => {
                   ))}
                 </div>
 
-                <span className="text-[10px] font-mono px-2.5 py-1 rounded-lg bg-slate-950/80 backdrop-blur-md text-blue-400 border border-slate-700/60 font-semibold uppercase tracking-wider">
+                <span className="text-[10px] font-mono px-2 py-0.5 rounded-lg bg-slate-950/80 backdrop-blur-md text-blue-400 border border-slate-700/60 font-semibold uppercase tracking-wider">
                   {activeMedia.tag}
                 </span>
               </div>
 
               {/* Bottom Card Glass Info Overlay */}
-              <div className="relative z-10 p-5 sm:p-6 bg-gradient-to-t from-[#030712] via-[#030712]/90 to-transparent">
-                <div className="space-y-2">
-                  <h3 className="text-xl sm:text-2xl font-bold text-white tracking-tight">
+              <div className="relative z-10 p-4 sm:p-5 bg-gradient-to-t from-[#030712] via-[#030712]/90 to-transparent">
+                <div className="space-y-1.5">
+                  <h3 className="text-lg sm:text-xl font-bold text-white tracking-tight">
                     {activeMedia.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-lg">
+                  <p className="text-xs text-slate-300 leading-relaxed max-w-lg">
                     {activeMedia.desc}
                   </p>
                 </div>
 
-                <div className="pt-3 mt-3 border-t border-slate-800/80 flex items-center justify-between text-xs">
-                  <span className="text-slate-400 font-medium">Siribrand Agency TZ • Nationwide & Global</span>
+                <div className="pt-2.5 mt-2.5 border-t border-slate-800/80 flex items-center justify-between text-xs">
+                  <span className="text-slate-400 text-[11px] font-medium">Siribrand Agency TZ • Nationwide & Global</span>
                   <a
                     href="#services"
-                    className="text-blue-400 hover:text-blue-300 font-semibold inline-flex items-center gap-1 bg-blue-950/60 px-3 py-1.5 rounded-lg border border-blue-800/50 hover:border-blue-500 transition-all"
+                    className="text-blue-400 hover:text-blue-300 font-semibold inline-flex items-center gap-1 bg-blue-950/60 px-2.5 py-1 rounded-lg border border-blue-800/50 hover:border-blue-500 transition-all text-[11px]"
                   >
                     <span>Explore Details</span>
-                    <ChevronRight className="w-3.5 h-3.5" />
+                    <ChevronRight className="w-3 h-3" />
                   </a>
                 </div>
               </div>
@@ -226,7 +226,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact }) => {
         </div>
 
         {/* Bottom Direct Stats Bar - Compact & Floating */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mt-10 pt-6 border-t border-slate-800/80">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mt-8 pt-5 border-t border-slate-800/80">
           <div className="p-3 rounded-xl bg-slate-900/60 border border-slate-800/80 float-card">
             <div className="text-xl font-bold text-white">10+ Services</div>
             <p className="text-[11px] text-slate-400 mt-0.5">Marketing, Branding, Web, Video & Print</p>
