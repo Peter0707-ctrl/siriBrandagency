@@ -157,12 +157,24 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact }) => {
         </div>
 
         {/* Bottom Copyright */}
-        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500">
+        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
           <div>
             © {currentYear} SIRIBRAND AGENCY TZ. All rights reserved. • <span className="text-blue-400 font-semibold">#WeForecastRealities</span>
           </div>
-          <div className="flex items-center gap-4 text-slate-400">
+
+          <div className="flex flex-wrap items-center gap-4 text-slate-400">
             <span>Dar es Salaam • Arusha • Tanzania</span>
+            <span className="text-slate-700 hidden sm:inline">•</span>
+            <div className="inline-flex items-center gap-1.5 text-slate-400">
+              <span>Developed by</span>
+              <a
+                href="#team"
+                className="font-mcharazo text-xl text-blue-400 hover:text-sky-300 font-bold tracking-wider transition-colors inline-block -rotate-2"
+                title="Peter Joseph"
+              >
+                peterjoh
+              </a>
+            </div>
           </div>
         </div>
       </div>

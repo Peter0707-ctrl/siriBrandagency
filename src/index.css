@@ -46,6 +46,10 @@
   font-family: 'JetBrains Mono', monospace;
 }
 
+.font-mcharazo {
+  font-family: 'Caveat', 'Dancing Script', 'Brush Script MT', cursive, sans-serif;
+}
+
 /* Direct Agency Cards - Compact & Auto-Floating */
 .agency-card {
   background: #0b1120;
