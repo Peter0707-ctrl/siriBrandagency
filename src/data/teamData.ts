@@ -30,7 +30,7 @@ export const teamData: TeamMember[] = [
     tagline: "Visionary Leadership • Brand Growth & Enterprise Governance",
     bio: "Leading Siribrand Agency TZ with a strategic vision to transform African brands into globally competitive market leaders through creativity, technology, and strategic execution.",
     extendedBio: "Sweetbert Macha steers the overarching corporate direction, client partnerships, and strategic expansion of Siribrand Agency TZ. With deep expertise in brand governance, business development, and market dynamics in East Africa, he ensures every agency initiative creates tangible commercial value and sustainable brand equity for our clients.",
-    image: "https://images.unsplash.com/photo-1531384441138-2736e62e0919?q=80&w=1000&auto=format&fit=crop",
+    image: "/sweetbert-macha.png",
     skills: [
       "Executive Brand Strategy",
       "Business Growth & Operations",

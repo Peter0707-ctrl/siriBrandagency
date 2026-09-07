@@ -246,7 +246,7 @@ export const TeamPage: React.FC<TeamPageProps> = ({
               Want to work directly with our leadership team?
             </h3>
             <p className="text-xs text-slate-300">
-              Schedule a strategic brand or technology consultation with Sweetbert Macha & Peter Joseph Msira.
+              Schedule a strategic brand or technology consultation with Sweetbert Macha & Peter Joseph.
             </p>
           </div>
 
