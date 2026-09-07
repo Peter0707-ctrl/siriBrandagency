@@ -19,23 +19,28 @@ const phrases: TypewriterPhrase[] = [
     categoryKey: "branding"
   },
   {
-    prefix: "We Craft Distinctive",
-    typed: "Logos & Brand Systems.",
+    prefix: "We Specialize In",
+    typed: "Photography & 4K Video Making.",
+    categoryKey: "video"
+  },
+  {
+    prefix: "We Design High-End",
+    typed: "Posters, Graphics & Branding.",
     categoryKey: "branding"
   },
   {
     prefix: "We Produce In-Studio",
-    typed: "4K Films & Podcasts.",
+    typed: "Commercial Ads & Podcasts.",
     categoryKey: "video"
   },
   {
-    prefix: "We Engineer Modern",
-    typed: "Fast Web Platforms.",
+    prefix: "We Architect Modern",
+    typed: "Fast Web Platforms & Software.",
     categoryKey: "web"
   },
   {
-    prefix: "We Drive High-ROI",
-    typed: "Digital Ad Campaigns.",
+    prefix: "We Scale Your Reach With",
+    typed: "Targeted Digital Marketing.",
     categoryKey: "events"
   }
 ];
@@ -137,7 +142,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact }) => {
 
             {/* Clear Supporting Copy */}
             <p className="text-base sm:text-lg text-slate-300 leading-relaxed max-w-xl font-normal">
-              Tunasaidia biashara, taasisi na brand za kibinafsi nchini Tanzania kujenga brand imara, kufikia hadhira sahihi, na kukuza biashara kidijitali kupitia mbinu za kisasa za ubunifu na teknolojia.
+              Tunatoa huduma za kiwango cha juu za <strong>Photography</strong>, <strong>Video Making</strong>, <strong>Poster Creation</strong>, <strong>Graphics Design</strong>, <strong>Branding</strong>, na <strong>Mifumo ya Web & Digital Marketing</strong> ili kukuza biashara na brand yako.
             </p>
 
             {/* Direct Action Buttons - Clean & Streamlined */}
