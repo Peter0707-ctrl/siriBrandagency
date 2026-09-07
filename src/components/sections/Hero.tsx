@@ -241,11 +241,8 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact }) => {
 
               {/* Top Bar: 10 Category Switchers */}
               <div className="relative z-10 p-3 sm:p-4 space-y-2">
-                <div className="flex items-center justify-between gap-2">
-                  <span className="text-[10px] font-mono text-slate-300 bg-slate-950/80 px-2 py-0.5 rounded border border-slate-700/60 uppercase tracking-wider">
-                    Capability 0{currentIndex + 1}/10
-                  </span>
-                  <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-blue-950/80 text-blue-400 border border-blue-800/60 font-semibold uppercase tracking-wider">
+                <div className="flex items-center justify-end gap-2">
+                  <span className="text-[10px] font-mono px-2.5 py-0.5 rounded-md bg-blue-950/80 text-blue-400 border border-blue-800/60 font-semibold uppercase tracking-wider backdrop-blur-sm">
                     {activeItem.tag}
                   </span>
                 </div>
