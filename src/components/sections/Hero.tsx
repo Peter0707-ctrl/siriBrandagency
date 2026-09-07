@@ -172,7 +172,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact }) => {
             {/* Dynamic Typewriter Headline */}
             <div className="min-h-[160px] sm:min-h-[185px] flex flex-col justify-center">
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[46px] xl:text-[50px] font-bold text-white tracking-tight leading-[1.18]">
-                Karibu Siribrand. <br />
+                Welcome Siribrand Agency. <br />
                 <span className="bg-gradient-to-r from-blue-400 via-sky-300 to-cyan-400 bg-clip-text text-transparent">
                   {activeItem.prefix}
                 </span> <br />
