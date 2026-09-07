@@ -165,11 +165,11 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact }) => {
           <div className="flex flex-wrap items-center gap-4 text-slate-400">
             <span>Dar es Salaam • Arusha • Tanzania</span>
             <span className="text-slate-700 hidden sm:inline">•</span>
-            <div className="inline-flex items-center gap-1.5 text-slate-400">
+            <div className="inline-flex items-center gap-2 text-slate-400">
               <span>Developed by</span>
               <a
                 href="#team"
-                className="font-mcharazo text-xl text-blue-400 hover:text-sky-300 font-bold tracking-wider transition-colors inline-block -rotate-2"
+                className="font-mcharazo text-2xl sm:text-3xl text-blue-400 hover:text-sky-300 tracking-widest transition-colors inline-block -rotate-3"
                 title="Peter Joseph"
               >
                 peterjoh

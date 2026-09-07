@@ -47,7 +47,8 @@
 }
 
 .font-mcharazo {
-  font-family: 'Caveat', 'Dancing Script', 'Brush Script MT', cursive, sans-serif;
+  font-family: 'Herr Von Muellerhoff', 'Mrs Saint Delafield', 'Caveat', cursive, sans-serif;
+  letter-spacing: 0.08em;
 }
 
 /* Direct Agency Cards - Compact & Auto-Floating */
