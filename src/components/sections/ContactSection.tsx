@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Send, MessageSquare, Mail, Phone, MapPin, Clock, CheckCircle2 } from 'lucide-react';
+import { Send, MessageSquare, Mail, Phone, MapPin, CheckCircle2, ArrowUpRight } from 'lucide-react';
 import { servicesData } from '../../data/servicesData';
 
 interface ContactSectionProps {
@@ -9,174 +9,142 @@ interface ContactSectionProps {
 export const ContactSection: React.FC<ContactSectionProps> = ({ initialServicePrefill }) => {
   const [formData, setFormData] = useState({
     name: '',
-    company: '',
-    email: '',
     phone: '',
     serviceNeeded: initialServicePrefill || 'Digital Marketing',
-    projectDescription: '',
-    budgetRange: '$1,000 - $3,000',
-    preferredContactMethod: 'WhatsApp'
+    message: ''
   });
 
   const [submitted, setSubmitted] = useState(false);
+
+  const getWhatsAppLink = () => {
+    const text = `Habari Siribrand Agency TZ!\n\nI would like to start a project:\n• *Name:* ${formData.name || 'Client'}\n• *Phone:* ${formData.phone || 'N/A'}\n• *Service:* ${formData.serviceNeeded}\n• *Message:* ${formData.message || 'Please reach out to discuss my project.'}`;
+    return `https://wa.me/255692590012?text=${encodeURIComponent(text)}`;
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitted(true);
   };
 
-  const getWhatsAppLink = () => {
-    const text = `Habari Siribrand Agency TZ!\n\nI want to start a project:\n\n*Name:* ${formData.name || 'Inquirer'}\n*Company:* ${formData.company || 'N/A'}\n*Service:* ${formData.serviceNeeded}\n*Budget:* ${formData.budgetRange}\n*Details:* ${formData.projectDescription || 'Please contact me to discuss.'}`;
-    return `https://wa.me/255692590012?text=${encodeURIComponent(text)}`;
-  };
-
   return (
     <section id="contact" className="py-20 bg-[#030712] border-b border-slate-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="max-w-2xl mb-12 space-y-2">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-blue-950/80 border border-blue-800/60 text-blue-400 text-xs font-semibold">
-            <Mail className="w-3.5 h-3.5" />
-            <span>Contact & Project Intake</span>
-          </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight">
-            Start Your Project With Siribrand
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* Centered Minimalist Section Header */}
+        <div className="max-w-2xl mx-auto text-center mb-14 space-y-3">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight">
+            LET'S WORK TOGETHER
           </h2>
-          <p className="text-sm text-slate-400">
-            Tell us about your brand goals below or message us directly on WhatsApp for an immediate response.
+          <p className="text-sm sm:text-base text-slate-300 leading-relaxed font-normal">
+            Ready to scale your brand? Reach out directly via WhatsApp or send us a quick project brief below.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          {/* Left Column: Direct Phone / WhatsApp / Email Box */}
+          {/* Left Column: Direct Action & Contacts */}
           <div className="lg:col-span-5 space-y-4">
-            <div className="agency-card p-6 space-y-5">
-              <h3 className="text-lg font-bold text-white">
-                Direct Contact Information
-              </h3>
-
-              <div className="space-y-3 text-sm">
-                <a
-                  href="https://wa.me/255692590012"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-3.5 p-3.5 rounded-xl bg-emerald-950/40 border border-emerald-800/50 hover:bg-emerald-900/40 transition-colors group"
-                >
-                  <MessageSquare className="w-5 h-5 text-emerald-400 shrink-0" />
-                  <div>
-                    <span className="text-[11px] text-emerald-300 font-mono block">Instant WhatsApp Chat</span>
-                    <span className="text-white font-semibold group-hover:text-emerald-300 transition-colors">0692 590 012 / +255 692 590 012</span>
-                  </div>
-                </a>
-
-                <div className="flex items-center gap-3.5 p-3.5 rounded-xl bg-slate-900 border border-slate-800">
-                  <Phone className="w-5 h-5 text-blue-400 shrink-0" />
-                  <div>
-                    <span className="text-[11px] text-slate-400 font-mono block">Call Us Directly</span>
-                    <span className="text-white font-semibold">+255 692 590 012</span>
-                  </div>
+            
+            {/* Instant WhatsApp Priority Button */}
+            <a
+              href="https://wa.me/255692590012?text=Habari%20Siribrand%20Agency%20TZ!%20I%20would%20like%20to%20inquire%20about%20your%20services."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-5 rounded-2xl bg-gradient-to-r from-emerald-950/70 to-emerald-900/40 border border-emerald-700/50 hover:border-emerald-500 text-white flex items-center justify-between group transition-all shadow-lg shadow-emerald-950/40"
+            >
+              <div className="flex items-center gap-3.5">
+                <div className="w-11 h-11 rounded-xl bg-emerald-500 text-white flex items-center justify-center shadow-md shadow-emerald-600/30 shrink-0">
+                  <MessageSquare className="w-6 h-6" />
                 </div>
-
-                <div className="flex items-center gap-3.5 p-3.5 rounded-xl bg-slate-900 border border-slate-800">
-                  <Mail className="w-5 h-5 text-blue-400 shrink-0" />
-                  <div>
-                    <span className="text-[11px] text-slate-400 font-mono block">Email Address</span>
-                    <a href="mailto:info@siribrand.co.tz" className="text-white font-semibold hover:text-blue-400">
-                      info@siribrand.co.tz
-                    </a>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-3.5 p-3.5 rounded-xl bg-slate-900 border border-slate-800">
-                  <MapPin className="w-5 h-5 text-blue-400 shrink-0" />
-                  <div>
-                    <span className="text-[11px] text-slate-400 font-mono block">Location</span>
-                    <span className="text-white font-semibold">Dar es Salaam & Arusha, Tanzania</span>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-3.5 p-3.5 rounded-xl bg-slate-900 border border-slate-800">
-                  <Clock className="w-5 h-5 text-emerald-400 shrink-0" />
-                  <div>
-                    <span className="text-[11px] text-slate-400 font-mono block">Working Hours</span>
-                    <span className="text-emerald-400 font-semibold">Mon - Sat: 08:30 — 18:00 EAT</span>
-                  </div>
+                <div>
+                  <span className="text-[11px] font-mono text-emerald-400 font-semibold uppercase tracking-wider block">
+                    Fastest Response
+                  </span>
+                  <span className="text-base font-bold text-white group-hover:text-emerald-300 transition-colors">
+                    Chat on WhatsApp
+                  </span>
                 </div>
               </div>
+              <ArrowUpRight className="w-5 h-5 text-emerald-400 group-hover:translate-x-1 transition-transform" />
+            </a>
 
-              {/* Siribrand Studios TZ Callout Box */}
-              <div className="p-4 rounded-xl bg-gradient-to-br from-pink-950/40 via-purple-950/20 to-slate-900 border border-pink-900/40 space-y-2.5">
-                <div className="flex items-center justify-between">
-                  <span className="text-xs font-bold text-pink-300 uppercase tracking-wider">
-                    Siribrand Studios TZ
-                  </span>
-                  <span className="px-2 py-0.5 rounded-full bg-pink-500/20 text-pink-300 text-[10px] font-semibold">
-                    In-House Studio
-                  </span>
+            {/* Direct Cards */}
+            <div className="agency-card p-6 space-y-4">
+              <a
+                href="tel:+255692590012"
+                className="flex items-center gap-3.5 p-3 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-slate-700 text-slate-300 hover:text-white transition-all group"
+              >
+                <div className="w-9 h-9 rounded-lg bg-blue-950 border border-blue-800/60 text-blue-400 flex items-center justify-center shrink-0">
+                  <Phone className="w-4 h-4" />
                 </div>
-                <p className="text-xs text-slate-300 leading-relaxed">
-                  Book studio photography, executive portraits, commercial video sets, or our full podcast recording suite.
-                </p>
-                <div className="pt-1 flex flex-wrap gap-2">
-                  <a
-                    href="https://www.instagram.com/siribrandstudiostz?stkn=czNmd21kZmlhYnlp"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-pink-900/60 hover:bg-pink-800/80 text-pink-200 text-xs font-semibold transition-colors"
-                  >
-                    <span>@siribrandstudiostz</span>
-                  </a>
-                  <a
-                    href="https://wa.me/255692590012?text=Habari%20Siribrand!%20I%20would%20like%20to%20book%20a%20Studio%20Session%20or%20Podcast%20Recording."
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold transition-colors"
-                  >
-                    <span>Book Studio Slot</span>
-                  </a>
+                <div>
+                  <span className="text-[10px] font-mono text-slate-400 uppercase block">Phone Call</span>
+                  <span className="text-sm font-semibold text-white group-hover:text-blue-400 transition-colors">+255 692 590 012</span>
+                </div>
+              </a>
+
+              <a
+                href="mailto:info@siribrand.co.tz"
+                className="flex items-center gap-3.5 p-3 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-slate-700 text-slate-300 hover:text-white transition-all group"
+              >
+                <div className="w-9 h-9 rounded-lg bg-blue-950 border border-blue-800/60 text-blue-400 flex items-center justify-center shrink-0">
+                  <Mail className="w-4 h-4" />
+                </div>
+                <div>
+                  <span className="text-[10px] font-mono text-slate-400 uppercase block">Email</span>
+                  <span className="text-sm font-semibold text-white group-hover:text-blue-400 transition-colors">info@siribrand.co.tz</span>
+                </div>
+              </a>
+
+              <div className="flex items-center gap-3.5 p-3 rounded-xl bg-slate-900/80 border border-slate-800 text-slate-300">
+                <div className="w-9 h-9 rounded-lg bg-blue-950 border border-blue-800/60 text-blue-400 flex items-center justify-center shrink-0">
+                  <MapPin className="w-4 h-4" />
+                </div>
+                <div>
+                  <span className="text-[10px] font-mono text-slate-400 uppercase block">Offices</span>
+                  <span className="text-sm font-semibold text-white">Dar es Salaam & Arusha, Tanzania</span>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Right Column: Direct Form */}
+          {/* Right Column: Clean Streamlined Form */}
           <div className="lg:col-span-7">
             <div className="agency-card p-6 sm:p-8">
               {submitted ? (
-                <div className="text-center py-8 space-y-4">
+                <div className="text-center py-10 space-y-4">
                   <div className="w-14 h-14 rounded-full bg-emerald-500/20 text-emerald-400 mx-auto flex items-center justify-center">
                     <CheckCircle2 className="w-8 h-8" />
                   </div>
                   <h3 className="text-2xl font-bold text-white">
-                    Inquiry Submitted Successfully!
+                    Message Received!
                   </h3>
-                  <p className="text-sm text-slate-300 max-w-md mx-auto">
-                    Thank you, <span className="text-white font-semibold">{formData.name}</span>. Our strategy team will contact you via {formData.preferredContactMethod} shortly.
+                  <p className="text-sm text-slate-300 max-w-sm mx-auto">
+                    Thank you, <span className="text-white font-semibold">{formData.name}</span>. Our team will get back to you shortly.
                   </p>
-                  <div className="pt-3 flex flex-wrap justify-center gap-3">
+                  <div className="pt-2 flex flex-wrap justify-center gap-3">
                     <a
                       href={getWhatsAppLink()}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-5 py-2.5 rounded-lg bg-emerald-600 text-white text-xs font-semibold flex items-center gap-1.5"
+                      className="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold flex items-center gap-1.5 transition-colors"
                     >
                       <MessageSquare className="w-4 h-4" />
-                      <span>Send On WhatsApp</span>
+                      <span>Send via WhatsApp</span>
                     </a>
                     <button
                       onClick={() => setSubmitted(false)}
-                      className="px-5 py-2.5 rounded-lg bg-slate-800 text-slate-300 text-xs font-semibold"
+                      className="px-5 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 text-xs font-semibold hover:text-white"
                     >
-                      Submit Another
+                      Send Another
                     </button>
                   </div>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-4">
+                <form onSubmit={handleSubmit} className="space-y-4 text-left">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label className="block text-xs font-medium text-slate-300 mb-1.5">
-                        Your Full Name *
+                      <label className="block text-xs font-semibold text-slate-300 mb-1.5">
+                        Your Name *
                       </label>
                       <input
                         type="text"
@@ -184,39 +152,12 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialServicePr
                         placeholder="e.g. Baraka Juma"
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className="w-full px-3.5 py-2.5 rounded-lg bg-slate-900 border border-slate-800 text-white text-sm focus:outline-none focus:border-blue-500"
+                        className="w-full px-3.5 py-2.5 rounded-xl bg-slate-900/90 border border-slate-800 text-white text-sm focus:outline-none focus:border-blue-500 transition-colors"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-xs font-medium text-slate-300 mb-1.5">
-                        Company / Brand Name
-                      </label>
-                      <input
-                        type="text"
-                        placeholder="e.g. Serengeti Luxury Ltd"
-                        value={formData.company}
-                        onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                        className="w-full px-3.5 py-2.5 rounded-lg bg-slate-900 border border-slate-800 text-white text-sm focus:outline-none focus:border-blue-500"
-                      />
-                    </div>
-
-                    <div>
-                      <label className="block text-xs font-medium text-slate-300 mb-1.5">
-                        Email Address *
-                      </label>
-                      <input
-                        type="email"
-                        required
-                        placeholder="name@domain.com"
-                        value={formData.email}
-                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        className="w-full px-3.5 py-2.5 rounded-lg bg-slate-900 border border-slate-800 text-white text-sm focus:outline-none focus:border-blue-500"
-                      />
-                    </div>
-
-                    <div>
-                      <label className="block text-xs font-medium text-slate-300 mb-1.5">
+                      <label className="block text-xs font-semibold text-slate-300 mb-1.5">
                         Phone / WhatsApp *
                       </label>
                       <input
@@ -225,67 +166,48 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialServicePr
                         placeholder="+255 7XX XXX XXX"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        className="w-full px-3.5 py-2.5 rounded-lg bg-slate-900 border border-slate-800 text-white text-sm focus:outline-none focus:border-blue-500"
+                        className="w-full px-3.5 py-2.5 rounded-xl bg-slate-900/90 border border-slate-800 text-white text-sm focus:outline-none focus:border-blue-500 transition-colors"
                       />
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div>
-                      <label className="block text-xs font-medium text-slate-300 mb-1.5">
-                        Service Needed *
-                      </label>
-                      <select
-                        value={formData.serviceNeeded}
-                        onChange={(e) => setFormData({ ...formData, serviceNeeded: e.target.value })}
-                        className="w-full px-3.5 py-2.5 rounded-lg bg-slate-900 border border-slate-800 text-white text-sm focus:outline-none focus:border-blue-500"
-                      >
-                        {servicesData.map((s) => (
-                          <option key={s.id} value={s.title}>
-                            {s.number}. {s.title}
-                          </option>
-                        ))}
-                      </select>
-                    </div>
-
-                    <div>
-                      <label className="block text-xs font-medium text-slate-300 mb-1.5">
-                        Estimated Budget Range
-                      </label>
-                      <select
-                        value={formData.budgetRange}
-                        onChange={(e) => setFormData({ ...formData, budgetRange: e.target.value })}
-                        className="w-full px-3.5 py-2.5 rounded-lg bg-slate-900 border border-slate-800 text-white text-sm focus:outline-none focus:border-blue-500"
-                      >
-                        <option value="Under $1,000 (TZS 2.6M)">Under $1,000 (TZS 2.6M)</option>
-                        <option value="$1,000 - $3,000 (TZS 2.6M - 8M)">$1,000 - $3,000 (TZS 2.6M - 8M)</option>
-                        <option value="$3,000 - $7,500 (TZS 8M - 20M)">$3,000 - $7,500 (TZS 8M - 20M)</option>
-                        <option value="$7,500+ (TZS 20M+)">$7,500+ (TZS 20M+)</option>
-                        <option value="Enterprise Retainer">Enterprise Retainer</option>
-                      </select>
-                    </div>
+                  <div>
+                    <label className="block text-xs font-semibold text-slate-300 mb-1.5">
+                      Service Interested In *
+                    </label>
+                    <select
+                      value={formData.serviceNeeded}
+                      onChange={(e) => setFormData({ ...formData, serviceNeeded: e.target.value })}
+                      className="w-full px-3.5 py-2.5 rounded-xl bg-slate-900/90 border border-slate-800 text-white text-sm focus:outline-none focus:border-blue-500 transition-colors"
+                    >
+                      {servicesData.map((s) => (
+                        <option key={s.id} value={s.title}>
+                          {s.number}. {s.title}
+                        </option>
+                      ))}
+                    </select>
                   </div>
 
                   <div>
-                    <label className="block text-xs font-medium text-slate-300 mb-1.5">
-                      Project Description / Requirements *
+                    <label className="block text-xs font-semibold text-slate-300 mb-1.5">
+                      Brief Message / Goal *
                     </label>
                     <textarea
                       rows={3}
                       required
-                      placeholder="Briefly describe what you want to achieve..."
-                      value={formData.projectDescription}
-                      onChange={(e) => setFormData({ ...formData, projectDescription: e.target.value })}
-                      className="w-full px-3.5 py-2.5 rounded-lg bg-slate-900 border border-slate-800 text-white text-sm focus:outline-none focus:border-blue-500 resize-none"
+                      placeholder="Briefly describe what you'd like us to create or grow..."
+                      value={formData.message}
+                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                      className="w-full px-3.5 py-2.5 rounded-xl bg-slate-900/90 border border-slate-800 text-white text-sm focus:outline-none focus:border-blue-500 resize-none transition-colors"
                     />
                   </div>
 
                   <button
                     type="submit"
-                    className="w-full py-3.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-bold text-sm uppercase tracking-wider flex items-center justify-center gap-2 transition-all shadow-lg shadow-blue-600/30"
+                    className="w-full py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-all shadow-lg shadow-blue-600/30"
                   >
                     <Send className="w-4 h-4" />
-                    <span>START A PROJECT (SUBMIT BRIEF)</span>
+                    <span>Send Project Request</span>
                   </button>
                 </form>
               )}
@@ -296,3 +218,4 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialServicePr
     </section>
   );
 };
+
