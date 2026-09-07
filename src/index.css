@@ -1,0 +1,200 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-calibri: 'Calibri', 'Calibre', 'Carlito', system-ui, -apple-system, sans-serif;
+    --font-heading: 'Calibri', 'Calibre', 'Carlito', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  html {
+    color-scheme: dark;
+    font-family: var(--font-calibri);
+    background-color: #030712;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #030712;
+    color: #e2e8f0;
+    font-family: var(--font-calibri);
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+  }
+
+  #root {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+}
+
+/* Typography Helpers - Calibra / Calibri Clean */
+.font-calibri,
+.font-calibra,
+.font-sans,
+.font-syne,
+.font-primary {
+  font-family: 'Calibri', 'Calibre', 'Carlito', system-ui, sans-serif;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Direct Agency Cards - Compact & Auto-Floating */
+.agency-card {
+  background: #0b1120;
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 16px -4px rgba(0, 0, 0, 0.4);
+  will-change: transform;
+}
+
+/* Continuous Auto-Floating Keyframes */
+@keyframes autoFloat1 {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes autoFloat2 {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes autoFloat3 {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+/* Automatic Continuous Floating for every card without needing touch */
+.agency-card:nth-child(3n+1),
+.float-card,
+.animate-float-1 {
+  animation: autoFloat1 4.5s ease-in-out infinite !important;
+}
+
+.agency-card:nth-child(3n+2),
+.float-card-delayed,
+.animate-float-2 {
+  animation: autoFloat2 5.5s ease-in-out infinite 1.2s !important;
+}
+
+.agency-card:nth-child(3n),
+.float-card-slow,
+.animate-float-3 {
+  animation: autoFloat3 6s ease-in-out infinite 2.2s !important;
+}
+
+.agency-card:hover {
+  animation-play-state: paused !important;
+  border-color: #3b82f6 !important;
+  background: #0f172a !important;
+  transform: translateY(-12px) scale(1.01) !important;
+  box-shadow: 0 20px 40px -10px rgba(37, 99, 235, 0.35) !important;
+}
+
+/* Clean Button Styles */
+.btn-primary {
+  background: #2563eb;
+  color: #ffffff;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-primary:hover {
+  background: #1d4ed8;
+  box-shadow: 0 8px 20px -6px rgba(37, 99, 235, 0.5);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background: #1e293b;
+  color: #e2e8f0;
+  border: 1px solid #334155;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-secondary:hover {
+  background: #334155;
+  color: #ffffff;
+  border-color: #475569;
+}
+
+.btn-whatsapp {
+  background: #059669;
+  color: #ffffff;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-whatsapp:hover {
+  background: #047857;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px -6px rgba(5, 150, 105, 0.4);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #030712;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Hide scrollbar helper */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Infinite Marquee */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 35s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}

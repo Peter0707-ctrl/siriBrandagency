@@ -1,0 +1,64 @@
+declare module 'lucide-react' {
+  import * as React from 'react';
+  export interface LucideProps extends React.SVGProps<SVGSVGElement> {
+    size?: string | number;
+    color?: string;
+    strokeWidth?: string | number;
+    className?: string;
+  }
+  export type Icon = React.FC<LucideProps>;
+
+  export const ArrowLeft: Icon;
+  export const ArrowRight: Icon;
+  export const ArrowUpRight: Icon;
+  export const Award: Icon;
+  export const Briefcase: Icon;
+  export const Building: Icon;
+  export const CheckCircle: Icon;
+  export const CheckCircle2: Icon;
+  export const ChevronDown: Icon;
+  export const ChevronLeft: Icon;
+  export const ChevronRight: Icon;
+  export const ChevronUp: Icon;
+  export const Clock: Icon;
+  export const Code2: Icon;
+  export const Compass: Icon;
+  export const Cpu: Icon;
+  export const ExternalLink: Icon;
+  export const Eye: Icon;
+  export const Github: Icon;
+  export const Globe: Icon;
+  export const Globe2: Icon;
+  export const GraduationCap: Icon;
+  export const HeartHandshake: Icon;
+  export const Home: Icon;
+  export const Instagram: Icon;
+  export const Layers: Icon;
+  export const Linkedin: Icon;
+  export const Mail: Icon;
+  export const MapPin: Icon;
+  export const Menu: Icon;
+  export const MessageSquare: Icon;
+  export const MoveDown: Icon;
+  export const PartyPopper: Icon;
+  export const Pause: Icon;
+  export const Phone: Icon;
+  export const Play: Icon;
+  export const Quote: Icon;
+  export const Rocket: Icon;
+  export const Send: Icon;
+  export const ShieldCheck: Icon;
+  export const ShoppingBag: Icon;
+  export const Sparkles: Icon;
+  export const Target: Icon;
+  export const TrendingUp: Icon;
+  export const Twitter: Icon;
+  export const User: Icon;
+  export const UserCheck: Icon;
+  export const Users: Icon;
+  export const Volume2: Icon;
+  export const VolumeX: Icon;
+  export const X: Icon;
+  export const Youtube: Icon;
+  export const Zap: Icon;
+}
