@@ -105,8 +105,8 @@ export const clientPartnersList = [
     category: "Artificial Intelligence & Academic Technology",
     tag: "AI & Tech Product",
     description: "Next-generation academic AI engine, intelligent mathematics & software development solver, progressive web platform, and modern interactive UI/UX architecture.",
-    logo: "/clients/copetra-ai.jpg",
-    bgStyle: "bg-slate-950 p-1.5",
+    logo: "/clients/copetra-ai.png",
+    bgStyle: "bg-slate-950 p-1",
     link: "https://miraculous-forgiveness-production-10d4.up.railway.app/",
     verified: true
   },
