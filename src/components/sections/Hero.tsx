@@ -14,6 +14,7 @@ interface TypewriterPhrase {
   title: string;
   desc: string;
   image: string;
+  slides?: string[];
   tag: string;
 }
 
@@ -26,6 +27,10 @@ const capabilities: TypewriterPhrase[] = [
     title: 'Branding & Visual Identity',
     desc: 'Distinctive logos, vector brand guidelines, corporate profiles, and luxury packaging design.',
     image: '/clients/siribrand-work-smart.jpg',
+    slides: [
+      '/clients/siribrand-work-smart.jpg',
+      '/clients/siribrand-bring-work.jpg'
+    ],
     tag: 'Identity Systems'
   },
   {
@@ -35,7 +40,11 @@ const capabilities: TypewriterPhrase[] = [
     typed: "Studio Portraits & Products.",
     title: 'Siribrand Studio Photography',
     desc: 'High-fashion editorial shoots, executive corporate portraits, and commercial product staging.',
-    image: 'https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=1200&auto=format&fit=crop',
+    image: '/sweetbert-macha.png',
+    slides: [
+      '/sweetbert-macha.png',
+      '/peter-joseph.png'
+    ],
     tag: 'Studio Photography'
   },
   {
@@ -45,7 +54,13 @@ const capabilities: TypewriterPhrase[] = [
     typed: "4K Commercial Films & Ads.",
     title: 'Commercial Videography & 4K Ads',
     desc: 'Cinema camera commercials, corporate documentaries, social media reels, and drone cinematography.',
-    image: 'https://images.unsplash.com/photo-1579632652768-6cb9dcf85912?q=80&w=1200&auto=format&fit=crop',
+    image: '/clients/france-embassy-slide-1.jpg',
+    slides: [
+      '/clients/france-embassy-slide-1.jpg',
+      '/clients/visit-tanga-slide-2.png',
+      '/clients/udiaa-slide-2.jpg',
+      '/clients/france-embassy-slide-3.jpg'
+    ],
     tag: '4K Cinematography'
   },
   {
@@ -56,6 +71,11 @@ const capabilities: TypewriterPhrase[] = [
     title: 'Poster Creation & Graphic Design',
     desc: 'Impactful advertising posters, event e-flyers, corporate brochures, and social media creatives.',
     image: '/clients/graphics-slide-5.png',
+    slides: [
+      '/clients/graphics-slide-5.png',
+      '/clients/graphics-slide-1.png',
+      '/clients/graphics-slide-2.jpg'
+    ],
     tag: 'Graphic Design'
   },
   {
@@ -76,6 +96,11 @@ const capabilities: TypewriterPhrase[] = [
     title: 'Performance Digital Marketing',
     desc: 'Data-driven Meta, TikTok, and Google Ads management that turns attention into paying customers.',
     image: '/clients/marketing-slide-3.png',
+    slides: [
+      '/clients/marketing-slide-3.png',
+      '/clients/marketing-slide-2.png',
+      '/clients/marketing-slide-1.png'
+    ],
     tag: 'Growth & Ads'
   },
   {
@@ -105,7 +130,12 @@ const capabilities: TypewriterPhrase[] = [
     typed: "Stage Branding & Summits.",
     title: 'Event Planning & Stage Branding',
     desc: 'End-to-end conference coordination, 3D stage backdrops, VIP protocol, and high-impact media production.',
-    image: 'https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=1200&auto=format&fit=crop',
+    image: '/clients/udiaa-slide-1.png',
+    slides: [
+      '/clients/udiaa-slide-1.png',
+      '/clients/udiaa-slide-2.jpg',
+      '/clients/france-embassy-slide-1.jpg'
+    ],
     tag: 'Staging & Events'
   },
   {
@@ -115,7 +145,12 @@ const capabilities: TypewriterPhrase[] = [
     typed: "Safari & Tourism Cinematics.",
     title: 'Tourism & Hospitality Marketing',
     desc: 'Destination promotion for safari operators, luxury lodges, and national tourism campaigns across Tanzania.',
-    image: 'https://images.unsplash.com/photo-1516426122078-c23e76319801?q=80&w=1200&auto=format&fit=crop',
+    image: '/clients/visit-tanga-slide-2.png',
+    slides: [
+      '/clients/visit-tanga-slide-2.png',
+      '/clients/visit-tanga-slide-1.png',
+      '/clients/visit-tanga-slide-3.jpg'
+    ],
     tag: 'Tourism Marketing'
   }
 ];
@@ -124,8 +159,28 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [currentText, setCurrentText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
+  const [slideIndex, setSlideIndex] = useState(0);
 
   const activeItem = capabilities[currentIndex];
+
+  // Reset slide index when active tab changes
+  useEffect(() => {
+    setSlideIndex(0);
+  }, [currentIndex]);
+
+  // Cycle slides if active item has multiple slides
+  useEffect(() => {
+    const currentSlides = activeItem.slides;
+    if (!currentSlides || currentSlides.length <= 1) return;
+    const interval = setInterval(() => {
+      setSlideIndex((prev) => (prev + 1) % currentSlides.length);
+    }, 3200);
+    return () => clearInterval(interval);
+  }, [currentIndex, activeItem.slides]);
+
+  const activeImage = (activeItem.slides && activeItem.slides.length > 0)
+    ? activeItem.slides[slideIndex % activeItem.slides.length]
+    : activeItem.image;
 
   useEffect(() => {
     const fullText = activeItem.typed;
@@ -159,6 +214,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact }) => {
     setIsDeleting(false);
     setCurrentIndex(index);
     setCurrentText('');
+    setSlideIndex(0);
   };
 
   return (
@@ -228,10 +284,10 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact }) => {
           <div className="lg:col-span-6">
             <div className="relative rounded-2xl overflow-hidden border border-slate-800 shadow-2xl min-h-[380px] sm:min-h-[430px] lg:min-h-[450px] flex flex-col justify-between float-card group bg-slate-950">
               
-              {/* High-Resolution Clear Background Image */}
+              {/* High-Resolution Clear Background Image with Smooth Crossfade */}
               <img
-                key={activeItem.id}
-                src={activeItem.image}
+                key={`${activeItem.id}-${slideIndex}`}
+                src={activeImage}
                 alt={activeItem.title}
                 className="absolute inset-0 w-full h-full object-cover transition-all duration-700 filter brightness-95 group-hover:scale-105"
               />
@@ -241,7 +297,13 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact }) => {
 
               {/* Top Bar: 10 Category Switchers */}
               <div className="relative z-10 p-3 sm:p-4 space-y-2">
-                <div className="flex items-center justify-end gap-2">
+                <div className="flex items-center justify-between gap-2">
+                  {activeItem.slides && activeItem.slides.length > 1 ? (
+                    <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-cyan-950/80 text-cyan-300 border border-cyan-800/60 flex items-center gap-1 backdrop-blur-sm">
+                      <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" />
+                      LIVE REEL ({slideIndex + 1}/{activeItem.slides.length})
+                    </span>
+                  ) : <div />}
                   <span className="text-[10px] font-mono px-2.5 py-0.5 rounded-md bg-blue-950/80 text-blue-400 border border-blue-800/60 font-semibold uppercase tracking-wider backdrop-blur-sm">
                     {activeItem.tag}
                   </span>
@@ -264,6 +326,25 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact }) => {
                   ))}
                 </div>
               </div>
+
+              {/* Slide Indicators if multi-slide */}
+              {activeItem.slides && activeItem.slides.length > 1 && (
+                <div className="relative z-10 px-4 flex items-center justify-center gap-1.5 pb-2">
+                  {activeItem.slides.map((_, dotIdx) => (
+                    <button
+                      key={dotIdx}
+                      type="button"
+                      onClick={() => setSlideIndex(dotIdx)}
+                      className={`h-1.5 rounded-full transition-all ${
+                        dotIdx === (slideIndex % (activeItem.slides?.length || 1))
+                          ? 'w-6 bg-cyan-400 shadow-sm shadow-cyan-400/50'
+                          : 'w-1.5 bg-white/40 hover:bg-white/70'
+                      }`}
+                      aria-label={`Slide ${dotIdx + 1}`}
+                    />
+                  ))}
+                </div>
+              )}
 
               {/* Bottom Card Glass Info Overlay */}
               <div className="relative z-10 p-4 sm:p-5 bg-gradient-to-t from-[#030712] via-[#030712]/95 to-transparent">

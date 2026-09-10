@@ -94,7 +94,7 @@ export const servicesData: ServiceItem[] = [
       "Rapid turnaround for social & broadcast formats"
     ],
     metrics: { label: "Cinematic Video Views", value: "12M+" },
-    image: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=1200&auto=format&fit=crop",
+    image: "/clients/france-embassy-slide-1.jpg",
     bgGradient: "from-indigo-600/20 via-slate-900/10 to-transparent"
   },
   {
@@ -230,7 +230,7 @@ export const servicesData: ServiceItem[] = [
       "Live broadcast & social media team on-site"
     ],
     metrics: { label: "Attendees Managed", value: "25,000+" },
-    image: "https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=1200&auto=format&fit=crop",
+    image: "/clients/udiaa-slide-1.png",
     bgGradient: "from-emerald-600/15 via-blue-900/10 to-transparent"
   },
   {
@@ -259,7 +259,7 @@ export const servicesData: ServiceItem[] = [
       "High-converting itinerary landing page architectures"
     ],
     metrics: { label: "International Reach", value: "45+ Countries" },
-    image: "https://images.unsplash.com/photo-1516426122078-c23e76319801?q=80&w=1200&auto=format&fit=crop",
+    image: "/clients/visit-tanga-slide-2.png",
     bgGradient: "from-amber-600/20 via-orange-950/10 to-transparent"
   },
   {
