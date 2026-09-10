@@ -230,8 +230,15 @@ export const portfolioProjects: Project[] = [
     category: "NGO & Non-Profit",
     subCategory: "Documentary Film • NGO Branding • Social Advocacy",
     year: "2024 - 2025",
-    featured: false,
-    image: "https://images.unsplash.com/photo-1489710437720-ebb67ec84dd2?q=80&w=1200&auto=format&fit=crop",
+    featured: true,
+    image: "/clients/lighters-family-slide-1.jpg",
+    secondaryImages: [
+      "/clients/lighters-family-slide-2.jpg",
+      "/clients/lighters-family-slide-3.jpg",
+      "/clients/lighters-family-slide-4.jpg",
+      "/clients/lighters-family-slide-5.jpg",
+      "/clients/lighters-family-slide-6.jpg"
+    ],
     summary: "Human-centered impact documentary production, social media campaign, and community storytelling for Lighters Family Organization.",
     challenge: "Communicating grassroots social empowerment programs compellingly to attract international partners and local donor support.",
     solution: "Produced emotional field video documentaries, branded social awareness posters, and an annual impact overview booklet.",
