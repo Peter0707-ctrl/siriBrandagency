@@ -4,10 +4,22 @@ import { InstagramIcon } from '../common/SocialIcons';
 
 const mediaItems = [
   {
-    title: "Siribrand Studio Portraiture & Fashion",
+    title: "Tourism & Safari 4K Cinematics",
+    type: "4K Film",
+    image: "/clients/visit-tanga-slide-2.png",
+    tag: "Visit Tanga • Aerial 4K"
+  },
+  {
+    title: "Siribrand Studio Portraiture & Editorial",
     type: "Studio Production",
-    image: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=800&auto=format&fit=crop",
+    image: "/sweetbert-macha.png",
     tag: "@siribrandstudiostz"
+  },
+  {
+    title: "East Africa Tech & Innovation Summit",
+    type: "Experiential",
+    image: "/clients/udiaa-slide-2.jpg",
+    tag: "UDIAA DSM • Stage & Lights"
   },
   {
     title: "Podcast Recording Suite & Audio Visuals",
@@ -16,40 +28,28 @@ const mediaItems = [
     tag: "Studio Suite"
   },
   {
+    title: "Coastal Travel & Destination Production",
+    type: "Travel Film",
+    image: "/clients/visit-tanga-slide-3.jpg",
+    tag: "Documentary Reel"
+  },
+  {
+    title: "Academic & Institutional Media Production",
+    type: "Photography",
+    image: "/clients/brainyield-slide-2.jpg",
+    tag: "Brainyield Schools"
+  },
+  {
     title: "Brand Systems & Identity",
     type: "Branding",
     image: "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?q=80&w=800&auto=format&fit=crop",
     tag: "Design System"
   },
   {
-    title: "Tourism & Safari 4K Cinematics",
-    type: "4K Film",
-    image: "https://images.unsplash.com/photo-1516426122078-c23e76319801?q=80&w=800&auto=format&fit=crop",
-    tag: "Documentary"
-  },
-  {
-    title: "Commercial Product & Packaging Staging",
-    type: "Product Shoot",
-    image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=800&auto=format&fit=crop",
-    tag: "Studio Staging"
-  },
-  {
-    title: "High-Fashion & Celebrity Editorial",
-    type: "Social Media",
-    image: "https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=800&auto=format&fit=crop",
-    tag: "Reels & Editorial"
-  },
-  {
-    title: "East Africa Tech Summit Staging",
-    type: "Experiential",
-    image: "https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=800&auto=format&fit=crop",
-    tag: "Stage & Lights"
-  },
-  {
-    title: "Corporate Visual Storytelling & Headshots",
-    type: "Photography",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop",
-    tag: "Executive Portraits"
+    title: "Beach Expedition & Snorkel Documentary",
+    type: "Videography",
+    image: "/clients/visit-tanga-slide-1.png",
+    tag: "Visit Tanga • Life in 4K"
   }
 ];
 

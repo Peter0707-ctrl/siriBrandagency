@@ -165,9 +165,13 @@ export const portfolioProjects: Project[] = [
     subCategory: "Brand Identity • Academic Prospectus • Digital Growth",
     year: "2024 - 2025",
     featured: true,
-    image: "/clients/brainyield-school.jpg",
+    image: "/clients/brainyield-slide-1.jpg",
     secondaryImages: [
-      "/clients/brainyield-school.jpg"
+      "/clients/brainyield-slide-2.jpg",
+      "/clients/brainyield-slide-3.jpg",
+      "/clients/brainyield-slide-4.jpg",
+      "/clients/brainyield-slide-5.jpg",
+      "/clients/brainyield-slide-6.jpg"
     ],
     summary: "End-to-end rebranding, corporate stationery, school prospectus design, and digital enrollment marketing for Brainyield Schools.",
     challenge: "Standing out in a competitive private educational sector and presenting an authoritative, modern learning environment to parents.",
@@ -194,7 +198,14 @@ export const portfolioProjects: Project[] = [
     subCategory: "Event Branding • Digital Cards • Live Media Coverage",
     year: "2024",
     featured: true,
-    image: "https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=1200&auto=format&fit=crop",
+    image: "/clients/udiaa-slide-1.jpg",
+    secondaryImages: [
+      "/clients/udiaa-slide-2.jpg",
+      "/clients/udiaa-slide-3.jpg",
+      "/clients/udiaa-slide-4.jpg",
+      "/clients/udiaa-slide-5.jpg",
+      "/clients/udiaa-slide-6.jpg"
+    ],
     summary: "Experiential stage branding, digital invitation cards, backdrop production, and full video coverage for UDIAA DSM innovation gatherings.",
     challenge: "Delivering fast-turnaround event branding, seamless RSVP management, and dynamic stage backdrops for high-profile academic & innovation delegates.",
     solution: "Designed modern digital event cards for WhatsApp sharing, printed stage roll-up banners and backdrops, and deployed a live camera unit on-site.",
