@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowUpRight, Eye } from 'lucide-react';
+import { ArrowUpRight, Eye, Play } from 'lucide-react';
 import { portfolioProjects, portfolioCategories, Project } from '../../data/portfolioData';
 
 interface PortfolioSectionProps {
@@ -72,6 +72,12 @@ export const PortfolioSection: React.FC<PortfolioSectionProps> = ({
                     {project.category}
                   </span>
                   <div className="flex items-center gap-1.5">
+                    {project.videoUrl && (
+                      <span className="px-2 py-0.5 text-[10px] font-mono text-pink-300 bg-pink-950/80 rounded border border-pink-800/80 flex items-center gap-1 backdrop-blur-md">
+                        <Play className="w-2.5 h-2.5 fill-pink-300" />
+                        Reel
+                      </span>
+                    )}
                     {project.secondaryImages && project.secondaryImages.length > 0 && (
                       <span className="px-2 py-0.5 text-[10px] font-mono text-cyan-300 bg-cyan-950/80 rounded border border-cyan-800/80 flex items-center gap-1 backdrop-blur-md">
                         <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" />

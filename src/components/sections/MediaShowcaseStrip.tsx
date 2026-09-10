@@ -28,10 +28,10 @@ const mediaItems = [
     tag: "Kingdom Graphix & Cee iPhones"
   },
   {
-    title: "Coastal Travel & Destination Production",
-    type: "Travel Film",
-    image: "/clients/visit-tanga-slide-3.jpg",
-    tag: "Documentary Reel"
+    title: "French Embassy Cultural Night & Event Reel",
+    type: "Diplomatic Event",
+    image: "/clients/france-embassy-slide-1.jpg",
+    tag: "Embassy of France • Live Reel"
   },
   {
     title: "Academic & Institutional Media Production",

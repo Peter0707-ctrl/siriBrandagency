@@ -8,6 +8,7 @@ export interface Project {
   featured: boolean;
   image: string;
   secondaryImages?: string[];
+  videoUrl?: string;
   summary: string;
   challenge: string;
   solution: string;
@@ -266,10 +267,16 @@ export const portfolioProjects: Project[] = [
     subCategory: "Diplomatic Event Media • Print Collaterals • Cultural Creatives",
     year: "2024 - 2025",
     featured: true,
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1200&auto=format&fit=crop",
+    image: "/clients/france-embassy-slide-1.jpg",
+    secondaryImages: [
+      "/clients/france-embassy-slide-2.jpg",
+      "/clients/france-embassy-slide-3.jpg",
+      "/clients/france-embassy-slide-4.jpg"
+    ],
+    videoUrl: "https://www.instagram.com/reel/DNbEg9RsME8/",
     summary: "Official event collaterals, digital announcements, and premium photo/video documentation for French Embassy cultural and diplomatic initiatives in Tanzania.",
     challenge: "Meeting strict diplomatic visual standards, bilingual communications, and high-precision event print deadlines.",
-    solution: "Designed clean editorial posters, digital cards, high-end roll-up backdrops, and provided professional corporate photography coverage.",
+    solution: "Designed clean editorial posters, digital cards, high-end roll-up backdrops, and provided professional corporate photography & video reel coverage.",
     results: [
       { stat: "100%", label: "Protocol Compliance" },
       { stat: "500+", label: "VIP Guests Hosted" },
@@ -278,6 +285,7 @@ export const portfolioProjects: Project[] = [
     deliverables: [
       "Official Event Posters & Digital Creatives",
       "Diplomatic Event Photography & Media",
+      "Official Instagram Reel Video Documentation",
       "Backdrop & Stage Print Production",
       "Social Media Announcement Assets"
     ],
