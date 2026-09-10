@@ -32,8 +32,8 @@ export const ClientsShowcase: React.FC<ClientsShowcaseProps> = ({ onOpenContact 
           </p>
         </div>
 
-        {/* 5 Real Client Logo Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5">
+        {/* 7 Real Clients & Products Logo Cards Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
           {clientPartnersList.map((client, index) => {
             const floatAnim = floatStyles[index % floatStyles.length];
             return (
@@ -81,15 +81,27 @@ export const ClientsShowcase: React.FC<ClientsShowcaseProps> = ({ onOpenContact 
                 {/* Card Footer */}
                 <div className="pt-3 mt-4 border-t border-slate-800/80 flex items-center justify-between text-[11px]">
                   <span className="text-emerald-400 font-semibold flex items-center gap-1">
-                    Verified Client
+                    Verified {client.id === 'copetra-ai' ? 'Product' : 'Client'}
                   </span>
-                  <button
-                    onClick={() => onOpenContact(client.name)}
-                    className="text-slate-400 group-hover:text-blue-400 font-semibold inline-flex items-center gap-0.5 transition-colors"
-                  >
-                    <span>Work With Us</span>
-                    <ArrowUpRight className="w-3 h-3" />
-                  </button>
+                  {client.link ? (
+                    <a
+                      href={client.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-400 hover:text-blue-300 font-semibold inline-flex items-center gap-0.5 transition-colors"
+                    >
+                      <span>Visit Live</span>
+                      <ArrowUpRight className="w-3 h-3" />
+                    </a>
+                  ) : (
+                    <button
+                      onClick={() => onOpenContact(client.name)}
+                      className="text-slate-400 group-hover:text-blue-400 font-semibold inline-flex items-center gap-0.5 transition-colors"
+                    >
+                      <span>Work With Us</span>
+                      <ArrowUpRight className="w-3 h-3" />
+                    </button>
+                  )}
                 </div>
               </div>
             );

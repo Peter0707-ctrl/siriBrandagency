@@ -86,6 +86,29 @@ export const clientPartnersList = [
     logo: "/clients/perfect-property.png",
     bgStyle: "bg-white p-2.5",
     verified: true
+  },
+  {
+    id: "lighters-family",
+    name: "Lighters Family Organization",
+    shortName: "Lighters Family Org",
+    category: "NGO & Community Empowerment",
+    tag: "Non-Profit & NGO",
+    description: "Impact documentary production, charity campaign visuals, community outreach materials, annual reports, and social advocacy digital media.",
+    logo: "/clients/lighters-family.png",
+    bgStyle: "bg-white p-2.5",
+    verified: true
+  },
+  {
+    id: "copetra-ai",
+    name: "Copetra AI",
+    shortName: "PJ Copetranova AI Engine",
+    category: "Artificial Intelligence & Academic Technology",
+    tag: "AI & Tech Product",
+    description: "Next-generation academic AI engine, intelligent mathematics & software development solver, progressive web platform, and modern interactive UI/UX architecture.",
+    logo: "/clients/copetra-ai.jpg",
+    bgStyle: "bg-slate-950 p-1.5",
+    link: "https://miraculous-forgiveness-production-10d4.up.railway.app/",
+    verified: true
   }
 ];
 
