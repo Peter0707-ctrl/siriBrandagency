@@ -109,6 +109,19 @@ export const clientPartnersList = [
     bgStyle: "bg-slate-950 p-1.5",
     link: "https://miraculous-forgiveness-production-10d4.up.railway.app/",
     verified: true
+  },
+  {
+    id: "ajiramarket",
+    name: "Ajira Market",
+    shortName: "ajiramarket.co.tz",
+    sponsoredBy: "Sponsored by Reliance Solutions Ltd",
+    category: "Online Recruitment & Web Portal Architecture",
+    tag: "Web Platform & Jobs",
+    description: "Tanzania's premier online job portal connecting thousands of job seekers with private sector & NGO vacancies. Co-engineered with modern web architecture (Sponsored by Reliance Solutions).",
+    logo: "/clients/ajiramarket.svg",
+    bgStyle: "bg-[#002244] p-2",
+    link: "https://ajiramarket.co.tz/",
+    verified: true
   }
 ];
 

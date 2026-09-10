@@ -64,9 +64,17 @@ export const ClientsShowcase: React.FC<ClientsShowcaseProps> = ({ onOpenContact 
 
                   {/* Client Info */}
                   <div className="space-y-1 pt-1">
-                    <h3 className="text-base font-bold text-white group-hover:text-blue-400 transition-colors leading-snug">
-                      {client.name}
-                    </h3>
+                    <div className="flex items-center justify-between gap-1">
+                      <h3 className="text-base font-bold text-white group-hover:text-blue-400 transition-colors leading-snug">
+                        {client.name}
+                      </h3>
+                    </div>
+
+                    {client.sponsoredBy && (
+                      <span className="inline-block text-[9.5px] font-mono font-semibold px-2 py-0.5 rounded bg-cyan-950/70 text-cyan-300 border border-cyan-800/50">
+                        {client.sponsoredBy}
+                      </span>
+                    )}
 
                     <p className="text-[11px] font-medium text-blue-300/90 font-mono">
                       {client.category}
@@ -81,7 +89,7 @@ export const ClientsShowcase: React.FC<ClientsShowcaseProps> = ({ onOpenContact 
                 {/* Card Footer */}
                 <div className="pt-3 mt-4 border-t border-slate-800/80 flex items-center justify-between text-[11px]">
                   <span className="text-emerald-400 font-semibold flex items-center gap-1">
-                    Verified {client.id === 'copetra-ai' ? 'Product' : 'Client'}
+                    Verified {client.id === 'copetra-ai' ? 'Product' : client.id === 'ajiramarket' ? 'Co-Built' : 'Client'}
                   </span>
                   {client.link ? (
                     <a
