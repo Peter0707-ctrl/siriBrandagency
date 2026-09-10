@@ -1,5 +1,5 @@
 import React from 'react';
-import { X, Code2, Cpu, ShieldCheck, Mail, Globe, ArrowRight } from 'lucide-react';
+import { X, Code2, Cpu, ShieldCheck, Mail, Globe, ArrowRight, MessageSquare } from 'lucide-react';
 import { LinkedinIcon, GithubIcon } from './SocialIcons';
 import { TeamMember } from '../../data/teamData';
 
@@ -148,6 +148,18 @@ export const TeamMemberModal: React.FC<TeamMemberModalProps> = ({
                   aria-label="Email directly"
                 >
                   <Mail className="w-4 h-4" />
+                </a>
+              )}
+              {member.socials.whatsapp && (
+                <a
+                  href={`https://wa.me/${member.socials.whatsapp}?text=Habari%20${encodeURIComponent(member.name)}!%20I%20would%20like%20to%20connect%20with%20you%20regarding%20a%20project%20at%20Siribrand.`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-3 py-1.5 rounded-lg bg-emerald-950/80 border border-emerald-700/60 text-emerald-400 hover:bg-emerald-900/90 hover:text-white transition-all inline-flex items-center gap-1.5 text-xs font-semibold"
+                  aria-label="WhatsApp directly"
+                >
+                  <MessageSquare className="w-3.5 h-3.5" />
+                  <span>+{member.socials.whatsapp}</span>
                 </a>
               )}
             </div>

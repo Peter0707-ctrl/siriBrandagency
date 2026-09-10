@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowLeft, ArrowUpRight, Mail, ShieldCheck, Cpu, Target, CheckCircle2 } from 'lucide-react';
+import { ArrowLeft, ArrowUpRight, Mail, ShieldCheck, Cpu, Target, CheckCircle2, MessageSquare } from 'lucide-react';
 import { LinkedinIcon } from '../common/SocialIcons';
 import { teamData, TeamMember } from '../../data/teamData';
 
@@ -136,9 +136,24 @@ export const TeamPage: React.FC<TeamPageProps> = ({
               {/* Card Footer */}
               <div className="pt-4 mt-4 border-t border-slate-800/80 flex items-center justify-between text-xs">
                 <span className="text-slate-500 font-mono text-[11px]">0{member.order} / 07</span>
-                <span className="text-blue-400 font-semibold inline-flex items-center gap-1 group-hover:translate-x-0.5 transition-transform text-xs">
-                  Details <ArrowUpRight className="w-3.5 h-3.5" />
-                </span>
+                <div className="flex items-center gap-2">
+                  {member.socials.whatsapp && (
+                    <a
+                      href={`https://wa.me/${member.socials.whatsapp}?text=Habari%20${encodeURIComponent(member.name)}!%20I%20would%20like%20to%20connect%20with%20you%20regarding%20a%20project%20at%20Siribrand.`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
+                      className="px-2 py-0.5 rounded bg-emerald-950/80 border border-emerald-700/60 text-emerald-400 hover:bg-emerald-900/90 hover:text-white transition-colors text-[10px] font-mono font-bold flex items-center gap-1"
+                      title="WhatsApp Peter Joseph"
+                    >
+                      <MessageSquare className="w-3 h-3" />
+                      <span>WhatsApp</span>
+                    </a>
+                  )}
+                  <span className="text-blue-400 font-semibold inline-flex items-center gap-1 group-hover:translate-x-0.5 transition-transform text-xs">
+                    Details <ArrowUpRight className="w-3.5 h-3.5" />
+                  </span>
+                </div>
               </div>
             </div>
           ))}

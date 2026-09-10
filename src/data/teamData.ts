@@ -15,6 +15,7 @@ export interface TeamMember {
     github?: string;
     twitter?: string;
     email?: string;
+    whatsapp?: string;
   };
   featured: boolean;
   order: number;
@@ -82,7 +83,8 @@ export const teamData: TeamMember[] = [
       linkedin: "https://linkedin.com",
       github: "https://github.com",
       twitter: "https://x.com",
-      email: "peter@siribrand.co.tz"
+      email: "peter@siribrand.co.tz",
+      whatsapp: "255673190931"
     },
     featured: true,
     order: 2
