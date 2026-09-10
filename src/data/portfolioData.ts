@@ -22,6 +22,7 @@ export interface Project {
 
 export const portfolioCategories = [
   "All",
+  "Digital Marketing",
   "Graphics & Branding",
   "Tourism & Travel",
   "Education",
@@ -344,7 +345,35 @@ export const portfolioProjects: Project[] = [
       "Social Media Music & Poetry Creatives",
       "Print-Ready Roll-up Banners & Frames"
     ],
-    testimonialQuote: "Every poster from Siribrand stops people in their tracks. Their eye for detail, color, and commercial design is unmatched.",
-    clientPerson: "Studio Production Team, Siribrand Studio"
+  },
+  {
+    id: "marketing-merch-showcase",
+    title: "Brand Marketing & Merchandising: Product Packaging, Bottles & Custom Apparel Bags",
+    client: "Commercial & Retail Clients",
+    category: "Digital Marketing",
+    subCategory: "Product Branding • Branded Merchandise • Commercial Packaging",
+    year: "2024 - 2025",
+    featured: true,
+    image: "/clients/marketing-slide-3.png",
+    secondaryImages: [
+      "/clients/marketing-slide-2.png",
+      "/clients/marketing-slide-1.png"
+    ],
+    summary: "High-impact brand merchandise production, retail packaging bags, custom stainless steel bottles, and promotional marketing collateral designed for customer delight and brand recall.",
+    challenge: "Elevating retail and corporate brands from generic commodity packaging to luxury, memorable merchandise that customers carry and show off with pride.",
+    solution: "Executed premium custom packaging with custom cord handles, high-precision typography printing, branded drinkware, and retail merchandise strategy.",
+    results: [
+      { stat: "10,000+", label: "Units Printed & Branded" },
+      { stat: "100%", label: "Brand Recall Boost" },
+      { stat: "Premium", label: "Material Finish" }
+    ],
+    deliverables: [
+      "Luxury Retail Bags & Cord Handles",
+      "Branded Insulated Water Bottles",
+      "Commercial Product Staging & Photography",
+      "Corporate Merchandise Strategy"
+    ],
+    testimonialQuote: "The branded packaging and merchandise delivered by Siribrand elevated our product presentation to international luxury standards.",
+    clientPerson: "Retail Merchandising Partners"
   }
 ];

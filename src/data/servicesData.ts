@@ -38,7 +38,7 @@ export const servicesData: ServiceItem[] = [
       "Full-funnel conversion rate optimization"
     ],
     metrics: { label: "Average Campaign Reach", value: "3.5M+" },
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop",
+    image: "/clients/marketing-slide-3.png",
     bgGradient: "from-blue-600/20 via-indigo-900/10 to-transparent"
   },
   {

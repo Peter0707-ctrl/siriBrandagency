@@ -75,7 +75,7 @@ const capabilities: TypewriterPhrase[] = [
     typed: "High-ROI Ad Campaigns.",
     title: 'Performance Digital Marketing',
     desc: 'Data-driven Meta, TikTok, and Google Ads management that turns attention into paying customers.',
-    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1200&auto=format&fit=crop',
+    image: '/clients/marketing-slide-3.png',
     tag: 'Growth & Ads'
   },
   {

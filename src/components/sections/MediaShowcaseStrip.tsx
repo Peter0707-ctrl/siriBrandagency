@@ -22,10 +22,10 @@ const mediaItems = [
     tag: "UDIAA DSM • Stage & Lights"
   },
   {
-    title: "Podcast Recording Suite & Audio Visuals",
-    type: "Podcast & Live",
-    image: "https://images.unsplash.com/photo-1590602847861-f357a9332bbc?q=80&w=800&auto=format&fit=crop",
-    tag: "Studio Suite"
+    title: "Brand Packaging & Retail Merchandising",
+    type: "Marketing",
+    image: "/clients/marketing-slide-2.png",
+    tag: "Kingdom Graphix & Cee iPhones"
   },
   {
     title: "Coastal Travel & Destination Production",
