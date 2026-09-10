@@ -1,5 +1,5 @@
 import React from 'react';
-import { X, Code2, Cpu, ShieldCheck, Mail, Globe, ArrowRight, MessageSquare } from 'lucide-react';
+import { X, Code2, Cpu, ShieldCheck, Mail, Globe, ArrowRight, MessageSquare, User } from 'lucide-react';
 import { LinkedinIcon, GithubIcon } from './SocialIcons';
 import { TeamMember } from '../../data/teamData';
 
@@ -40,13 +40,24 @@ export const TeamMemberModal: React.FC<TeamMemberModalProps> = ({
         <div className="p-6 md:p-8 max-h-[80vh] overflow-y-auto space-y-6">
           {/* Top Profile Card */}
           <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
-            <div className="relative w-28 h-28 sm:w-36 sm:h-36 rounded-2xl overflow-hidden border-2 border-blue-500/40 shadow-xl shrink-0 bg-slate-900">
-              <img
-                src={member.image}
-                alt={member.name}
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent" />
+            <div className="relative w-28 h-28 sm:w-36 sm:h-36 rounded-2xl overflow-hidden border-2 border-blue-500/40 shadow-xl shrink-0 bg-slate-900 flex items-center justify-center">
+              {member.image ? (
+                <>
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent" />
+                </>
+              ) : (
+                <div className="w-full h-full bg-gradient-to-br from-blue-950 via-slate-900 to-slate-950 flex flex-col items-center justify-center text-blue-400 font-mono font-bold border border-blue-800/40">
+                  <User className="w-10 h-10 text-blue-400 mb-1 opacity-80" />
+                  <span className="text-sm text-slate-300 font-bold tracking-widest">
+                    {member.name.split(' ').map(n => n[0]).join('').slice(0, 2)}
+                  </span>
+                </div>
+              )}
             </div>
 
             <div className="text-center sm:text-left space-y-2">

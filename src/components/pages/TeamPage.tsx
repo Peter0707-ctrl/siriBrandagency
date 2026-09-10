@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowLeft, ArrowUpRight, Mail, ShieldCheck, Cpu, Target, CheckCircle2, MessageSquare } from 'lucide-react';
+import { ArrowLeft, ArrowUpRight, Mail, ShieldCheck, Cpu, Target, CheckCircle2, MessageSquare, User } from 'lucide-react';
 import { LinkedinIcon } from '../common/SocialIcons';
 import { teamData, TeamMember } from '../../data/teamData';
 
@@ -82,13 +82,22 @@ export const TeamPage: React.FC<TeamPageProps> = ({
               <div className="space-y-4">
                 {/* Compact Header: Avatar + Category Tag */}
                 <div className="flex items-start justify-between gap-3">
-                  <div className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-xl overflow-hidden border border-blue-500/30 bg-slate-900 shrink-0 group-hover:scale-105 transition-transform duration-300">
-                    <img
-                      src={member.image}
-                      alt={member.name}
-                      className="w-full h-full object-cover"
-                      loading="lazy"
-                    />
+                  <div className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-xl overflow-hidden border border-blue-500/30 bg-slate-900 shrink-0 group-hover:scale-105 transition-transform duration-300 flex items-center justify-center">
+                    {member.image ? (
+                      <img
+                        src={member.image}
+                        alt={member.name}
+                        className="w-full h-full object-cover"
+                        loading="lazy"
+                      />
+                    ) : (
+                      <div className="w-full h-full bg-gradient-to-br from-blue-950 via-slate-900 to-slate-950 flex flex-col items-center justify-center text-blue-400 font-mono font-bold text-lg border border-blue-800/30">
+                        <User className="w-6 h-6 text-blue-400 mb-0.5 opacity-80" />
+                        <span className="text-[11px] text-slate-300 font-bold tracking-wider">
+                          {member.name.split(' ').map(n => n[0]).join('').slice(0, 2)}
+                        </span>
+                      </div>
+                    )}
                   </div>
                   
                   <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-blue-950/80 text-blue-400 border border-blue-800/60 font-semibold uppercase tracking-wider">

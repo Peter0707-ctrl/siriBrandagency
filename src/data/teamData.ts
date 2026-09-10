@@ -98,7 +98,7 @@ export const teamData: TeamMember[] = [
     tagline: "Shaping Timeless Visual Systems & Brand Stories",
     bio: "Directing brand identity systems, typography, corporate guidelines, and multi-channel creative storytelling that command market recognition.",
     extendedBio: "Amani oversees all visual assets produced at Siribrand. From vector logo architecture to luxury packaging and editorial design, he ensures brand consistency across every physical and digital medium.",
-    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1000&auto=format&fit=crop",
+    image: "",
     skills: [
       "Art Direction",
       "Brand Identity Systems",
@@ -128,7 +128,7 @@ export const teamData: TeamMember[] = [
     tagline: "Cinema-Grade Visual Storytelling for Screen & Stage",
     bio: "Specializing in commercial cinematography, drone wildlife documentaries, 4K promotional films, and live multi-camera broadcast coverage across East Africa.",
     extendedBio: "Kelvin brings over 8 years of cinema camera experience, directing high-impact commercial campaigns, safari documentaries, and corporate galas with broadcast-level color grading and sound design.",
-    image: "https://images.unsplash.com/photo-1522529599102-193c0d76b5b6?q=80&w=1000&auto=format&fit=crop",
+    image: "",
     skills: [
       "Cinema Direction & Lighting",
       "Aerial Drone Cinematography",
@@ -157,7 +157,7 @@ export const teamData: TeamMember[] = [
     tagline: "Data-Driven Audience Growth & Paid Media Scaling",
     bio: "Driving audience acquisition, SEO, social media management, and high-converting paid ad funnels that deliver measurable ROI for ambitious brands.",
     extendedBio: "Fatma orchestrates Siribrand's performance marketing engine, managing multi-million impression campaigns across Meta, Google, TikTok, and LinkedIn with granular conversion attribution.",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1000&auto=format&fit=crop",
+    image: "",
     skills: [
       "Performance Ads (Meta & Google)",
       "Social Media Editorial Strategy",
@@ -186,7 +186,7 @@ export const teamData: TeamMember[] = [
     tagline: "Flawless Execution from Stage Design to Guest Flow",
     bio: "Coordinating corporate conferences, summits, product launches, digital invitations, and stage branding with seamless precision.",
     extendedBio: "Josephat leads on-ground event operations across Tanzania, managing venue logistics, audiovisual vendors, VIP protocol, and high-impact physical print staging.",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1000&auto=format&fit=crop",
+    image: "",
     skills: [
       "Event Concept & Staging",
       "Vendor & Venue Logistics",
@@ -215,7 +215,7 @@ export const teamData: TeamMember[] = [
     tagline: "Connecting African Destinations with Global Travelers",
     bio: "Managing tourism campaigns, safari operator branding, international traveler booking journeys, and key enterprise client accounts.",
     extendedBio: "Neema brings specialized acumen in East African travel marketing, working with eco-lodges, tour operators, and destination boards to drive high-value international bookings.",
-    image: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=1000&auto=format&fit=crop",
+    image: "",
     skills: [
       "Tourism Destination Marketing",
       "Global Traveler Funnels",
