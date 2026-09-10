@@ -282,8 +282,13 @@ export const portfolioProjects: Project[] = [
     category: "Real Estate",
     subCategory: "Real Estate Marketing • Drone Walkthroughs • Lead Generation",
     year: "2024 - 2025",
-    featured: false,
-    image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=1200&auto=format&fit=crop",
+    featured: true,
+    image: "/clients/perfect-property-slide-1.jpg",
+    secondaryImages: [
+      "/clients/perfect-property-slide-2.jpg",
+      "/clients/perfect-property-slide-3.jpg",
+      "/clients/perfect-property-slide-4.jpg"
+    ],
     summary: "End-to-end property marketing campaigns, 4K drone site walkthroughs, and high-converting advertising for Perfect Property.",
     challenge: "Building trust for land and property buyers and scaling buyer leads across Dar es Salaam, Pwani, and Bagamoyo locations.",
     solution: "Created engaging drone site videos, clear plot map graphics, social media ads targeting salaried professionals, and instant WhatsApp inquiry funnels.",
