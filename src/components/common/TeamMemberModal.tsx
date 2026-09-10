@@ -47,6 +47,12 @@ export const TeamMemberModal: React.FC<TeamMemberModalProps> = ({
                     src={member.image}
                     alt={member.name}
                     className="w-full h-full object-cover"
+                    onError={(e) => {
+                      const target = e.currentTarget;
+                      if (target.src.includes('/clients/')) {
+                        target.src = target.src.replace('/clients/', '/');
+                      }
+                    }}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent" />
                 </>

@@ -88,7 +88,12 @@ export const TeamPage: React.FC<TeamPageProps> = ({
                         src={member.image}
                         alt={member.name}
                         className="w-full h-full object-cover"
-                        loading="lazy"
+                        onError={(e) => {
+                          const target = e.currentTarget;
+                          if (target.src.includes('/clients/')) {
+                            target.src = target.src.replace('/clients/', '/');
+                          }
+                        }}
                       />
                     ) : (
                       <div className="w-full h-full bg-gradient-to-br from-blue-950 via-slate-900 to-slate-950 flex flex-col items-center justify-center text-blue-400 font-mono font-bold text-lg border border-blue-800/30">

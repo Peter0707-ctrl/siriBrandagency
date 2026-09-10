@@ -31,7 +31,7 @@ export const teamData: TeamMember[] = [
     tagline: "Visionary Leadership • Brand Growth & Enterprise Governance",
     bio: "Leading Siribrand Agency TZ with a strategic vision to transform African brands into globally competitive market leaders through creativity, technology, and strategic execution.",
     extendedBio: "Sweetbert Macha steers the overarching corporate direction, client partnerships, and strategic expansion of Siribrand Agency TZ. With deep expertise in brand governance, business development, and market dynamics in East Africa, he ensures every agency initiative creates tangible commercial value and sustainable brand equity for our clients.",
-    image: "/sweetbert-macha.png",
+    image: "/clients/sweetbert-macha.png",
     skills: [
       "Executive Brand Strategy",
       "Business Growth & Operations",
@@ -60,7 +60,7 @@ export const teamData: TeamMember[] = [
     tagline: "Building Intelligent Systems & Modern Digital Experiences",
     bio: "Experienced in AI engineering, web development, UI/UX design, and digital solutions, with a focus on building intelligent systems and modern digital experiences that transform ideas into practical technology solutions.",
     extendedBio: "Leading Siribrand's technology backbone, Peter bridges the nexus of next-generation artificial intelligence, high-performance web engineering, and user-centric interface architecture. His engineering philosophy centers on creating lightning-fast, scalable digital products that solve concrete business challenges across African and global markets.",
-    image: "/peter-joseph.png",
+    image: "/clients/peter-joseph.png",
     skills: [
       "AI Systems Architecture",
       "Full-Stack Web Engineering",
