@@ -22,6 +22,7 @@ export interface Project {
 
 export const portfolioCategories = [
   "All",
+  "Graphics & Branding",
   "Tourism & Travel",
   "Education",
   "Events & Academic",
@@ -310,7 +311,38 @@ export const portfolioProjects: Project[] = [
       "Land Catalogues & Print Banners",
       "Instant WhatsApp Sales Lead Funnel"
     ],
-    testimonialQuote: "Siribrand's videos and social media ads directly drove massive land buyers to our sites every single week.",
-    clientPerson: "Sales Director, Perfect Property"
+  },
+  {
+    id: "graphics-branding-showcase",
+    title: "Siribrand Creative Studio: High-Impact Posters, Editorial Layouts & Campaign Branding",
+    client: "Siribrand Studio & Clients",
+    category: "Graphics & Branding",
+    subCategory: "Commercial Posters • Event E-Flyers • Brand Advertising",
+    year: "2024 - 2025",
+    featured: true,
+    image: "/clients/graphics-slide-5.png",
+    secondaryImages: [
+      "/clients/graphics-slide-1.png",
+      "/clients/graphics-slide-2.jpg",
+      "/clients/graphics-slide-3.png",
+      "/clients/graphics-slide-4.png"
+    ],
+    summary: "Creative art direction, print-ready posters, graduation campaign collateral, charity event visuals, and social media advertising designed to captivate East African audiences.",
+    challenge: "Producing standout visual designs that convey brand prestige, maintain high typography legibility, and drive rapid audience conversion across digital and print channels.",
+    solution: "Developed custom creative layouts with rich visual hierarchy, 3D typography styling, bold color harmony, and multi-format packaging for social media, roll-up banners, and print frames.",
+    results: [
+      { stat: "300+", label: "Posters & Flyers Designed" },
+      { stat: "100%", label: "Client Approval" },
+      { stat: "High-Res", label: "Print & Digital Quality" }
+    ],
+    deliverables: [
+      "Graduation & Studio Campaign Posters",
+      "Charity Tour & NGO Event Visuals",
+      "Tourism Program Banners & E-Flyers",
+      "Social Media Music & Poetry Creatives",
+      "Print-Ready Roll-up Banners & Frames"
+    ],
+    testimonialQuote: "Every poster from Siribrand stops people in their tracks. Their eye for detail, color, and commercial design is unmatched.",
+    clientPerson: "Studio Production Team, Siribrand Studio"
   }
 ];

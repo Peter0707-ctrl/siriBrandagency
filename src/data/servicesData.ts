@@ -66,7 +66,7 @@ export const servicesData: ServiceItem[] = [
       "Premium print-ready CMYK & digital RGB packaging specs"
     ],
     metrics: { label: "Identities Crafted", value: "85+" },
-    image: "https://images.unsplash.com/photo-1600132806370-bf17e65e942f?q=80&w=1200&auto=format&fit=crop",
+    image: "/clients/graphics-slide-5.png",
     bgGradient: "from-cyan-600/20 via-blue-900/10 to-transparent"
   },
   {

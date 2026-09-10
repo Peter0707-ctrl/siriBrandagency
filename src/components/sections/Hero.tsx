@@ -55,7 +55,7 @@ const capabilities: TypewriterPhrase[] = [
     typed: "Posters, Flyers & Graphics.",
     title: 'Poster Creation & Graphic Design',
     desc: 'Impactful advertising posters, event e-flyers, corporate brochures, and social media creatives.',
-    image: 'https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=1200&auto=format&fit=crop',
+    image: '/clients/graphics-slide-5.png',
     tag: 'Graphic Design'
   },
   {
