@@ -60,13 +60,13 @@ const capabilities: TypewriterPhrase[] = [
   },
   {
     id: 'web',
-    tabLabel: 'Web & AI',
-    prefix: "We Architect Modern",
-    typed: "Fast Web Platforms & AI.",
-    title: 'Web Engineering & Digital Platforms',
-    desc: 'Ultra-fast business websites, booking systems, high-converting landing pages, and AI automations.',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop',
-    tag: 'Web & Software'
+    tabLabel: 'POS, Web & App',
+    prefix: "We Engineer High-End",
+    typed: "POS, Web & Mobile Apps.",
+    title: 'POS Systems, Web & App Development',
+    desc: 'Custom Point of Sale (POS) management systems, ultra-fast business websites, iOS/Android mobile applications, and AI integrations.',
+    image: 'https://images.unsplash.com/photo-1556742049-0a67c5574f73?q=80&w=1200&auto=format&fit=crop',
+    tag: 'POS, Web & Apps'
   },
   {
     id: 'marketing',
@@ -295,7 +295,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact }) => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mt-8 pt-5 border-t border-slate-800/80">
           <div className="p-3 rounded-xl bg-slate-900/60 border border-slate-800/80 float-card">
             <div className="text-xl font-bold text-white">10+ Services</div>
-            <p className="text-[11px] text-slate-400 mt-0.5">Marketing, Branding, Web, Video & Print</p>
+            <p className="text-[11px] text-slate-400 mt-0.5">POS, Web & Apps, Branding, Video & Ads</p>
           </div>
           <div className="p-3 rounded-xl bg-slate-900/60 border border-slate-800/80 float-card-delayed">
             <div className="text-xl font-bold text-blue-400">100+ Brands</div>

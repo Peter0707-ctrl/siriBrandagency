@@ -127,26 +127,28 @@ export const servicesData: ServiceItem[] = [
   {
     id: "web-digital-solutions",
     number: "05",
-    title: "Web & Digital Solutions",
-    tagline: "Ultra-Fast, High-Converting Digital Platforms",
-    shortDesc: "We help businesses build professional digital platforms that make it easier for customers to discover, understand, and engage with their brands.",
-    fullDesc: "Engineered with modern web standards, lightning-fast performance, interactive UI/UX design, and mobile-first responsiveness. We architect websites and web applications that serve as your 24/7 digital growth machine.",
+    title: "POS, Web & Mobile App Development",
+    tagline: "Point of Sale Systems, Web Platforms & Mobile Applications",
+    shortDesc: "Tunatengeneza Mifumo ya POS (Mauzo & Stoo), Tovuti (Websites) na Mobile & Web Apps za kisasa kwa biashara na taasisi.",
+    fullDesc: "Kutoka mifumo madhubuti ya POS (Point of Sale Systems) ya kusimamia mauzo, risiti, na stoo, hadi tovuti za kisasa (Websites) na mobile applications za iOS na Android. Tunajenga mifumo ya kidijitali inayorahisisha uendeshaji wa biashara yako 24/7.",
     category: "Engineering & Tech",
     items: [
-      "Website Design",
-      "Landing Pages",
-      "Business Websites",
-      "Website Content",
-      "Digital Strategy",
-      "Online Brand Presence"
+      "POS Systems (Point of Sale & Stoo)",
+      "Website & Web Application Design",
+      "Mobile App Development (iOS & Android)",
+      "E-Commerce & Online Stores",
+      "Business Management Software",
+      "Landing Pages & Funnels",
+      "Database & Cloud Systems",
+      "WhatsApp & Payment Gateway Integration"
     ],
     features: [
-      "Sub-second load times with Core Web Vitals optimization",
-      "Custom responsive layouts crafted for Tanzanian & global traffic",
-      "Seamless integration with analytics, WhatsApp, CRM and payments"
+      "Mifumo ya POS yenye ripoti za kila siku, risiti & stock tracking",
+      "Websites na Mobile Apps za kisasa zenye kasi ya juu sana",
+      "Uunganishaji wa malipo (M-Pesa, Tigo Pesa, Airtel Money, Kadi & Benki)"
     ],
-    metrics: { label: "Average Performance Score", value: "99/100" },
-    image: "https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=1200&auto=format&fit=crop",
+    metrics: { label: "Systems & Apps Built", value: "45+" },
+    image: "https://images.unsplash.com/photo-1556742049-0a67c5574f73?q=80&w=1200&auto=format&fit=crop",
     bgGradient: "from-blue-500/20 via-sky-950/10 to-transparent"
   },
   {
