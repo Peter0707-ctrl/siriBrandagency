@@ -66,7 +66,7 @@ export const servicesData: ServiceItem[] = [
       "Premium print-ready CMYK & digital RGB packaging specs"
     ],
     metrics: { label: "Identities Crafted", value: "85+" },
-    image: "/clients/graphics-slide-5.png",
+    image: "/clients/siribrand-work-smart.jpg",
     bgGradient: "from-cyan-600/20 via-blue-900/10 to-transparent"
   },
   {

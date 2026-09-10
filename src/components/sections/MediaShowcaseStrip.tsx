@@ -40,10 +40,10 @@ const mediaItems = [
     tag: "Brainyield Schools"
   },
   {
-    title: "Editorial Campaign & Poster Design",
+    title: "Official Brand Identity & Campaign Creatives",
     type: "Branding",
-    image: "/clients/graphics-slide-1.png",
-    tag: "Siribrand Studio"
+    image: "/clients/siribrand-bring-work.jpg",
+    tag: "@siribrandstudiostz"
   },
   {
     title: "Beach Expedition & Snorkel Documentary",

@@ -320,8 +320,10 @@ export const portfolioProjects: Project[] = [
     subCategory: "Commercial Posters • Event E-Flyers • Brand Advertising",
     year: "2024 - 2025",
     featured: true,
-    image: "/clients/graphics-slide-5.png",
+    image: "/clients/siribrand-work-smart.jpg",
     secondaryImages: [
+      "/clients/siribrand-bring-work.jpg",
+      "/clients/graphics-slide-5.png",
       "/clients/graphics-slide-1.png",
       "/clients/graphics-slide-2.jpg",
       "/clients/graphics-slide-3.png",

@@ -25,7 +25,7 @@ const capabilities: TypewriterPhrase[] = [
     typed: "Logos & Brand Systems.",
     title: 'Branding & Visual Identity',
     desc: 'Distinctive logos, vector brand guidelines, corporate profiles, and luxury packaging design.',
-    image: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?q=80&w=1200&auto=format&fit=crop',
+    image: '/clients/siribrand-work-smart.jpg',
     tag: 'Identity Systems'
   },
   {
