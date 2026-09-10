@@ -163,9 +163,9 @@ export const portfolioProjects: Project[] = [
     subCategory: "Brand Identity • Academic Prospectus • Digital Growth",
     year: "2024 - 2025",
     featured: true,
-    image: "https://images.unsplash.com/photo-1544717305-2782549b5136?q=80&w=1200&auto=format&fit=crop",
+    image: "/clients/brainyield-school.jpg",
     secondaryImages: [
-      "https://images.unsplash.com/photo-1588072432836-e10032774350?q=80&w=1200&auto=format&fit=crop"
+      "/clients/brainyield-school.jpg"
     ],
     summary: "End-to-end rebranding, corporate stationery, school prospectus design, and digital enrollment marketing for Brainyield Schools.",
     challenge: "Standing out in a competitive private educational sector and presenting an authoritative, modern learning environment to parents.",
