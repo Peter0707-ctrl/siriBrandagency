@@ -1,5 +1,5 @@
-import React from 'react';
-import { X, CheckCircle2, ArrowRight, ExternalLink } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { X, CheckCircle2, ArrowRight, ChevronLeft, ChevronRight, Play, Pause } from 'lucide-react';
 import { Project } from '../../data/portfolioData';
 
 interface CaseStudyModalProps {
@@ -14,6 +14,34 @@ export const CaseStudyModal: React.FC<CaseStudyModalProps> = ({
   onOpenContact
 }) => {
   if (!project) return null;
+
+  // Build slides: primary image + any secondary images
+  const allSlides = [
+    project.image,
+    ...(project.secondaryImages || [])
+  ].filter((img, idx, self) => self.indexOf(img) === idx);
+
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(true);
+
+  // Auto-play sliding slideshow every 3.5 seconds
+  useEffect(() => {
+    if (!isPlaying || allSlides.length <= 1) return;
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % allSlides.length);
+    }, 3500);
+    return () => clearInterval(interval);
+  }, [isPlaying, allSlides.length]);
+
+  const handleNext = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setCurrentSlide((prev) => (prev + 1) % allSlides.length);
+  };
+
+  const handlePrev = (e: React.MouseEvent) => {
+    e.stopPropagation();
+    setCurrentSlide((prev) => (prev - 1 + allSlides.length) % allSlides.length);
+  };
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-6 overflow-y-auto bg-black/85 backdrop-blur-xl animate-fadeIn">
@@ -57,14 +85,101 @@ export const CaseStudyModal: React.FC<CaseStudyModalProps> = ({
             </p>
           </div>
 
-          {/* Featured Image Showcase */}
-          <div className="relative rounded-xl overflow-hidden border border-slate-800 bg-slate-950 aspect-video md:aspect-[21/9]">
-            <img
-              src={project.image}
-              alt={project.title}
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
+          {/* Featured Image & Video Sliding Showcase */}
+          <div className="relative rounded-xl overflow-hidden border border-slate-800 bg-slate-950 aspect-video md:aspect-[21/9] group select-none">
+            {/* Sliding frames */}
+            {allSlides.map((slideUrl, idx) => (
+              <div
+                key={idx}
+                className={`absolute inset-0 transition-all duration-700 ease-in-out transform ${
+                  idx === currentSlide
+                    ? 'opacity-100 scale-100 translate-x-0 z-10'
+                    : idx < currentSlide
+                    ? 'opacity-0 scale-105 -translate-x-full z-0'
+                    : 'opacity-0 scale-105 translate-x-full z-0'
+                }`}
+              >
+                <img
+                  src={slideUrl}
+                  alt={`${project.title} slide ${idx + 1}`}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            ))}
+
+            {/* Gradient Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/85 via-transparent to-black/30 pointer-events-none z-10" />
+
+            {/* Top Badge with Live Slideshow Status */}
+            <div className="absolute top-3 left-3 z-20 flex items-center gap-2">
+              <span className="px-2.5 py-1 text-[11px] font-mono font-semibold rounded-md bg-black/60 backdrop-blur-md text-cyan-400 border border-cyan-500/30 flex items-center gap-1.5 shadow-lg">
+                <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
+                CINEMATIC REEL ({currentSlide + 1}/{allSlides.length})
+              </span>
+            </div>
+
+            {/* Top Right Play/Pause Toggle */}
+            {allSlides.length > 1 && (
+              <div className="absolute top-3 right-3 z-20">
+                <button
+                  type="button"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setIsPlaying(!isPlaying);
+                  }}
+                  className="p-2 rounded-lg bg-black/60 hover:bg-black/80 backdrop-blur-md text-white border border-slate-700 transition-all text-xs flex items-center gap-1"
+                  title={isPlaying ? 'Pause Slideshow' : 'Play Slideshow'}
+                >
+                  {isPlaying ? <Pause className="w-3.5 h-3.5" /> : <Play className="w-3.5 h-3.5 text-cyan-400" />}
+                </button>
+              </div>
+            )}
+
+            {/* Navigation Arrows */}
+            {allSlides.length > 1 && (
+              <>
+                <button
+                  type="button"
+                  onClick={handlePrev}
+                  className="absolute left-3 top-1/2 -translate-y-1/2 z-20 p-2 rounded-full bg-black/60 hover:bg-black/90 backdrop-blur-md text-white border border-slate-700/80 opacity-80 hover:opacity-100 transition-all hover:scale-110"
+                  aria-label="Previous image"
+                >
+                  <ChevronLeft className="w-5 h-5" />
+                </button>
+                <button
+                  type="button"
+                  onClick={handleNext}
+                  className="absolute right-3 top-1/2 -translate-y-1/2 z-20 p-2 rounded-full bg-black/60 hover:bg-black/90 backdrop-blur-md text-white border border-slate-700/80 opacity-80 hover:opacity-100 transition-all hover:scale-110"
+                  aria-label="Next image"
+                >
+                  <ChevronRight className="w-5 h-5" />
+                </button>
+              </>
+            )}
+
+            {/* Bottom Progress Bar & Dot Indicators */}
+            {allSlides.length > 1 && (
+              <div className="absolute bottom-3 inset-x-0 z-20 flex flex-col items-center gap-1.5 px-4">
+                <div className="flex items-center gap-2">
+                  {allSlides.map((_, idx) => (
+                    <button
+                      key={idx}
+                      type="button"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setCurrentSlide(idx);
+                      }}
+                      className={`h-1.5 rounded-full transition-all duration-300 ${
+                        idx === currentSlide
+                          ? 'w-8 bg-cyan-400'
+                          : 'w-2 bg-white/40 hover:bg-white/70'
+                      }`}
+                      aria-label={`Go to slide ${idx + 1}`}
+                    />
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
 
           {/* Results Metric Callout Grid */}

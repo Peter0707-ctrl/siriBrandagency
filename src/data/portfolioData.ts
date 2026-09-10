@@ -134,9 +134,11 @@ export const portfolioProjects: Project[] = [
     subCategory: "Destination Marketing • 4K Cinematography • Social Media",
     year: "2024 - 2025",
     featured: true,
-    image: "https://images.unsplash.com/photo-1516426122078-c23e76319801?q=80&w=1200&auto=format&fit=crop",
+    image: "/clients/visit-tanga-slide-2.png",
     secondaryImages: [
-      "https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?q=80&w=1200&auto=format&fit=crop"
+      "/clients/visit-tanga-slide-1.png",
+      "/clients/visit-tanga-slide-3.jpg",
+      "/clients/visit-tanga-slide-4.jpg"
     ],
     summary: "Comprehensive destination branding, documentary cinematography, and social media campaign promoting Tanga Region's attractions, beaches, and eco-tourism.",
     challenge: "Elevating Tanga's tourism appeal against traditional northern circuit safari routes and boosting domestic and international visitor interest.",

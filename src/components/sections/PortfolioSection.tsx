@@ -59,26 +59,34 @@ export const PortfolioSection: React.FC<PortfolioSectionProps> = ({
               onClick={() => onSelectProject(project)}
               className="agency-card overflow-hidden cursor-pointer flex flex-col justify-between group"
             >
-              {/* Image Container */}
-              <div className="relative aspect-[16/10] overflow-hidden bg-slate-950">
+              {/* Image Container with Sliding Reel Preview */}
+              <div className="relative aspect-[16/10] overflow-hidden bg-slate-950 group/img">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   loading="lazy"
                 />
-                <div className="absolute top-3 left-3 right-3 flex items-center justify-between">
+                <div className="absolute top-3 left-3 right-3 flex items-center justify-between z-10">
                   <span className="px-2.5 py-1 text-[11px] font-semibold rounded bg-slate-950/85 text-blue-400 border border-slate-800 backdrop-blur-md">
                     {project.category}
                   </span>
-                  <span className="text-xs font-mono text-slate-300 bg-slate-950/85 px-2 py-0.5 rounded border border-slate-800">
-                    {project.year}
-                  </span>
+                  <div className="flex items-center gap-1.5">
+                    {project.secondaryImages && project.secondaryImages.length > 0 && (
+                      <span className="px-2 py-0.5 text-[10px] font-mono text-cyan-300 bg-cyan-950/80 rounded border border-cyan-800/80 flex items-center gap-1 backdrop-blur-md">
+                        <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" />
+                        {(project.secondaryImages.length + 1)} Slides
+                      </span>
+                    )}
+                    <span className="text-xs font-mono text-slate-300 bg-slate-950/85 px-2 py-0.5 rounded border border-slate-800">
+                      {project.year}
+                    </span>
+                  </div>
                 </div>
 
-                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                  <span className="px-3.5 py-1.5 rounded-lg bg-blue-600 text-white text-xs font-semibold flex items-center gap-1.5">
-                    <Eye className="w-3.5 h-3.5" /> Inspect Case Study
+                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center z-10">
+                  <span className="px-3.5 py-1.5 rounded-lg bg-blue-600 text-white text-xs font-semibold flex items-center gap-1.5 shadow-lg shadow-blue-600/50">
+                    <Eye className="w-3.5 h-3.5" /> Inspect Sliding Reel
                   </span>
                 </div>
               </div>
