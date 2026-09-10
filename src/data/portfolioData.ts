@@ -32,52 +32,60 @@ export const portfolioCategories = [
 
 export const clientPartnersList = [
   {
+    id: "france-embassy",
+    name: "Ambassade de France en Tanzanie",
+    shortName: "French Embassy TZ",
+    category: "Diplomatic Mission & Cultural Affairs",
+    tag: "Diplomatic & Embassy",
+    description: "High-level cultural event coverage, diplomatic media support, promotional materials, official campaign creative design, and protocol-level documentation.",
+    logo: "/clients/france-embassy.png",
+    bgStyle: "bg-white p-2.5",
+    verified: true
+  },
+  {
+    id: "udiaa",
+    name: "UDIAA",
+    shortName: "University of Dar es Salaam",
+    subName: "Internal Audit Association",
+    category: "Higher Education & Academic Governance",
+    tag: "Academic Institution",
+    description: "Event stage branding, digital invitation cards, summit media coverage, innovation exhibition creatives, and executive forum materials.",
+    logo: "/clients/udiaa.png",
+    bgStyle: "bg-white p-2.5",
+    verified: true
+  },
+  {
     id: "visit-tanga",
     name: "Visit Tanga",
+    shortName: "Destination Marketing",
     category: "Tourism & Destination Marketing",
-    tag: "Tourism & Travel",
-    description: "Destination branding, tourism photography, documentary filmmaking, and digital travel campaigns promoting Tanga's coastline, historical sites, and eco-tourism.",
-    image: "https://images.unsplash.com/photo-1516426122078-c23e76319801?q=80&w=800&auto=format&fit=crop"
+    tag: "Tourism & Hospitality",
+    description: "Destination branding, tourism photography, 4K documentary filmmaking, and digital travel campaigns promoting Tanga's coastline, heritage, and eco-tourism.",
+    logo: "/clients/visit-tanga.png",
+    bgStyle: "bg-[#0b1c2d] p-1.5",
+    verified: true
   },
   {
     id: "brainyield-schools",
-    name: "Brainyield Schools",
-    category: "Educational Institutions",
+    name: "Brain Yield Schools",
+    shortName: "Brain Yield Schools",
+    category: "Private Education & Academic Excellence",
     tag: "Education",
-    description: "Complete visual identity, prospectus design, student enrollment campaigns, social media management, and modern academic website development.",
-    image: "https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=800&auto=format&fit=crop"
+    description: "Complete visual identity, prospectus design, student enrollment campaigns, social media management, and modern academic digital branding.",
+    logo: "/clients/brainyield.png",
+    bgStyle: "bg-[#101018] p-1.5",
+    verified: true
   },
   {
-    id: "udiaa-dsm",
-    name: "UDIAA DSM",
-    category: "University Innovation & Academic Organization",
-    tag: "Academic & Events",
-    description: "Event stage branding, digital invitation cards, summit media coverage, innovation exhibition creatives, and youth engagement campaigns.",
-    image: "https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=800&auto=format&fit=crop"
-  },
-  {
-    id: "lighters-family-organization",
-    name: "Lighters Family Organization",
-    category: "NGO & Community Empowerment",
-    tag: "Non-Profit",
-    description: "Impact documentary production, charity campaign visuals, community outreach materials, annual reports, and social media advocacy.",
-    image: "https://images.unsplash.com/photo-1489710437720-ebb67ec84dd2?q=80&w=800&auto=format&fit=crop"
-  },
-  {
-    id: "embassy-of-france-tz",
-    name: "Embassy of France in Tanzania",
-    category: "Diplomatic Mission & Cultural Affairs",
-    tag: "Diplomatic & Corporate",
-    description: "High-level cultural event coverage, diplomatic media support, promotional flyers, print materials, and official campaign creative production.",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop"
-  },
-  {
-    id: "viwanja-nafuu",
-    name: "Viwanja Nafuu",
-    category: "Real Estate & Land Property",
+    id: "perfect-property",
+    name: "Perfect Property",
+    shortName: "Real Estate & Property",
+    category: "Real Estate & Land Development",
     tag: "Real Estate",
-    description: "Property marketing campaigns, drone site video walkthroughs, high-converting social media lead generation, and branded marketing collaterals.",
-    image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=800&auto=format&fit=crop"
+    description: "Property marketing campaigns, high-converting digital advertising, branded property collaterals, and customer acquisition lead funnels.",
+    logo: "/clients/perfect-property.png",
+    bgStyle: "bg-white p-2.5",
+    verified: true
   }
 ];
 
@@ -219,15 +227,15 @@ export const portfolioProjects: Project[] = [
     clientPerson: "Cultural Department, Embassy of France in Tanzania"
   },
   {
-    id: "viwanja-nafuu-project",
-    title: "Viwanja Nafuu: Real Estate Digital Ads, Drone Site Tours & Lead Engine",
-    client: "Viwanja Nafuu",
+    id: "perfect-property-project",
+    title: "Perfect Property: Real Estate Digital Ads, Drone Site Tours & Lead Engine",
+    client: "Perfect Property",
     category: "Real Estate",
     subCategory: "Real Estate Marketing • Drone Walkthroughs • Lead Generation",
     year: "2024 - 2025",
     featured: false,
     image: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=1200&auto=format&fit=crop",
-    summary: "End-to-end property lead generation campaigns, 4K drone plot site walkthroughs, and high-converting WhatsApp advertising for Viwanja Nafuu.",
+    summary: "End-to-end property marketing campaigns, 4K drone site walkthroughs, and high-converting advertising for Perfect Property.",
     challenge: "Building trust for land and property buyers and scaling buyer leads across Dar es Salaam, Pwani, and Bagamoyo locations.",
     solution: "Created engaging drone site videos, clear plot map graphics, social media ads targeting salaried professionals, and instant WhatsApp inquiry funnels.",
     results: [
@@ -242,6 +250,6 @@ export const portfolioProjects: Project[] = [
       "Instant WhatsApp Sales Lead Funnel"
     ],
     testimonialQuote: "Siribrand's videos and social media ads directly drove massive land buyers to our sites every single week.",
-    clientPerson: "Sales Director, Viwanja Nafuu"
+    clientPerson: "Sales Director, Perfect Property"
   }
 ];
