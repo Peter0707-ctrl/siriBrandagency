@@ -51,11 +51,16 @@ const server = http.createServer((req, res) => {
     const ext = path.extname(filePath).toLowerCase();
     const contentType = MIME_TYPES[ext] || 'application/octet-stream';
 
-    // Cache headers for hashed assets
+    // Security & Cache headers
     const isImmutable = filePath.includes('/assets/') || filePath.includes('\\assets\\');
     res.writeHead(200, {
       'Content-Type': contentType,
-      'Cache-Control': isImmutable ? 'public, max-age=31536000, immutable' : 'no-cache'
+      'Cache-Control': isImmutable ? 'public, max-age=31536000, immutable' : 'no-cache',
+      'X-Content-Type-Options': 'nosniff',
+      'X-Frame-Options': 'SAMEORIGIN',
+      'X-XSS-Protection': '1; mode=block',
+      'Referrer-Policy': 'strict-origin-when-cross-origin',
+      'Permissions-Policy': 'camera=(), microphone=(), geolocation=()'
     });
     res.end(data);
   });
