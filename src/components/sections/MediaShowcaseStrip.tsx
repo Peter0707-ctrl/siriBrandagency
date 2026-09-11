@@ -10,10 +10,10 @@ const mediaItems = [
     tag: "Visit Tanga • Aerial 4K"
   },
   {
-    title: "Siribrand Studio Portraiture & Editorial",
-    type: "Studio Production",
-    image: "/sweetbert-macha.png",
-    tag: "@siribrandstudiostz"
+    title: "Luxury Real Estate & Architectural Tours",
+    type: "Property Media",
+    image: "/clients/perfect-property-slide-1.jpg",
+    tag: "Perfect Property • Living & Interior"
   },
   {
     title: "East Africa Tech & Innovation Summit",
