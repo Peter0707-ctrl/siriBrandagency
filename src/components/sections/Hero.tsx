@@ -40,12 +40,7 @@ const capabilities: TypewriterPhrase[] = [
     typed: "Studio Portraits & Products.",
     title: 'Siribrand Studio Photography',
     desc: 'High-fashion editorial shoots, executive corporate portraits, and commercial product staging.',
-    image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1200&auto=format&fit=crop',
-    slides: [
-      'https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=1200&auto=format&fit=crop',
-      'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1200&auto=format&fit=crop'
-    ],
+    image: 'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=1200&auto=format&fit=crop',
     tag: 'Studio Photography'
   },
   {
