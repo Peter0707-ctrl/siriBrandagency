@@ -1,5 +1,6 @@
 import React from 'react';
-import { ShieldCheck, ArrowUpRight, Cpu, Code2 } from 'lucide-react';
+import { ShieldCheck, ArrowUpRight, Cpu, Code2, Mail, Phone, MessageSquare } from 'lucide-react';
+import { InstagramIcon, GithubIcon, LinkedinIcon } from '../common/SocialIcons';
 import { teamData, TeamMember } from '../../data/teamData';
 
 interface TeamSectionProps {
@@ -96,7 +97,7 @@ export const TeamSection: React.FC<TeamSectionProps> = ({ onSelectMember, onOpen
                       </div>
                     </div>
 
-                    {/* Actions */}
+                    {/* Actions & Direct Contacts */}
                     <div className="pt-3 flex flex-wrap items-center gap-3">
                       <button
                         onClick={() => onSelectMember(member)}
@@ -105,12 +106,42 @@ export const TeamSection: React.FC<TeamSectionProps> = ({ onSelectMember, onOpen
                         <span>View Full Profile</span>
                         <ArrowUpRight className="w-3.5 h-3.5" />
                       </button>
-                      <button
-                        onClick={() => onOpenContact(`Technology & Web Consultation with ${member.name}`)}
-                        className="px-4 py-2 rounded-lg bg-slate-900 border border-slate-800 hover:border-slate-700 text-slate-300 text-xs font-semibold"
-                      >
-                        Book Tech Consultation
-                      </button>
+
+                      {/* Quick Direct Social Links */}
+                      {member.socials.instagram && (
+                        <a
+                          href={member.socials.instagram}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="p-2 rounded-lg bg-pink-950/60 border border-pink-700/60 text-pink-400 hover:text-white hover:bg-pink-900 transition-colors"
+                          title="Instagram @peterjoh_jim"
+                        >
+                          <InstagramIcon className="w-3.5 h-3.5" />
+                        </a>
+                      )}
+
+                      {member.socials.whatsapp && (
+                        <a
+                          href={`https://wa.me/${member.socials.whatsapp}?text=Habari%20${encodeURIComponent(member.name)}!%20I%20would%20like%20to%20connect%20with%20you.`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="px-3 py-2 rounded-lg bg-emerald-950/80 border border-emerald-700/60 text-emerald-400 hover:bg-emerald-900 hover:text-white transition-colors text-xs font-semibold inline-flex items-center gap-1.5"
+                          title={`WhatsApp +${member.socials.whatsapp}`}
+                        >
+                          <MessageSquare className="w-3.5 h-3.5" />
+                          <span>+{member.socials.whatsapp}</span>
+                        </a>
+                      )}
+
+                      {member.socials.email && (
+                        <a
+                          href={`mailto:${member.socials.email}`}
+                          className="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-white hover:border-blue-500 transition-colors"
+                          title={`Email: ${member.socials.email}`}
+                        >
+                          <Mail className="w-3.5 h-3.5" />
+                        </a>
+                      )}
                     </div>
                   </div>
                 </div>

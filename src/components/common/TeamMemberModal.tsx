@@ -1,6 +1,6 @@
 import React from 'react';
-import { X, Code2, Cpu, ShieldCheck, Mail, Globe, ArrowRight, MessageSquare, User } from 'lucide-react';
-import { LinkedinIcon, GithubIcon } from './SocialIcons';
+import { X, Code2, Cpu, ShieldCheck, Mail, Globe, ArrowRight, MessageSquare, User, Phone } from 'lucide-react';
+import { LinkedinIcon, GithubIcon, InstagramIcon } from './SocialIcons';
 import { TeamMember } from '../../data/teamData';
 
 interface TeamMemberModalProps {
@@ -135,7 +135,19 @@ export const TeamMemberModal: React.FC<TeamMemberModalProps> = ({
 
           {/* Bottom Actions */}
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 border-t border-slate-800">
-            <div className="flex items-center gap-3">
+            <div className="flex flex-wrap items-center gap-2.5">
+              {member.socials.instagram && (
+                <a
+                  href={member.socials.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2 rounded-lg bg-pink-950/50 border border-pink-700/50 text-pink-400 hover:text-white hover:bg-pink-900/60 transition-colors"
+                  aria-label="Instagram Profile"
+                  title="Instagram Profile"
+                >
+                  <InstagramIcon className="w-4 h-4 text-pink-400" />
+                </a>
+              )}
               {member.socials.linkedin && (
                 <a
                   href={member.socials.linkedin}
@@ -143,6 +155,7 @@ export const TeamMemberModal: React.FC<TeamMemberModalProps> = ({
                   rel="noopener noreferrer"
                   className="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-white hover:border-blue-500 transition-colors"
                   aria-label="LinkedIn Profile"
+                  title="LinkedIn Profile"
                 >
                   <LinkedinIcon className="w-4 h-4" />
                 </a>
@@ -154,6 +167,7 @@ export const TeamMemberModal: React.FC<TeamMemberModalProps> = ({
                   rel="noopener noreferrer"
                   className="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-white hover:border-blue-500 transition-colors"
                   aria-label="GitHub Profile"
+                  title="GitHub Profile"
                 >
                   <GithubIcon className="w-4 h-4" />
                 </a>
@@ -163,8 +177,19 @@ export const TeamMemberModal: React.FC<TeamMemberModalProps> = ({
                   href={`mailto:${member.socials.email}`}
                   className="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-white hover:border-blue-500 transition-colors"
                   aria-label="Email directly"
+                  title="Email directly"
                 >
                   <Mail className="w-4 h-4" />
+                </a>
+              )}
+              {member.socials.phone && (
+                <a
+                  href={`tel:${member.socials.phone}`}
+                  className="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-white hover:border-blue-500 transition-colors"
+                  aria-label="Call directly"
+                  title={`Call ${member.socials.phone}`}
+                >
+                  <Phone className="w-4 h-4 text-blue-400" />
                 </a>
               )}
               {member.socials.whatsapp && (

@@ -14,8 +14,10 @@ export interface TeamMember {
     linkedin?: string;
     github?: string;
     twitter?: string;
+    instagram?: string;
     email?: string;
     whatsapp?: string;
+    phone?: string;
   };
   featured: boolean;
   order: number;
@@ -81,10 +83,11 @@ export const teamData: TeamMember[] = [
     ],
     socials: {
       linkedin: "https://linkedin.com",
-      github: "https://github.com",
-      twitter: "https://x.com",
+      github: "https://github.com/Peter0707-ctrl",
+      instagram: "https://instagram.com/peterjoh_jim",
       email: "pj0040280@gmail.com",
-      whatsapp: "255673190931"
+      whatsapp: "255673190931",
+      phone: "+255673190931"
     },
     featured: true,
     order: 2
