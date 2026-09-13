@@ -76,7 +76,7 @@ export const clientPartnersList = [
     tag: "Education",
     description: "Complete visual identity, prospectus design, student enrollment campaigns, social media management, and modern academic digital branding.",
     logo: "/clients/brainyield.png",
-    bgStyle: "bg-[#101018] p-1.5",
+    bgStyle: "bg-white p-1.5",
     verified: true
   },
   {
