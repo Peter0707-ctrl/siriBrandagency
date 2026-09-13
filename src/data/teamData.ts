@@ -114,7 +114,7 @@ export const teamData: TeamMember[] = [
     ],
     socials: {
       linkedin: "https://linkedin.com",
-      email: "creative@siribrand.co.tz"
+      email: "siribrandagencytz@gmail.com"
     },
     featured: false,
     order: 3
@@ -143,7 +143,7 @@ export const teamData: TeamMember[] = [
     ],
     socials: {
       linkedin: "https://linkedin.com",
-      email: "media@siribrand.co.tz"
+      email: "siribrandagencytz@gmail.com"
     },
     featured: false,
     order: 4
@@ -172,7 +172,7 @@ export const teamData: TeamMember[] = [
     ],
     socials: {
       linkedin: "https://linkedin.com",
-      email: "marketing@siribrand.co.tz"
+      email: "siribrandagencytz@gmail.com"
     },
     featured: false,
     order: 5
@@ -201,7 +201,7 @@ export const teamData: TeamMember[] = [
     ],
     socials: {
       linkedin: "https://linkedin.com",
-      email: "events@siribrand.co.tz"
+      email: "siribrandagencytz@gmail.com"
     },
     featured: false,
     order: 6
@@ -230,7 +230,7 @@ export const teamData: TeamMember[] = [
     ],
     socials: {
       linkedin: "https://linkedin.com",
-      email: "partnerships@siribrand.co.tz"
+      email: "siribrandagencytz@gmail.com"
     },
     featured: false,
     order: 7
