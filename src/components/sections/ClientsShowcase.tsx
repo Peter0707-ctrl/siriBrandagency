@@ -53,7 +53,7 @@ export const ClientsShowcase: React.FC<ClientsShowcaseProps> = ({ onOpenContact 
                   </div>
 
                   {/* High-Impact Logo Display Box */}
-                  <div className="w-full h-28 rounded-xl bg-gradient-to-b from-slate-900 to-slate-950 border border-slate-800/90 p-3 flex items-center justify-center group-hover:border-blue-500/50 group-hover:shadow-lg group-hover:shadow-blue-500/10 transition-all overflow-hidden relative">
+                  <div className={`w-full h-28 rounded-xl ${client.bgStyle || 'bg-white p-3'} border border-slate-700/60 flex items-center justify-center group-hover:border-blue-500/50 group-hover:shadow-lg group-hover:shadow-blue-500/10 transition-all overflow-hidden relative`}>
                     <img
                       src={client.logo}
                       alt={client.name}

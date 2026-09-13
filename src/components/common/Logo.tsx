@@ -22,15 +22,9 @@ export const Logo: React.FC<LogoProps> = ({
       {/* Siri Brand Agency Official Logo Badge */}
       <div className="relative flex items-center justify-center bg-white px-3 py-1.5 rounded-xl shadow-lg shadow-blue-500/10 transition-all duration-300 group-hover:scale-105 group-hover:shadow-blue-500/20 border border-slate-200/20">
         <img 
-          src="/assets/logo/siribrand-logo-cropped.png" 
+          src="/assets/logo/siribrand-logo.png" 
           alt="Siri Brand Agency" 
           className={`${sizeClasses[size]} w-auto object-contain`}
-          onError={(e) => {
-            const target = e.currentTarget;
-            if (target.src.includes('cropped')) {
-              target.src = '/assets/logo/siribrand-logo.png';
-            }
-          }}
         />
       </div>
     </div>
