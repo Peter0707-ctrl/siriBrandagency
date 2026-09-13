@@ -259,7 +259,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact }) => {
 
             {/* Subtle, Compact Supporting Copy */}
             <p className="text-xs sm:text-sm text-slate-400 leading-relaxed max-w-lg font-normal">
-              Tunatoa huduma za kiwango cha juu za <span className="text-slate-200 font-medium">Photography</span>, <span className="text-slate-200 font-medium">Video Making</span>, <span className="text-slate-200 font-medium">Poster Creation</span>, <span className="text-slate-200 font-medium">Graphics Design</span>, <span className="text-slate-200 font-medium">Branding</span>, na <span className="text-slate-200 font-medium">Mifumo ya Web & Digital Marketing</span> ili kukuza biashara na brand yako.
+              We deliver top-tier services in <span className="text-slate-200 font-medium">Photography</span>, <span className="text-slate-200 font-medium">Video Production</span>, <span className="text-slate-200 font-medium">Poster Creation</span>, <span className="text-slate-200 font-medium">Graphic Design</span>, <span className="text-slate-200 font-medium">Branding</span>, and <span className="text-slate-200 font-medium">Web Systems & Digital Marketing</span> to scale your business and brand.
             </p>
 
             {/* Direct Action Buttons - Clean & Streamlined */}
