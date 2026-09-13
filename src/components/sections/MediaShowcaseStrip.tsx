@@ -4,10 +4,22 @@ import { InstagramIcon } from '../common/SocialIcons';
 
 const mediaItems = [
   {
+    title: "High-End Editorial & Executive Portrait",
+    type: "Studio Photography",
+    image: "/clients/photo-portrait-yellow.jpg",
+    tag: "Studio Portraits • Siri Brand"
+  },
+  {
     title: "Tourism & Safari 4K Cinematics",
     type: "4K Film",
     image: "/clients/visit-tanga-slide-2.png",
     tag: "Visit Tanga • Aerial 4K"
+  },
+  {
+    title: "Glamour & Creative Editorial Studio Session",
+    type: "Studio Photography",
+    image: "/clients/photo-glamour-mirror.jpg",
+    tag: "Editorial • Siri Brand Studio"
   },
   {
     title: "Luxury Real Estate & Architectural Tours",
@@ -16,16 +28,22 @@ const mediaItems = [
     tag: "Perfect Property • Living & Interior"
   },
   {
+    title: "Family Studio Portrait & Maternity Embraces",
+    type: "Studio Portrait",
+    image: "/clients/photo-family-embrace.jpg",
+    tag: "Studio Sessions • Siri Brand"
+  },
+  {
     title: "East Africa Tech & Innovation Summit",
     type: "Experiential",
     image: "/clients/udiaa-slide-2.jpg",
     tag: "UDIAA DSM • Stage & Lights"
   },
   {
-    title: "Brand Packaging & Retail Merchandising",
-    type: "Marketing",
-    image: "/clients/marketing-slide-2.png",
-    tag: "Kingdom Graphix & Cee iPhones"
+    title: "Birthday & Milestone Celebration Coverage",
+    type: "Event Photography",
+    image: "/clients/photo-event-celebration.jpg",
+    tag: "Events • Siri Brand Media"
   },
   {
     title: "French Embassy Cultural Night & Event Reel",
@@ -34,22 +52,10 @@ const mediaItems = [
     tag: "Embassy of France • Live Reel"
   },
   {
-    title: "Academic & Institutional Media Production",
-    type: "Photography",
-    image: "/clients/brainyield-slide-2.jpg",
-    tag: "Brainyield Schools"
-  },
-  {
     title: "Official Brand Identity & Campaign Creatives",
     type: "Branding",
     image: "/clients/siribrand-bring-work.jpg",
     tag: "@siribrandstudiostz"
-  },
-  {
-    title: "Beach Expedition & Snorkel Documentary",
-    type: "Videography",
-    image: "/clients/visit-tanga-slide-1.png",
-    tag: "Visit Tanga • Life in 4K"
   }
 ];
 

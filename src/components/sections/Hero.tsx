@@ -39,13 +39,13 @@ const capabilities: TypewriterPhrase[] = [
     prefix: "We Capture High-End",
     typed: "Studio Portraits & Products.",
     title: 'Siribrand Studio Photography',
-    desc: 'High-fashion editorial shoots, executive corporate portraits, and commercial product staging.',
-    image: '/clients/graphics-slide-2.jpg',
+    desc: 'High-fashion editorial shoots, executive corporate portraits, family shoots, birthday events, and commercial studio sessions.',
+    image: '/clients/photo-portrait-yellow.jpg',
     slides: [
-      '/clients/graphics-slide-2.jpg',
-      '/clients/udiaa-slide-4.jpg',
-      '/clients/perfect-property-slide-1.jpg',
-      'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=1200&auto=format&fit=crop'
+      '/clients/photo-portrait-yellow.jpg',
+      '/clients/photo-glamour-mirror.jpg',
+      '/clients/photo-family-embrace.jpg',
+      '/clients/photo-event-celebration.jpg'
     ],
     tag: 'Studio Photography'
   },
