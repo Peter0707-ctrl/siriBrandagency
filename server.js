@@ -30,7 +30,7 @@ const MIME_TYPES = {
 
 const server = http.createServer((req, res) => {
   const urlPath = req.url.split('?')[0];
-  let safePath = path.normalize(urlPath).replace(/^(\.\.[\/\\])+/, '');
+  let safePath = path.normalize(urlPath).replace(/^(\.\.[\/\\])+/, '').replace(/^[/\\]+/, '');
   let filePath = path.join(DIST_DIR, safePath);
 
   // If path is directory or root, serve index.html
