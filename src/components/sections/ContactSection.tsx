@@ -83,15 +83,15 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialServicePr
               </a>
 
               <a
-                href="mailto:info@siribrand.co.tz"
+                href="mailto:siribrandagencytz@gmail.com"
                 className="flex items-center gap-3.5 p-3 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-slate-700 text-slate-300 hover:text-white transition-all group"
               >
                 <div className="w-9 h-9 rounded-lg bg-blue-950 border border-blue-800/60 text-blue-400 flex items-center justify-center shrink-0">
                   <Mail className="w-4 h-4" />
                 </div>
                 <div>
-                  <span className="text-[10px] font-mono text-slate-400 uppercase block">Email</span>
-                  <span className="text-sm font-semibold text-white group-hover:text-blue-400 transition-colors">info@siribrand.co.tz</span>
+                  <span className="text-[10px] font-mono text-blue-400 uppercase block font-semibold">@</span>
+                  <span className="text-sm font-semibold text-white group-hover:text-blue-400 transition-colors">siribrandagencytz@gmail.com</span>
                 </div>
               </a>
 

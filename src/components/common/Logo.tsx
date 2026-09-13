@@ -20,15 +20,17 @@ export const Logo: React.FC<LogoProps> = ({
 
   return (
     <div className={`inline-flex items-center gap-2 group select-none ${className}`}>
-      {/* Official Brand Logo Image with sleek fallback styling */}
-      <div className="relative flex items-center justify-center">
+      {/* Official Brand Logo Image inside sleek high-contrast badge */}
+      <div className="relative flex items-center justify-center bg-white px-2 py-1 rounded-lg shadow-md shadow-blue-500/10 transition-transform duration-300 group-hover:scale-105">
         <img 
-          src="/assets/logo/siribrand-logo.png" 
+          src="/assets/logo/siribrand-logo-cropped.png" 
           alt="Siribrand Agency TZ" 
-          className={`${sizeClasses[size]} w-auto object-contain transition-transform duration-500 group-hover:scale-105 filter drop-shadow-[0_0_15px_rgba(37,99,235,0.4)]`}
+          className={`${sizeClasses[size]} w-auto object-contain`}
           onError={(e) => {
-            // If image is loading or fallback needed, hide image and show vector mark
-            (e.target as HTMLElement).style.display = 'none';
+            const target = e.currentTarget;
+            if (target.src.includes('cropped')) {
+              target.src = '/assets/logo/siribrand-logo.png';
+            }
           }}
         />
       </div>

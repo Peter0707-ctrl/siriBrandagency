@@ -151,6 +151,17 @@ export const TeamPage: React.FC<TeamPageProps> = ({
               <div className="pt-4 mt-4 border-t border-slate-800/80 flex items-center justify-between text-xs">
                 <span className="text-slate-500 font-mono text-[11px]">0{member.order} / 07</span>
                 <div className="flex items-center gap-2">
+                  {member.socials.email && (
+                    <a
+                      href={`mailto:${member.socials.email}`}
+                      onClick={(e) => e.stopPropagation()}
+                      className="p-1.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-white hover:border-blue-500 transition-colors"
+                      title={`Email ${member.name} (${member.socials.email})`}
+                      aria-label="Email"
+                    >
+                      <Mail className="w-3 h-3 text-blue-400" />
+                    </a>
+                  )}
                   {member.socials.whatsapp && (
                     <a
                       href={`https://wa.me/${member.socials.whatsapp}?text=Habari%20${encodeURIComponent(member.name)}!%20I%20would%20like%20to%20connect%20with%20you%20regarding%20a%20project%20at%20Siribrand.`}
@@ -158,7 +169,7 @@ export const TeamPage: React.FC<TeamPageProps> = ({
                       rel="noopener noreferrer"
                       onClick={(e) => e.stopPropagation()}
                       className="px-2 py-0.5 rounded bg-emerald-950/80 border border-emerald-700/60 text-emerald-400 hover:bg-emerald-900/90 hover:text-white transition-colors text-[10px] font-mono font-bold flex items-center gap-1"
-                      title="WhatsApp Peter Joseph"
+                      title={`WhatsApp ${member.name}`}
                     >
                       <MessageSquare className="w-3 h-3" />
                       <span>WhatsApp</span>

@@ -29,7 +29,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenContact }) => {
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-3.5 h-3.5 text-blue-400 shrink-0" />
-                <span>info@siribrand.co.tz</span>
+                <a href="mailto:siribrandagencytz@gmail.com" className="hover:text-blue-400 transition-colors">siribrandagencytz@gmail.com</a>
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="w-3.5 h-3.5 text-blue-400 shrink-0" />

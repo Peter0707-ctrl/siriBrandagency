@@ -46,7 +46,7 @@ export const teamData: TeamMember[] = [
     ],
     socials: {
       linkedin: "https://linkedin.com",
-      email: "sweetbert@siribrand.co.tz"
+      email: "siribrandagencytz@gmail.com"
     },
     featured: true,
     order: 1
@@ -83,7 +83,7 @@ export const teamData: TeamMember[] = [
       linkedin: "https://linkedin.com",
       github: "https://github.com",
       twitter: "https://x.com",
-      email: "peter@siribrand.co.tz",
+      email: "pj0040280@gmail.com",
       whatsapp: "255673190931"
     },
     featured: true,
