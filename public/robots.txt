@@ -1,0 +1,11 @@
+﻿User-agent: *
+Allow: /
+Allow: /assets/
+Allow: /clients/
+Allow: /sitemap.xml
+
+# Sitemaps
+Sitemap: https://siribrandagency.click/sitemap.xml
+
+# Crawl-delay for optimal indexing
+Crawl-delay: 1
