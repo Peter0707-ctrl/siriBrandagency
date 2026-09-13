@@ -1,5 +1,5 @@
 import React from 'react';
-import { X, Code2, Cpu, ShieldCheck, Mail, Globe, ArrowRight, MessageSquare, User, Phone } from 'lucide-react';
+import { X, Code2, Cpu, ShieldCheck, Mail, Globe, ArrowRight, MessageSquare, User, Phone, GraduationCap, Sparkles, Rocket } from 'lucide-react';
 import { LinkedinIcon, GithubIcon, InstagramIcon } from './SocialIcons';
 import { TeamMember } from '../../data/teamData';
 
@@ -82,6 +82,27 @@ export const TeamMemberModal: React.FC<TeamMemberModalProps> = ({
             </div>
           </div>
 
+          {/* Academic Credentials / Education */}
+          {member.education && member.education.length > 0 && (
+            <div className="space-y-3 pt-4 border-t border-slate-800">
+              <h3 className="text-xs font-mono uppercase tracking-wider text-slate-400 flex items-center gap-2">
+                <GraduationCap className="w-4 h-4 text-emerald-400" />
+                Academic & Postgraduate Credentials
+              </h3>
+              <div className="space-y-2">
+                {member.education.map((edu, idx) => (
+                  <div
+                    key={idx}
+                    className="flex items-start gap-3 p-3 rounded-xl bg-slate-900/70 border border-slate-800 text-xs sm:text-sm text-slate-200"
+                  >
+                    <span className="w-2 h-2 rounded-full bg-emerald-400 mt-1.5 shrink-0" />
+                    <span>{edu}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
           {/* Bio Overview */}
           <div className="space-y-3 pt-4 border-t border-slate-800">
             <h3 className="text-xs font-mono uppercase tracking-wider text-slate-400">
@@ -97,11 +118,56 @@ export const TeamMemberModal: React.FC<TeamMemberModalProps> = ({
             )}
           </div>
 
+          {/* Leadership & Strategic Vision */}
+          {member.leadershipVision && (
+            <div className="space-y-2 pt-4 border-t border-slate-800">
+              <h3 className="text-xs font-mono uppercase tracking-wider text-slate-400 flex items-center gap-2">
+                <Sparkles className="w-4 h-4 text-amber-400" />
+                Leadership & Vision
+              </h3>
+              <div className="p-3.5 rounded-xl bg-amber-950/20 border border-amber-800/40 text-xs sm:text-sm text-amber-200/90 leading-relaxed">
+                {member.leadershipVision}
+              </div>
+            </div>
+          )}
+
+          {/* Selected Technology Projects */}
+          {member.projects && member.projects.length > 0 && (
+            <div className="space-y-3 pt-4 border-t border-slate-800">
+              <h3 className="text-xs font-mono uppercase tracking-wider text-slate-400 flex items-center gap-2">
+                <Rocket className="w-4 h-4 text-cyan-400" />
+                Selected Key Projects & Digital Platforms
+              </h3>
+              <div className="grid grid-cols-1 gap-2.5">
+                {member.projects.map((proj, idx) => (
+                  <div
+                    key={idx}
+                    className="p-3 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-slate-700 transition-colors"
+                  >
+                    <div className="flex items-center justify-between gap-2 mb-1">
+                      <h4 className="text-sm font-bold text-white">
+                        {proj.name}
+                      </h4>
+                      {proj.tag && (
+                        <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-blue-950 text-blue-300 border border-blue-800/40">
+                          {proj.tag}
+                        </span>
+                      )}
+                    </div>
+                    <p className="text-xs text-slate-400 leading-relaxed">
+                      {proj.description}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
           {/* Capabilities & Core Specializations */}
           <div className="space-y-3 pt-4 border-t border-slate-800">
             <h3 className="text-xs font-mono uppercase tracking-wider text-slate-400 flex items-center gap-2">
               <Code2 className="w-4 h-4 text-blue-400" />
-              Technical & Creative Capabilities
+              Technical & Core Capabilities
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
               {member.skills.map((skill, i) => (

@@ -5,8 +5,15 @@ export interface TeamMember {
   department: string;
   category: 'Executive' | 'Technology' | 'Creative' | 'Operations';
   tagline: string;
+  education?: string[];
   bio: string;
   extendedBio?: string;
+  leadershipVision?: string;
+  projects?: {
+    name: string;
+    description: string;
+    tag?: string;
+  }[];
   image: string;
   skills: string[];
   technologies: string[];
@@ -28,29 +35,32 @@ export const teamData: TeamMember[] = [
     id: "sweetbert-macha",
     name: "SWEETBERT MACHA",
     role: "Founder & Chief Executive Officer (CEO)",
-    department: "Executive Leadership & Corporate Brand Strategy",
+    department: "Executive Leadership & Brand Strategy",
     category: "Executive",
-    tagline: "Visionary Corporate Leadership • Brand Architecture & Enterprise Governance",
-    bio: "Founder & Chief Executive Officer leading Siribrand Agency TZ with high-level corporate brand architecture, multi-sector media expansion, and strategic enterprise growth across Tanzania and East Africa.",
-    extendedBio: "Sweetbert Macha directs the executive vision, corporate governance, and multi-disciplinary expansion of Siribrand Agency TZ. Renowned for strategic brand engineering, high-level diplomatic and institutional partnerships, and creative media mastery, he guides enterprises, academic institutions, and national initiatives from conceptual foundations to dominant market leadership.",
+    tagline: "Visionary Leadership • Strategic Brand Growth & Corporate Governance",
+    bio: "Leading Siribrand Agency TZ with a strategic vision to transform African enterprises and global brands into high-impact market leaders through creative storytelling, cutting-edge technology, and strategic brand execution.",
+    extendedBio: "Sweetbert Macha steers the overarching corporate direction, client partnerships, and strategic expansion of Siribrand Agency TZ. With deep expertise in brand governance, business development, and market dynamics in East Africa, he ensures every agency initiative creates tangible commercial value, executive prestige, and sustainable brand equity for our clients.",
+    leadershipVision: "To establish Siribrand Agency as East Africa's benchmark creative powerhouse, setting new standards in corporate branding, luxury visual production, and digital market dominance.",
     image: "/clients/sweetbert-macha.png",
     skills: [
-      "Executive Brand Architecture",
-      "Corporate Strategy & Governance",
-      "Diplomatic & Institutional Media",
-      "High-Impact Commercial Campaigns",
-      "Market Expansion & Business Growth",
-      "Creative Direction & Leadership"
+      "Executive Brand Strategy",
+      "Business Growth & Operations",
+      "Client Partnership Governance",
+      "Market Expansion & Vision",
+      "Commercial Media Direction",
+      "Corporate Positioning"
     ],
     technologies: [
-      "Brand Positioning Strategy",
-      "Enterprise Governance",
-      "Commercial Media Direction",
-      "Campaign ROI Architecture"
+      "Strategic Planning",
+      "Enterprise Management",
+      "Financial Strategy",
+      "Brand Architecture",
+      "Multi-Channel Campaign Strategy"
     ],
     socials: {
       linkedin: "https://linkedin.com",
-      email: "siribrandagencytz@gmail.com"
+      email: "siribrandagencytz@gmail.com",
+      whatsapp: "255692590012"
     },
     featured: true,
     order: 1
@@ -58,29 +68,65 @@ export const teamData: TeamMember[] = [
   {
     id: "peter-joseph",
     name: "PETER JOSEPH MSIRA",
-    role: "AI Systems Engineer • Full-Stack Web Developer • UI/UX Architect",
-    department: "Artificial Intelligence & Software Engineering",
+    role: "Computer Scientist | Software Developer | AI & Machine Learning Specialist | IT Architect",
+    department: "Technology, Data Structures & Artificial Intelligence",
     category: "Technology",
-    tagline: "Master's Scholar in Data Structures & AI (UDSM) • Intelligent Web Architecture",
-    bio: "AI Engineer, Full-Stack Web Developer, and UI/UX Designer with advanced academic specialization in Data Structures, Artificial Intelligence, and Computer Science at the University of Dar es Salaam (UDSM).",
-    extendedBio: "Peter Joseph Msira spearheads the artificial intelligence, algorithmic infrastructure, and digital engineering ecosystem at Siribrand Agency TZ. With advanced postgraduate academic mastery in Data Structures, Algorithms, and Artificial Intelligence in Computer Science at the University of Dar es Salaam (UDSM), Peter engineers mission-critical web applications, enterprise POS systems, and AI-driven automation pipelines. His technical prowess combines deep computational theory with cutting-edge modern UI/UX design, empowering African and international brands with ultra-fast, intelligent, and scalable digital platforms.",
+    tagline: "Pioneering Intelligent Systems, High-Performance Software & Machine Learning Innovation",
+    education: [
+      "Master of Computer Science (MSc) — Specializing in Data Structures and Artificial Intelligence at University of Dar es Salaam (UDSM) (Pursuing)",
+      "Bachelor of Computer Science — Kampala International University (KIU)"
+    ],
+    bio: "Peter Joseph Msira is a Computer Scientist, Software Developer, AI enthusiast, and technology entrepreneur focused on building practical digital solutions through software engineering, artificial intelligence, automation, and emerging technologies.",
+    extendedBio: "Holding a Bachelor of Computer Science from Kampala International University and currently pursuing his Master of Computer Science (MSc) with specialization in Data Structures and Artificial Intelligence at the University of Dar es Salaam (UDSM), Peter brings deep algorithmic rigor, machine learning architecture, and robust full-stack engineering to Siribrand Agency. As a technology entrepreneur, he designs and deploys scalable platforms combining software engineering, AI automation, and data-driven decision-making.",
+    leadershipVision: "Passionate about leveraging artificial intelligence and computational engineering to solve real-world problems, modernize digital services, and build scalable technology products that compete globally across African and international markets.",
+    projects: [
+      {
+        name: "Copetra AI",
+        description: "AI assistant project focused on intelligent interaction, learning, and practical digital assistance.",
+        tag: "Artificial Intelligence"
+      },
+      {
+        name: "CopetraNovaX",
+        description: "AI/ML-powered trading technology project focused on algorithmic market analysis and automated trading signals.",
+        tag: "AI / Machine Learning & FinTech"
+      },
+      {
+        name: "Ajira Market",
+        description: "High-scale digital platform designed to connect talent with employment and HR-related opportunities.",
+        tag: "Enterprise Web Platform"
+      },
+      {
+        name: "Siribrand Agency",
+        description: "Modern digital ecosystem, web architecture, and branding platform engine.",
+        tag: "Digital Ecosystem"
+      },
+      {
+        name: "Secured Academic Result Portal",
+        description: "Academic management system designed to securely manage student results, attendance, grading algorithms, teachers, parents, and administrators.",
+        tag: "Cybersecurity & Academic Systems"
+      }
+    ],
     image: "/clients/peter-joseph.png",
     skills: [
-      "Data Structures & Advanced Algorithms",
       "Artificial Intelligence & Machine Learning",
-      "Full-Stack Web & Mobile App Engineering",
-      "Enterprise UI/UX Design Systems",
-      "POS & Cloud Software Architecture",
-      "High-Performance Computing & APIs"
+      "Data Structures & Algorithms",
+      "Software Development & Systems Architecture",
+      "Web Application Engineering",
+      "IT Support & Systems Maintenance",
+      "API & Payment Integration",
+      "Database Systems & Cloud Infrastructure",
+      "Cybersecurity & Secure Systems",
+      "Automation & Intelligent Applications"
     ],
     technologies: [
-      "Python / PyTorch & AI Frameworks",
-      "Data Structures & Algorithm Design",
-      "React, Next.js & TypeScript",
-      "Tailwind CSS & Modern UI",
-      "Node.js & Cloud Systems",
-      "PostgreSQL & REST/GraphQL",
-      "Figma UI/UX & Design Systems"
+      "Python / AI & ML Frameworks",
+      "Data Structures & Algorithms",
+      "React / Next.js / TypeScript",
+      "Node.js & Express / FastAPI",
+      "PostgreSQL / MongoDB / Redis",
+      "Tailwind CSS & UI/UX Design",
+      "RESTful APIs & GraphQL",
+      "Linux / Docker & Cloud Systems"
     ],
     socials: {
       linkedin: "https://linkedin.com",
