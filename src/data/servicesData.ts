@@ -230,7 +230,7 @@ export const servicesData: ServiceItem[] = [
       "Live broadcast & social media team on-site"
     ],
     metrics: { label: "Attendees Managed", value: "25,000+" },
-    image: "/clients/udiaa-slide-1.png",
+    image: "/clients/udiaa-slide-1.jpg",
     bgGradient: "from-emerald-600/15 via-blue-900/10 to-transparent"
   },
   {

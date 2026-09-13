@@ -40,7 +40,13 @@ const capabilities: TypewriterPhrase[] = [
     typed: "Studio Portraits & Products.",
     title: 'Siribrand Studio Photography',
     desc: 'High-fashion editorial shoots, executive corporate portraits, and commercial product staging.',
-    image: 'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=1200&auto=format&fit=crop',
+    image: '/clients/graphics-slide-2.jpg',
+    slides: [
+      '/clients/graphics-slide-2.jpg',
+      '/clients/udiaa-slide-4.jpg',
+      '/clients/perfect-property-slide-1.jpg',
+      'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=1200&auto=format&fit=crop'
+    ],
     tag: 'Studio Photography'
   },
   {
@@ -70,7 +76,9 @@ const capabilities: TypewriterPhrase[] = [
     slides: [
       '/clients/graphics-slide-5.png',
       '/clients/graphics-slide-1.png',
-      '/clients/graphics-slide-2.jpg'
+      '/clients/graphics-slide-2.jpg',
+      '/clients/graphics-slide-3.png',
+      '/clients/graphics-slide-4.png'
     ],
     tag: 'Graphic Design'
   },
@@ -81,7 +89,11 @@ const capabilities: TypewriterPhrase[] = [
     typed: "POS, Web & Mobile Apps.",
     title: 'POS Systems, Web & App Development',
     desc: 'Custom Point of Sale (POS) management systems, ultra-fast business websites, iOS/Android mobile applications, and AI integrations.',
-    image: 'https://images.unsplash.com/photo-1556742049-0a67c5574f73?q=80&w=1200&auto=format&fit=crop',
+    image: '/clients/copetra-ai.jpg',
+    slides: [
+      '/clients/copetra-ai.jpg',
+      'https://images.unsplash.com/photo-1556742049-0a67c5574f73?q=80&w=1200&auto=format&fit=crop'
+    ],
     tag: 'POS, Web & Apps'
   },
   {
@@ -106,7 +118,11 @@ const capabilities: TypewriterPhrase[] = [
     typed: "Video Podcasts & Voiceovers.",
     title: 'Podcast Studio Suite & Audio',
     desc: 'Acoustically treated multi-camera podcast recording studio, voiceovers, and live audio-visual production.',
-    image: 'https://images.unsplash.com/photo-1590602847861-f357a9332bbc?q=80&w=1200&auto=format&fit=crop',
+    image: '/clients/france-embassy-slide-2.jpg',
+    slides: [
+      '/clients/france-embassy-slide-2.jpg',
+      'https://images.unsplash.com/photo-1590602847861-f357a9332bbc?q=80&w=1200&auto=format&fit=crop'
+    ],
     tag: 'Podcast Studio'
   },
   {
@@ -116,7 +132,11 @@ const capabilities: TypewriterPhrase[] = [
     typed: "Interactive Digital Cards.",
     title: 'Digital Event & Invitation Cards',
     desc: 'Modern WhatsApp-ready digital cards with clickable RSVP, Google Maps location pins, and video invites.',
-    image: 'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=1200&auto=format&fit=crop',
+    image: '/clients/udiaa-slide-3.jpg',
+    slides: [
+      '/clients/udiaa-slide-3.jpg',
+      'https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=1200&auto=format&fit=crop'
+    ],
     tag: 'Digital Cards'
   },
   {
@@ -126,11 +146,12 @@ const capabilities: TypewriterPhrase[] = [
     typed: "Stage Branding & Summits.",
     title: 'Event Planning & Stage Branding',
     desc: 'End-to-end conference coordination, 3D stage backdrops, VIP protocol, and high-impact media production.',
-    image: '/clients/udiaa-slide-1.png',
+    image: '/clients/udiaa-slide-1.jpg',
     slides: [
-      '/clients/udiaa-slide-1.png',
+      '/clients/udiaa-slide-1.jpg',
       '/clients/udiaa-slide-2.jpg',
-      '/clients/france-embassy-slide-1.jpg'
+      '/clients/france-embassy-slide-1.jpg',
+      '/clients/udiaa-slide-5.jpg'
     ],
     tag: 'Staging & Events'
   },
@@ -145,7 +166,8 @@ const capabilities: TypewriterPhrase[] = [
     slides: [
       '/clients/visit-tanga-slide-2.png',
       '/clients/visit-tanga-slide-1.png',
-      '/clients/visit-tanga-slide-3.jpg'
+      '/clients/visit-tanga-slide-3.jpg',
+      '/clients/visit-tanga-slide-4.jpg'
     ],
     tag: 'Tourism Marketing'
   }
@@ -286,6 +308,12 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContact }) => {
                 src={activeImage}
                 alt={activeItem.title}
                 className="absolute inset-0 w-full h-full object-cover transition-all duration-700 filter brightness-95 group-hover:scale-105"
+                onError={(e) => {
+                  const target = e.currentTarget;
+                  if (!target.src.includes('siribrand-work-smart')) {
+                    target.src = '/clients/siribrand-work-smart.jpg';
+                  }
+                }}
               />
 
               {/* Subtle Atmospheric Gradient Overlay */}
