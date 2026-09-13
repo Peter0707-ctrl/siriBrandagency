@@ -28,23 +28,25 @@ export const teamData: TeamMember[] = [
     id: "sweetbert-macha",
     name: "SWEETBERT MACHA",
     role: "Founder & Chief Executive Officer (CEO)",
-    department: "Executive Leadership & Strategy",
+    department: "Executive Leadership & Corporate Brand Strategy",
     category: "Executive",
-    tagline: "Visionary Leadership • Brand Growth & Enterprise Governance",
-    bio: "Leading Siribrand Agency TZ with a strategic vision to transform African brands into globally competitive market leaders through creativity, technology, and strategic execution.",
-    extendedBio: "Sweetbert Macha steers the overarching corporate direction, client partnerships, and strategic expansion of Siribrand Agency TZ. With deep expertise in brand governance, business development, and market dynamics in East Africa, he ensures every agency initiative creates tangible commercial value and sustainable brand equity for our clients.",
+    tagline: "Visionary Corporate Leadership • Brand Architecture & Enterprise Governance",
+    bio: "Founder & Chief Executive Officer leading Siribrand Agency TZ with high-level corporate brand architecture, multi-sector media expansion, and strategic enterprise growth across Tanzania and East Africa.",
+    extendedBio: "Sweetbert Macha directs the executive vision, corporate governance, and multi-disciplinary expansion of Siribrand Agency TZ. Renowned for strategic brand engineering, high-level diplomatic and institutional partnerships, and creative media mastery, he guides enterprises, academic institutions, and national initiatives from conceptual foundations to dominant market leadership.",
     image: "/clients/sweetbert-macha.png",
     skills: [
-      "Executive Brand Strategy",
-      "Business Growth & Operations",
-      "Client Partnership Governance",
-      "Market Expansion & Vision"
+      "Executive Brand Architecture",
+      "Corporate Strategy & Governance",
+      "Diplomatic & Institutional Media",
+      "High-Impact Commercial Campaigns",
+      "Market Expansion & Business Growth",
+      "Creative Direction & Leadership"
     ],
     technologies: [
-      "Strategic Planning",
-      "Enterprise Management",
-      "Financial Strategy",
-      "Brand Architecture"
+      "Brand Positioning Strategy",
+      "Enterprise Governance",
+      "Commercial Media Direction",
+      "Campaign ROI Architecture"
     ],
     socials: {
       linkedin: "https://linkedin.com",
@@ -55,31 +57,30 @@ export const teamData: TeamMember[] = [
   },
   {
     id: "peter-joseph",
-    name: "PETER JOSEPH",
-    role: "AI Engineer • Web Developer • UI/UX & Digital Solutions",
-    department: "Technology & Digital Architecture",
+    name: "PETER JOSEPH MSIRA",
+    role: "AI Systems Engineer • Full-Stack Web Developer • UI/UX Architect",
+    department: "Artificial Intelligence & Software Engineering",
     category: "Technology",
-    tagline: "Building Intelligent Systems & Modern Digital Experiences",
-    bio: "Experienced in AI engineering, web development, UI/UX design, and digital solutions, with a focus on building intelligent systems and modern digital experiences that transform ideas into practical technology solutions.",
-    extendedBio: "Leading Siribrand's technology backbone, Peter bridges the nexus of next-generation artificial intelligence, high-performance web engineering, and user-centric interface architecture. His engineering philosophy centers on creating lightning-fast, scalable digital products that solve concrete business challenges across African and global markets.",
+    tagline: "Master's Scholar in Data Structures & AI (UDSM) • Intelligent Web Architecture",
+    bio: "AI Engineer, Full-Stack Web Developer, and UI/UX Designer with advanced academic specialization in Data Structures, Artificial Intelligence, and Computer Science at the University of Dar es Salaam (UDSM).",
+    extendedBio: "Peter Joseph Msira spearheads the artificial intelligence, algorithmic infrastructure, and digital engineering ecosystem at Siribrand Agency TZ. With advanced postgraduate academic mastery in Data Structures, Algorithms, and Artificial Intelligence in Computer Science at the University of Dar es Salaam (UDSM), Peter engineers mission-critical web applications, enterprise POS systems, and AI-driven automation pipelines. His technical prowess combines deep computational theory with cutting-edge modern UI/UX design, empowering African and international brands with ultra-fast, intelligent, and scalable digital platforms.",
     image: "/clients/peter-joseph.png",
     skills: [
-      "AI Systems Architecture",
-      "Full-Stack Web Engineering",
-      "UI/UX Design Systems",
-      "Cloud & API Infrastructure",
-      "Interactive Frontend Development",
-      "Performance Optimization"
+      "Data Structures & Advanced Algorithms",
+      "Artificial Intelligence & Machine Learning",
+      "Full-Stack Web & Mobile App Engineering",
+      "Enterprise UI/UX Design Systems",
+      "POS & Cloud Software Architecture",
+      "High-Performance Computing & APIs"
     ],
     technologies: [
-      "React",
-      "TypeScript",
-      "Next.js",
-      "Python / AI Frameworks",
-      "Tailwind CSS",
-      "Node.js",
-      "Figma",
-      "REST & GraphQL"
+      "Python / PyTorch & AI Frameworks",
+      "Data Structures & Algorithm Design",
+      "React, Next.js & TypeScript",
+      "Tailwind CSS & Modern UI",
+      "Node.js & Cloud Systems",
+      "PostgreSQL & REST/GraphQL",
+      "Figma UI/UX & Design Systems"
     ],
     socials: {
       linkedin: "https://linkedin.com",
