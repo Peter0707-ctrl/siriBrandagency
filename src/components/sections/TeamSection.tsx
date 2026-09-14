@@ -55,8 +55,10 @@ export const TeamSection: React.FC<TeamSectionProps> = ({ onSelectMember, onOpen
                         className="w-full h-full object-cover object-top"
                       />
                       <span className="absolute bottom-2 left-2 text-[10px] font-mono px-2 py-0.5 rounded bg-blue-600 text-white font-bold">
-                        {member.category === 'Executive'
-                          ? 'Executive Lead'
+                        {member.id === 'sweetbert-macha'
+                          ? 'Founder & CEO'
+                          : member.id === 'zamda-kalema'
+                          ? 'Finance Director'
                           : member.id === 'peter-joseph'
                           ? 'Lead AI & Web'
                           : member.id === 'chenlee-soja'

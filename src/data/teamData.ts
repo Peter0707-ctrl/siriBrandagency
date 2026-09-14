@@ -291,5 +291,55 @@ export const teamData: TeamMember[] = [
     },
     featured: true,
     order: 5
+  },
+  {
+    id: "zamda-kalema",
+    name: "ZAMDA YUSUPH KALEMA",
+    role: "Finance Director & Corporate Controller",
+    department: "Corporate Finance, Accounting & Commercial Governance",
+    category: "Executive",
+    tagline: "Financial Integrity • Capital Allocation & Commercial Fiscal Governance",
+    bio: "Zamda Yusuph Kalema is the Finance Director at Siribrand Agency TZ, directing agency financial planning, corporate budgeting, financial reporting, risk governance, and commercial fiscal operations.",
+    extendedBio: "Zamda oversees the fiscal architecture, financial compliance, and commercial capital allocation across Siribrand Agency TZ. With extensive background in corporate accounting, financial forecasting, agency project budgeting, and statutory tax governance in Tanzania, Zamda ensures high fiscal resilience, optimal cashflow management, and long-term financial stability for the agency and client accounts.",
+    leadershipVision: "Ensuring sustainable agency scale and investor confidence through disciplined fiscal stewardship, transparent financial reporting, and prudent capital allocation.",
+    projects: [
+      {
+        name: "Corporate Budgeting & Financial Control",
+        description: "Designing multi-department financial forecasts, expenditure controls, and agency fiscal frameworks.",
+        tag: "Financial Control"
+      },
+      {
+        name: "Commercial Contract & Retainer Governance",
+        description: "Structuring client billing schedules, enterprise retainers, and procurement governance.",
+        tag: "Corporate Finance"
+      },
+      {
+        name: "Statutory & Tax Compliance Architecture",
+        description: "Ensuring regulatory audit readiness, TRA compliance, and corporate financial transparency.",
+        tag: "Fiscal Compliance"
+      }
+    ],
+    image: "/clients/zamda-kalema.jpg",
+    skills: [
+      "Corporate Financial Planning",
+      "Budgeting & Cost Optimization",
+      "Statutory & Tax Compliance",
+      "Risk Management & Auditing",
+      "Cashflow Forecasting",
+      "Financial Analysis & Reporting"
+    ],
+    technologies: [
+      "QuickBooks / Tally ERP",
+      "Financial Modeling Systems",
+      "Excel Advanced Analytics",
+      "Payroll & Statutory Systems",
+      "Enterprise Billing Platforms"
+    ],
+    socials: {
+      email: "siribrandagencytz@gmail.com",
+      whatsapp: "255692590012"
+    },
+    featured: true,
+    order: 6
   }
 ];
