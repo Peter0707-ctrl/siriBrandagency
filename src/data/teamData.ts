@@ -189,5 +189,57 @@ export const teamData: TeamMember[] = [
     },
     featured: true,
     order: 3
+  },
+  {
+    id: "nathan-kwilasa",
+    name: "NATHAN KWILASA",
+    role: "Head of Social Media Management & Marketing Strategist",
+    department: "Social Media Management & Digital Marketing Strategy",
+    category: "Operations",
+    tagline: "Viral Brand Growth • Social Architecture & Multi-Channel Conversion Funnels",
+    bio: "Nathan Kwilasa is the Head of Social Media Management and Lead Marketing Strategist at Siribrand Agency TZ, specializing in viral audience growth, content strategy, brand community development, and performance marketing.",
+    extendedBio: "Nathan leads social media strategy, channel architecture, and growth marketing at Siribrand Agency TZ. By orchestrating data-backed social campaigns, high-engagement content calendars, and targeted conversion funnels, Nathan helps corporate enterprises, tourism operators, and lifestyle brands scale their online presence, build loyal customer communities, and maximize commercial conversions across Instagram, TikTok, Facebook, and LinkedIn.",
+    leadershipVision: "Dominating modern digital attention through strategic storytelling, high-retention content creation, and data-driven marketing systems that transform social audiences into loyal customers.",
+    projects: [
+      {
+        name: "Omnichannel Brand Growth Campaigns",
+        description: "Executing viral social media growth and engagement strategies for corporate and lifestyle brands.",
+        tag: "Social Media Strategy"
+      },
+      {
+        name: "Performance Paid Ads & Funnels",
+        description: "Designing high-converting meta and social ad campaigns with precise audience segmentation and ROI tracking.",
+        tag: "Performance Marketing"
+      },
+      {
+        name: "Content Calendars & Community Management",
+        description: "Managing daily editorial calendars, community engagement, brand tone, and customer touchpoint optimization.",
+        tag: "Community Governance"
+      }
+    ],
+    image: "/clients/nathan-kwilasa.jpg",
+    skills: [
+      "Social Media Management & Growth",
+      "Digital Marketing Strategy",
+      "Content Planning & Viral Strategy",
+      "Paid Ads & Performance Marketing",
+      "Audience Segmentation & Analytics",
+      "Brand Community Building & PR"
+    ],
+    technologies: [
+      "Meta Ads Manager",
+      "Instagram & TikTok Algorithms",
+      "Google Analytics & SEMrush",
+      "Canva & Creative Suites",
+      "Buffer / Hootsuite / Sprout",
+      "Conversion Rate Optimization (CRO)"
+    ],
+    socials: {
+      instagram: "https://instagram.com/nathan_e.k",
+      email: "siribrandagencytz@gmail.com",
+      whatsapp: "255692590012"
+    },
+    featured: true,
+    order: 4
   }
 ];
