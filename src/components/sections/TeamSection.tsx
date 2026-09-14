@@ -1,6 +1,6 @@
 import React from 'react';
-import { ShieldCheck, ArrowUpRight, Cpu, Code2, Mail, Phone, MessageSquare } from 'lucide-react';
-import { InstagramIcon, GithubIcon, LinkedinIcon } from '../common/SocialIcons';
+import { ShieldCheck, ArrowUpRight, Cpu, Code2, Mail, Phone } from 'lucide-react';
+import { InstagramIcon, GithubIcon, LinkedinIcon, WhatsappIcon } from '../common/SocialIcons';
 import { teamData, TeamMember } from '../../data/teamData';
 
 interface TeamSectionProps {
@@ -126,7 +126,7 @@ export const TeamSection: React.FC<TeamSectionProps> = ({ onSelectMember, onOpen
                         href={member.socials.instagram}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="p-1.5 rounded-lg bg-pink-950/60 border border-pink-700/60 text-pink-400 hover:text-white hover:bg-pink-900 transition-colors"
+                        className="p-1.5 rounded-lg bg-slate-900 border border-slate-800 text-pink-400 hover:text-white hover:bg-pink-600 hover:border-pink-500 transition-colors flex items-center justify-center"
                         title={`Instagram ${member.name}`}
                       >
                         <InstagramIcon className="w-3.5 h-3.5" />
@@ -138,21 +138,30 @@ export const TeamSection: React.FC<TeamSectionProps> = ({ onSelectMember, onOpen
                         href={`https://wa.me/${member.socials.whatsapp}?text=Habari%20${encodeURIComponent(member.name)}!%20I%20would%20like%20to%20connect%20with%20you.`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="px-2.5 py-1.5 rounded-lg bg-emerald-950/80 border border-emerald-700/60 text-emerald-400 hover:bg-emerald-900 hover:text-white transition-colors text-xs font-semibold inline-flex items-center gap-1"
-                        title={`WhatsApp +${member.socials.whatsapp}`}
+                        className="p-1.5 rounded-lg bg-slate-900 border border-slate-800 text-emerald-400 hover:text-white hover:bg-emerald-600 hover:border-emerald-500 transition-colors flex items-center justify-center"
+                        title="WhatsApp"
                       >
-                        <MessageSquare className="w-3 h-3" />
-                        <span>+{member.socials.whatsapp}</span>
+                        <WhatsappIcon className="w-3.5 h-3.5" />
                       </a>
                     )}
 
                     {member.socials.email && (
                       <a
                         href={`mailto:${member.socials.email}`}
-                        className="p-1.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-white hover:border-blue-500 transition-colors"
+                        className="p-1.5 rounded-lg bg-slate-900 border border-slate-800 text-blue-400 hover:text-white hover:bg-blue-600 hover:border-blue-500 transition-colors flex items-center justify-center"
                         title={`Email: ${member.socials.email}`}
                       >
                         <Mail className="w-3.5 h-3.5" />
+                      </a>
+                    )}
+
+                    {member.socials.phone && (
+                      <a
+                        href={`tel:${member.socials.phone}`}
+                        className="p-1.5 rounded-lg bg-slate-900 border border-slate-800 text-cyan-400 hover:text-white hover:bg-cyan-600 hover:border-cyan-500 transition-colors flex items-center justify-center"
+                        title="Call directly"
+                      >
+                        <Phone className="w-3.5 h-3.5" />
                       </a>
                     )}
                   </div>

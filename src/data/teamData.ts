@@ -134,7 +134,7 @@ export const teamData: TeamMember[] = [
     socials: {
       linkedin: "https://linkedin.com",
       github: "https://github.com/Peter0707-ctrl",
-      instagram: "https://instagram.com/peterjoh_jim",
+      instagram: "https://www.instagram.com/peterjoh_jim/",
       email: "pj0040280@gmail.com",
       whatsapp: "255673190931",
       phone: "+255673190931"

@@ -1,6 +1,6 @@
 import React from 'react';
 import { X, Code2, Cpu, ShieldCheck, Mail, Globe, ArrowRight, MessageSquare, User, Phone, Compass, Layers } from 'lucide-react';
-import { LinkedinIcon, GithubIcon, InstagramIcon } from './SocialIcons';
+import { LinkedinIcon, GithubIcon, InstagramIcon, WhatsappIcon } from './SocialIcons';
 import { TeamMember } from '../../data/teamData';
 
 interface TeamMemberModalProps {
@@ -181,61 +181,17 @@ export const TeamMemberModal: React.FC<TeamMemberModalProps> = ({
 
           {/* Bottom Actions */}
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-6 border-t border-slate-800">
-            <div className="flex flex-wrap items-center gap-2.5">
+            <div className="flex flex-wrap items-center gap-2">
               {member.socials.instagram && (
                 <a
                   href={member.socials.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-2 rounded-lg bg-pink-950/50 border border-pink-700/50 text-pink-400 hover:text-white hover:bg-pink-900/60 transition-colors"
+                  className="p-2.5 rounded-xl bg-pink-950/40 border border-pink-700/50 text-pink-400 hover:text-white hover:bg-pink-600 hover:border-pink-500 transition-all shadow-sm flex items-center justify-center"
                   aria-label="Instagram Profile"
                   title="Instagram Profile"
                 >
-                  <InstagramIcon className="w-4 h-4 text-pink-400" />
-                </a>
-              )}
-              {member.socials.linkedin && (
-                <a
-                  href={member.socials.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-white hover:border-blue-500 transition-colors"
-                  aria-label="LinkedIn Profile"
-                  title="LinkedIn Profile"
-                >
-                  <LinkedinIcon className="w-4 h-4" />
-                </a>
-              )}
-              {member.socials.github && (
-                <a
-                  href={member.socials.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-white hover:border-blue-500 transition-colors"
-                  aria-label="GitHub Profile"
-                  title="GitHub Profile"
-                >
-                  <GithubIcon className="w-4 h-4" />
-                </a>
-              )}
-              {member.socials.email && (
-                <a
-                  href={`mailto:${member.socials.email}`}
-                  className="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-white hover:border-blue-500 transition-colors"
-                  aria-label="Email directly"
-                  title="Email directly"
-                >
-                  <Mail className="w-4 h-4" />
-                </a>
-              )}
-              {member.socials.phone && (
-                <a
-                  href={`tel:${member.socials.phone}`}
-                  className="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-white hover:border-blue-500 transition-colors"
-                  aria-label="Call directly"
-                  title={`Call ${member.socials.phone}`}
-                >
-                  <Phone className="w-4 h-4 text-blue-400" />
+                  <InstagramIcon className="w-4 h-4 text-pink-400 hover:text-white" />
                 </a>
               )}
               {member.socials.whatsapp && (
@@ -243,11 +199,55 @@ export const TeamMemberModal: React.FC<TeamMemberModalProps> = ({
                   href={`https://wa.me/${member.socials.whatsapp}?text=Habari%20${encodeURIComponent(member.name)}!%20I%20would%20like%20to%20connect%20with%20you%20regarding%20a%20project%20at%20Siribrand.`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="px-3 py-1.5 rounded-lg bg-emerald-950/80 border border-emerald-700/60 text-emerald-400 hover:bg-emerald-900/90 hover:text-white transition-all inline-flex items-center gap-1.5 text-xs font-semibold"
+                  className="p-2.5 rounded-xl bg-emerald-950/40 border border-emerald-700/50 text-emerald-400 hover:text-white hover:bg-emerald-600 hover:border-emerald-500 transition-all shadow-sm flex items-center justify-center"
                   aria-label="WhatsApp directly"
+                  title="WhatsApp"
                 >
-                  <MessageSquare className="w-3.5 h-3.5" />
-                  <span>+{member.socials.whatsapp}</span>
+                  <WhatsappIcon className="w-4 h-4 text-emerald-400 hover:text-white" />
+                </a>
+              )}
+              {member.socials.email && (
+                <a
+                  href={`mailto:${member.socials.email}`}
+                  className="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-blue-400 hover:text-white hover:bg-blue-600 hover:border-blue-500 transition-all shadow-sm flex items-center justify-center"
+                  aria-label="Email directly"
+                  title={`Email: ${member.socials.email}`}
+                >
+                  <Mail className="w-4 h-4 text-blue-400 hover:text-white" />
+                </a>
+              )}
+              {member.socials.phone && (
+                <a
+                  href={`tel:${member.socials.phone}`}
+                  className="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-cyan-400 hover:text-white hover:bg-cyan-600 hover:border-cyan-500 transition-all shadow-sm flex items-center justify-center"
+                  aria-label="Call directly"
+                  title="Call directly"
+                >
+                  <Phone className="w-4 h-4 text-cyan-400 hover:text-white" />
+                </a>
+              )}
+              {member.socials.linkedin && (
+                <a
+                  href={member.socials.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-sky-400 hover:text-white hover:bg-sky-600 hover:border-sky-500 transition-all shadow-sm flex items-center justify-center"
+                  aria-label="LinkedIn Profile"
+                  title="LinkedIn Profile"
+                >
+                  <LinkedinIcon className="w-4 h-4 text-sky-400 hover:text-white" />
+                </a>
+              )}
+              {member.socials.github && (
+                <a
+                  href={member.socials.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 hover:text-white hover:bg-slate-700 hover:border-slate-500 transition-all shadow-sm flex items-center justify-center"
+                  aria-label="GitHub Profile"
+                  title="GitHub Profile"
+                >
+                  <GithubIcon className="w-4 h-4" />
                 </a>
               )}
             </div>
