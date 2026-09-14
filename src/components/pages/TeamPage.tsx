@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { ArrowLeft, ArrowUpRight, Mail, ShieldCheck, Cpu, Target, CheckCircle2, MessageSquare, User } from 'lucide-react';
-import { LinkedinIcon } from '../common/SocialIcons';
+import { ArrowLeft, ArrowUpRight, Mail, Phone, ShieldCheck, Code2, Compass, Layers, Award } from 'lucide-react';
+import { InstagramIcon, WhatsappIcon, LinkedinIcon, GithubIcon } from '../common/SocialIcons';
 import { teamData, TeamMember } from '../../data/teamData';
 
 interface TeamPageProps {
@@ -16,9 +16,17 @@ export const TeamPage: React.FC<TeamPageProps> = ({
 }) => {
   const [selectedFilter, setSelectedFilter] = useState<'All' | 'Executive' | 'Technology' | 'Creative' | 'Operations'>('All');
 
+  const sortedMembers = [...teamData].sort((a, b) => a.order - b.order);
+
   const filteredMembers = selectedFilter === 'All'
-    ? teamData
-    : teamData.filter((m) => m.category === selectedFilter);
+    ? sortedMembers
+    : sortedMembers.filter((m) => {
+        if (selectedFilter === 'Executive') return m.category === 'Executive';
+        if (selectedFilter === 'Technology') return m.category === 'Technology';
+        if (selectedFilter === 'Creative') return m.category === 'Creative';
+        if (selectedFilter === 'Operations') return m.category === 'Operations';
+        return true;
+      });
 
   return (
     <div className="min-h-screen bg-[#030712] text-slate-100 pt-24 pb-20">
@@ -34,28 +42,33 @@ export const TeamPage: React.FC<TeamPageProps> = ({
           </button>
 
           <div className="text-xs font-mono text-slate-400">
-            <span>Home</span> / <span className="text-blue-400 font-bold">Our Team ({teamData.length} Members)</span>
+            <span>Home</span> / <span className="text-blue-400 font-bold">Leadership Team ({teamData.length} Members)</span>
           </div>
         </div>
 
         {/* Clean Centered Page Header */}
-        <div className="max-w-2xl mx-auto text-center mb-10 space-y-3">
+        <div className="max-w-3xl mx-auto text-center mb-8 space-y-3">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-950/80 border border-blue-800/60 text-blue-400 text-xs font-semibold">
+            <ShieldCheck className="w-3.5 h-3.5 text-blue-400" />
+            <span>Executive Governance & Department Protocol</span>
+          </div>
+
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight">
-            LEADERSHIP TEAM
+            MEET OUR LEADERSHIP & TEAM
           </h1>
-          <p className="text-sm sm:text-base text-slate-300 leading-relaxed font-normal">
-            Meet the leaders and specialists powering Siribrand Agency TZ.
+          <p className="text-sm sm:text-base text-slate-300 leading-relaxed font-normal max-w-2xl mx-auto">
+            The visionary directors, engineers, marketing strategists, and creative producers behind Siribrand Agency TZ.
           </p>
         </div>
 
         {/* Centered Minimalist Filter Tabs */}
-        <div className="flex items-center justify-center gap-2 overflow-x-auto pb-4 mb-12 no-scrollbar">
+        <div className="flex items-center justify-center gap-2 overflow-x-auto pb-4 mb-10 no-scrollbar">
           {[
-            { label: `All (${teamData.length})`, value: 'All' },
-            { label: 'Executive', value: 'Executive' },
-            { label: 'Technology & AI', value: 'Technology' },
-            { label: 'Creative & Media', value: 'Creative' },
-            { label: 'Operations', value: 'Operations' }
+            { label: `All Departments (${teamData.length})`, value: 'All' },
+            { label: 'Executive & Finance', value: 'Executive' },
+            { label: 'Technology & Software', value: 'Technology' },
+            { label: 'Marketing & PR', value: 'Operations' },
+            { label: 'Visual & Photography', value: 'Creative' }
           ].map((tab) => (
             <button
               key={tab.value}
@@ -71,119 +84,174 @@ export const TeamPage: React.FC<TeamPageProps> = ({
           ))}
         </div>
 
-        {/* Clean, Modern & Balanced Compact Team Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
+        {/* High-Impact Executive Portrait Grid (Large Photos with Focused Faces) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {filteredMembers.map((member) => (
             <div
               key={member.id}
-              onClick={() => onSelectMember(member)}
-              className="agency-card p-5 cursor-pointer flex flex-col justify-between group hover:border-blue-500/60 transition-all text-left"
+              className="agency-card p-5 border-blue-600/30 rounded-2xl hover:border-blue-500/60 transition-all flex flex-col justify-between group bg-slate-950/80"
             >
-              <div className="space-y-4">
-                {/* Compact Header: Avatar + Category Tag */}
-                <div className="flex items-start justify-between gap-3">
-                  <div className="relative w-16 h-16 sm:w-20 sm:h-20 rounded-xl overflow-hidden border border-blue-500/30 bg-slate-900 shrink-0 group-hover:scale-105 transition-transform duration-300 flex items-center justify-center">
-                    {member.image ? (
-                      <img
-                        src={member.image}
-                        alt={member.name}
-                        className="w-full h-full object-cover"
-                        onError={(e) => {
-                          const target = e.currentTarget;
-                          if (target.src.includes('/clients/')) {
-                            target.src = target.src.replace('/clients/', '/');
-                          }
-                        }}
-                      />
-                    ) : (
-                      <div className="w-full h-full bg-gradient-to-br from-blue-950 via-slate-900 to-slate-950 flex flex-col items-center justify-center text-blue-400 font-mono font-bold text-lg border border-blue-800/30">
-                        <User className="w-6 h-6 text-blue-400 mb-0.5 opacity-80" />
-                        <span className="text-[11px] text-slate-300 font-bold tracking-wider">
-                          {member.name.split(' ').map(n => n[0]).join('').slice(0, 2)}
-                        </span>
-                      </div>
-                    )}
-                  </div>
-                  
-                  <span className="text-[10px] font-mono px-2 py-0.5 rounded bg-blue-950/80 text-blue-400 border border-blue-800/60 font-semibold uppercase tracking-wider">
-                    {member.category}
+              <div>
+                {/* Large HD Portrait with Prominent Face Framing */}
+                <div className="relative w-full h-80 sm:h-96 rounded-xl overflow-hidden border-2 border-blue-500/40 bg-slate-900 mb-5 shadow-2xl">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-full h-full object-cover object-[center_top] group-hover:scale-105 transition-transform duration-500"
+                    onError={(e) => {
+                      const target = e.currentTarget;
+                      if (target.src.includes('/clients/')) {
+                        target.src = target.src.replace('/clients/', '/');
+                      }
+                    }}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent pointer-events-none" />
+
+                  {/* Top Protocol Badge */}
+                  <span className="absolute top-3 right-3 text-[10px] font-mono px-2.5 py-0.5 rounded-md bg-slate-950/85 backdrop-blur-md text-blue-300 border border-blue-800/70 font-bold shadow-lg">
+                    Protocol 0{member.order}
+                  </span>
+
+                  {/* Role Title Badge */}
+                  <span className="absolute bottom-3 left-3 text-xs font-mono px-3 py-1 rounded-lg bg-blue-600 text-white font-bold leading-tight shadow-xl">
+                    {member.id === 'sweetbert-macha'
+                      ? 'Founder & CEO'
+                      : member.id === 'zamda-kalema'
+                      ? 'Finance Director'
+                      : member.id === 'peter-joseph'
+                      ? 'Head of Technology'
+                      : member.id === 'paulina-wambura'
+                      ? 'Head of Marketing'
+                      : member.id === 'nathan-kwilasa'
+                      ? 'Head of Social Media'
+                      : 'Head of Visual Media'}
                   </span>
                 </div>
 
-                {/* Info & Content */}
-                <div className="space-y-1.5">
-                  <span className="text-[10px] font-mono text-slate-400 uppercase tracking-wide block">
-                    {member.department}
-                  </span>
+                {/* Information & Content */}
+                <div className="space-y-2.5">
+                  <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md bg-blue-950/80 border border-blue-800/40 text-blue-400 text-[10px] font-mono font-semibold truncate max-w-full">
+                    {member.category === 'Executive' ? (
+                      <Award className="w-3.5 h-3.5 shrink-0 text-amber-400" />
+                    ) : member.category === 'Technology' ? (
+                      <Code2 className="w-3.5 h-3.5 shrink-0 text-cyan-400" />
+                    ) : member.category === 'Creative' ? (
+                      <Compass className="w-3.5 h-3.5 shrink-0 text-pink-400" />
+                    ) : (
+                      <Layers className="w-3.5 h-3.5 shrink-0 text-emerald-400" />
+                    )}
+                    <span className="truncate">{member.department}</span>
+                  </div>
 
-                  <h3 className="text-base sm:text-lg font-bold text-white group-hover:text-blue-400 transition-colors">
+                  <h3 className="text-xl font-bold text-white tracking-tight">
                     {member.name}
                   </h3>
 
-                  <p className="text-xs font-semibold text-blue-300/90">
+                  <p className="text-xs sm:text-sm font-semibold text-blue-400">
                     {member.role}
                   </p>
 
-                  <p className="text-xs text-slate-300/90 line-clamp-3 leading-relaxed pt-1 font-normal">
-                    {member.bio}
+                  <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal">
+                    "{member.bio}"
                   </p>
-                </div>
 
-                {/* Skills Preview */}
-                <div className="flex flex-wrap gap-1 pt-1">
-                  {member.skills.slice(0, 2).map((skill, idx) => (
-                    <span
-                      key={idx}
-                      className="text-[10px] px-2 py-0.5 rounded bg-slate-900 border border-slate-800 text-slate-400 font-mono"
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                  {member.skills.length > 2 && (
-                    <span className="text-[10px] px-1.5 py-0.5 rounded bg-slate-900 text-slate-500 font-mono">
-                      +{member.skills.length - 2}
-                    </span>
-                  )}
+                  {/* Skills Pills */}
+                  <div className="pt-2 flex flex-wrap gap-1.5">
+                    {member.skills.slice(0, 3).map((skill, idx) => (
+                      <span
+                        key={idx}
+                        className="text-[10px] px-2.5 py-0.5 rounded-md bg-slate-900 border border-slate-800 text-slate-300 font-medium"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                    {member.skills.length > 3 && (
+                      <span className="text-[10px] px-2 py-0.5 rounded-md bg-slate-900/60 text-slate-400 font-mono">
+                        +{member.skills.length - 3}
+                      </span>
+                    )}
+                  </div>
                 </div>
               </div>
 
-              {/* Card Footer */}
-              <div className="pt-4 mt-4 border-t border-slate-800/80 flex items-center justify-between text-xs">
-                <span className="text-slate-500 font-mono text-[11px]">0{member.order} / 07</span>
-                <div className="flex items-center gap-2">
-                  {member.socials.email && (
+              {/* Card Footer: View Profile & Direct Contact Logos */}
+              <div className="pt-4 mt-5 border-t border-slate-800/80 flex items-center justify-between gap-2">
+                <button
+                  onClick={() => onSelectMember(member)}
+                  className="px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold flex items-center gap-1.5 shadow-md shadow-blue-600/30 transition-all hover:scale-105 active:scale-95"
+                >
+                  <span>View Full Profile</span>
+                  <ArrowUpRight className="w-3.5 h-3.5" />
+                </button>
+
+                {/* Direct Contact Logos */}
+                <div className="flex items-center gap-1.5">
+                  {member.socials.instagram && (
                     <a
-                      href={`mailto:${member.socials.email}`}
-                      onClick={(e) => e.stopPropagation()}
-                      className="p-1.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-400 hover:text-white hover:border-blue-500 transition-colors"
-                      title={`Email ${member.name} (${member.socials.email})`}
-                      aria-label="Email"
+                      href={member.socials.instagram}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-2 rounded-xl bg-slate-900 border border-slate-800 text-pink-400 hover:text-white hover:bg-pink-600 hover:border-pink-500 transition-colors flex items-center justify-center"
+                      title={`Instagram ${member.name}`}
                     >
-                      <Mail className="w-3 h-3 text-blue-400" />
+                      <InstagramIcon className="w-4 h-4" />
                     </a>
                   )}
+
                   {member.socials.whatsapp && (
                     <a
                       href={`https://wa.me/${member.socials.whatsapp}?text=Habari%20${encodeURIComponent(member.name)}!%20I%20would%20like%20to%20connect%20with%20you%20regarding%20a%20project%20at%20Siribrand.`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      onClick={(e) => e.stopPropagation()}
-                      className="px-2 py-0.5 rounded bg-emerald-950/80 border border-emerald-700/60 text-emerald-400 hover:bg-emerald-900/90 hover:text-white transition-colors text-[10px] font-mono font-bold flex items-center gap-1"
-                      title={`WhatsApp ${member.name}`}
+                      className="p-2 rounded-xl bg-slate-900 border border-slate-800 text-emerald-400 hover:text-white hover:bg-emerald-600 hover:border-emerald-500 transition-colors flex items-center justify-center"
+                      title="WhatsApp"
                     >
-                      <MessageSquare className="w-3 h-3" />
-                      <span>WhatsApp</span>
+                      <WhatsappIcon className="w-4 h-4" />
                     </a>
                   )}
-                  <span className="text-blue-400 font-semibold inline-flex items-center gap-1 group-hover:translate-x-0.5 transition-transform text-xs">
-                    Details <ArrowUpRight className="w-3.5 h-3.5" />
-                  </span>
+
+                  {member.socials.email && (
+                    <a
+                      href={`mailto:${member.socials.email}`}
+                      className="p-2 rounded-xl bg-slate-900 border border-slate-800 text-blue-400 hover:text-white hover:bg-blue-600 hover:border-blue-500 transition-colors flex items-center justify-center"
+                      title={`Email: ${member.socials.email}`}
+                    >
+                      <Mail className="w-4 h-4" />
+                    </a>
+                  )}
+
+                  {member.socials.phone && (
+                    <a
+                      href={`tel:${member.socials.phone}`}
+                      className="p-2 rounded-xl bg-slate-900 border border-slate-800 text-cyan-400 hover:text-white hover:bg-cyan-600 hover:border-cyan-500 transition-colors flex items-center justify-center"
+                      title="Call directly"
+                    >
+                      <Phone className="w-4 h-4" />
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
           ))}
         </div>
 
+        {/* Bottom CTA for Team Recruitment */}
+        <div className="mt-16 p-8 rounded-2xl bg-gradient-to-r from-blue-950/40 via-slate-900/60 to-slate-950 border border-blue-900/40 text-center space-y-4">
+          <h2 className="text-2xl sm:text-3xl font-bold text-white">
+            Want to Join the SiriBrand Team?
+          </h2>
+          <p className="text-xs sm:text-sm text-slate-300 max-w-xl mx-auto leading-relaxed">
+            We are always looking for exceptional software engineers, creative directors, photographers, and growth marketers to join our team in Tanzania.
+          </p>
+          <div className="pt-2">
+            <button
+              onClick={() => onOpenContact('Join SiriBrand Agency Team')}
+              className="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold uppercase tracking-wider transition-all shadow-lg shadow-blue-600/30"
+            >
+              Get In Touch With Leadership
+            </button>
+          </div>
+        </div>
 
       </div>
     </div>
