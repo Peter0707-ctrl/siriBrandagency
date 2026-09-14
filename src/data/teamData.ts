@@ -140,149 +140,54 @@ export const teamData: TeamMember[] = [
     order: 2
   },
   {
-    id: "creative-director",
-    name: "AMANI MWANGI",
-    role: "Creative Director & Lead Brand Strategist",
-    department: "Creative Direction & Brand Identity",
+    id: "chenlee-soja",
+    name: "CHENLEE SOJA MKUVASSA",
+    role: "Photographer & Editor | Visual Media Specialist",
+    department: "Photography, Cinematography & Visual Editing",
     category: "Creative",
-    tagline: "Shaping Timeless Visual Systems & Brand Stories",
-    bio: "Directing brand identity systems, typography, corporate guidelines, and multi-channel creative storytelling that command market recognition.",
-    extendedBio: "Amani oversees all visual assets produced at Siribrand. From vector logo architecture to luxury packaging and editorial design, he ensures brand consistency across every physical and digital medium.",
-    image: "",
+    tagline: "High-End Visual Production • Editorial Retouching & Cinematic Storytelling",
+    bio: "Chenlee Soja Mkuvassa is a creative photographer and professional visual editor at Siribrand Agency TZ, specializing in high-fashion studio shoots, commercial product photography, corporate portraits, and advanced digital editing.",
+    extendedBio: "Chenlee leads visual storytelling through the lens at Siribrand Agency TZ. With expert mastery in studio lighting, color theory, composition, and high-end post-production retouching, Chenlee produces striking visual content for corporate brands, lifestyle campaigns, executive portraits, and events across Tanzania and East Africa.",
+    leadershipVision: "Elevating African visual aesthetics and digital storytelling to global industry standards through precision photography, cinematic lighting, and cutting-edge digital editing.",
+    projects: [
+      {
+        name: "Studio & Commercial Shoots",
+        description: "High-end studio photography sessions for corporate executives, fashion campaigns, and commercial brands.",
+        tag: "Studio Photography"
+      },
+      {
+        name: "Event & Documentary Coverage",
+        description: "Live event media, corporate galas, and documentary photography capturing high-impact real-time moments.",
+        tag: "Visual Media"
+      },
+      {
+        name: "Post-Production & Color Grading",
+        description: "Master-level digital retouching, color grading, and creative compositing for editorial and digital publications.",
+        tag: "Digital Editing"
+      }
+    ],
+    image: "/clients/chenlee-soja.png",
     skills: [
-      "Art Direction",
-      "Brand Identity Systems",
-      "Editorial Design",
-      "Typography & Color Theory"
+      "Studio & Commercial Photography",
+      "Digital Photo Retouching & Editing",
+      "Cinematic Lighting & Composition",
+      "Color Grading & Post-Production",
+      "Visual Storytelling & Art Direction",
+      "Event & Executive Portraiture"
     ],
     technologies: [
-      "Adobe Illustrator",
-      "Photoshop",
-      "Figma",
-      "Cinema 4D",
-      "InDesign"
-    ],
-    socials: {
-      linkedin: "https://linkedin.com",
-      email: "siribrandagencytz@gmail.com"
-    },
-    featured: false,
-    order: 3
-  },
-  {
-    id: "head-of-media",
-    name: "KELVIN MTALII",
-    role: "Head of Media Production & Cinematography",
-    department: "Media & Film Production",
-    category: "Creative",
-    tagline: "Cinema-Grade Visual Storytelling for Screen & Stage",
-    bio: "Specializing in commercial cinematography, drone wildlife documentaries, 4K promotional films, and live multi-camera broadcast coverage across East Africa.",
-    extendedBio: "Kelvin brings over 8 years of cinema camera experience, directing high-impact commercial campaigns, safari documentaries, and corporate galas with broadcast-level color grading and sound design.",
-    image: "",
-    skills: [
-      "Cinema Direction & Lighting",
-      "Aerial Drone Cinematography",
-      "DaVinci Color Grading",
-      "Commercial Sound Design"
-    ],
-    technologies: [
-      "RED / Sony FX Cine Systems",
+      "Adobe Photoshop",
+      "Adobe Lightroom",
       "DaVinci Resolve Studio",
-      "Premiere Pro",
-      "After Effects"
+      "Capture One",
+      "Sony & Canon Cinema / Alpha Systems",
+      "Studio Strobe & Lighting Systems"
     ],
     socials: {
-      linkedin: "https://linkedin.com",
-      email: "siribrandagencytz@gmail.com"
+      email: "siribrandagencytz@gmail.com",
+      whatsapp: "255692590012"
     },
-    featured: false,
-    order: 4
-  },
-  {
-    id: "digital-marketing-lead",
-    name: "FATMA HASSAN",
-    role: "Head of Digital Marketing & Social Strategy",
-    department: "Growth & Performance Marketing",
-    category: "Operations",
-    tagline: "Data-Driven Audience Growth & Paid Media Scaling",
-    bio: "Driving audience acquisition, SEO, social media management, and high-converting paid ad funnels that deliver measurable ROI for ambitious brands.",
-    extendedBio: "Fatma orchestrates Siribrand's performance marketing engine, managing multi-million impression campaigns across Meta, Google, TikTok, and LinkedIn with granular conversion attribution.",
-    image: "",
-    skills: [
-      "Performance Ads (Meta & Google)",
-      "Social Media Editorial Strategy",
-      "Funnel & CRO Optimization",
-      "Audience Data Analytics"
-    ],
-    technologies: [
-      "Meta Ads Manager",
-      "Google Analytics 4",
-      "SEMrush",
-      "HubSpot"
-    ],
-    socials: {
-      linkedin: "https://linkedin.com",
-      email: "siribrandagencytz@gmail.com"
-    },
-    featured: false,
-    order: 5
-  },
-  {
-    id: "events-operations-lead",
-    name: "JOSEPHAT SHAYO",
-    role: "Head of Event Planning & Production Logistics",
-    department: "Experiential & Event Operations",
-    category: "Operations",
-    tagline: "Flawless Execution from Stage Design to Guest Flow",
-    bio: "Coordinating corporate conferences, summits, product launches, digital invitations, and stage branding with seamless precision.",
-    extendedBio: "Josephat leads on-ground event operations across Tanzania, managing venue logistics, audiovisual vendors, VIP protocol, and high-impact physical print staging.",
-    image: "",
-    skills: [
-      "Event Concept & Staging",
-      "Vendor & Venue Logistics",
-      "Digital Event Cards & RSVP",
-      "Large-Scale Print Production"
-    ],
-    technologies: [
-      "Event Logistics Software",
-      "Stage CAD Layouts",
-      "NFC Badging",
-      "Print Specs Management"
-    ],
-    socials: {
-      linkedin: "https://linkedin.com",
-      email: "siribrandagencytz@gmail.com"
-    },
-    featured: false,
-    order: 6
-  },
-  {
-    id: "tourism-client-relations",
-    name: "NEEMA KILIMBA",
-    role: "Tourism Marketing & Client Relations Lead",
-    department: "Hospitality & Strategic Partnerships",
-    category: "Operations",
-    tagline: "Connecting African Destinations with Global Travelers",
-    bio: "Managing tourism campaigns, safari operator branding, international traveler booking journeys, and key enterprise client accounts.",
-    extendedBio: "Neema brings specialized acumen in East African travel marketing, working with eco-lodges, tour operators, and destination boards to drive high-value international bookings.",
-    image: "",
-    skills: [
-      "Tourism Destination Marketing",
-      "Global Traveler Funnels",
-      "Key Account Management",
-      "Itinerary Web Systems"
-    ],
-    technologies: [
-      "Travel CRM Systems",
-      "Global PPC Targeting",
-      "Booking Portals",
-      "Client Retainer Governance"
-    ],
-    socials: {
-      linkedin: "https://linkedin.com",
-      email: "siribrandagencytz@gmail.com"
-    },
-    featured: false,
-    order: 7
+    featured: true,
+    order: 3
   }
 ];

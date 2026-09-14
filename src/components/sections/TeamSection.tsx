@@ -55,7 +55,11 @@ export const TeamSection: React.FC<TeamSectionProps> = ({ onSelectMember, onOpen
                         className="w-full h-full object-cover object-top"
                       />
                       <span className="absolute bottom-2 left-2 text-[10px] font-mono px-2 py-0.5 rounded bg-blue-600 text-white font-bold">
-                        {member.category === 'Executive' ? 'Executive Lead' : 'Lead AI & Web'}
+                        {member.category === 'Executive'
+                          ? 'Executive Lead'
+                          : member.id === 'peter-joseph'
+                          ? 'Lead AI & Web'
+                          : 'Photographer & Editor'}
                       </span>
                     </div>
                   </div>
@@ -114,7 +118,7 @@ export const TeamSection: React.FC<TeamSectionProps> = ({ onSelectMember, onOpen
                           target="_blank"
                           rel="noopener noreferrer"
                           className="p-2 rounded-lg bg-pink-950/60 border border-pink-700/60 text-pink-400 hover:text-white hover:bg-pink-900 transition-colors"
-                          title="Instagram @peterjoh_jim"
+                          title={`Instagram ${member.name}`}
                         >
                           <InstagramIcon className="w-3.5 h-3.5" />
                         </a>
@@ -150,39 +154,41 @@ export const TeamSection: React.FC<TeamSectionProps> = ({ onSelectMember, onOpen
         </div>
 
         {/* Additional Team Units */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {teamData
-            .filter((m) => !m.featured)
-            .map((member) => (
-              <div
-                key={member.id}
-                onClick={() => onSelectMember(member)}
-                className="agency-card p-5 cursor-pointer flex flex-col justify-between group"
-              >
-                <div className="space-y-2">
-                  <span className="text-xs font-mono text-blue-400 font-semibold">
-                    {member.department}
-                  </span>
-                  <h4 className="text-lg font-bold text-white group-hover:text-blue-400 transition-colors">
-                    {member.name}
-                  </h4>
-                  <p className="text-xs font-semibold text-slate-300">
-                    {member.role}
-                  </p>
-                  <p className="text-xs text-slate-400 leading-relaxed">
-                    {member.bio}
-                  </p>
-                </div>
+        {teamData.filter((m) => !m.featured).length > 0 && (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {teamData
+              .filter((m) => !m.featured)
+              .map((member) => (
+                <div
+                  key={member.id}
+                  onClick={() => onSelectMember(member)}
+                  className="agency-card p-5 cursor-pointer flex flex-col justify-between group"
+                >
+                  <div className="space-y-2">
+                    <span className="text-xs font-mono text-blue-400 font-semibold">
+                      {member.department}
+                    </span>
+                    <h4 className="text-lg font-bold text-white group-hover:text-blue-400 transition-colors">
+                      {member.name}
+                    </h4>
+                    <p className="text-xs font-semibold text-slate-300">
+                      {member.role}
+                    </p>
+                    <p className="text-xs text-slate-400 leading-relaxed">
+                      {member.bio}
+                    </p>
+                  </div>
 
-                <div className="pt-3 mt-3 border-t border-slate-800 flex items-center justify-between">
-                  <span className="text-xs text-slate-400">Siribrand Studio</span>
-                  <span className="text-xs text-blue-400 font-semibold inline-flex items-center gap-1">
-                    Details <ArrowUpRight className="w-3.5 h-3.5" />
-                  </span>
+                  <div className="pt-3 mt-3 border-t border-slate-800 flex items-center justify-between">
+                    <span className="text-xs text-slate-400">Siribrand Studio</span>
+                    <span className="text-xs text-blue-400 font-semibold inline-flex items-center gap-1">
+                      Details <ArrowUpRight className="w-3.5 h-3.5" />
+                    </span>
+                  </div>
                 </div>
-              </div>
-            ))}
-        </div>
+              ))}
+          </div>
+        )}
       </div>
     </section>
   );
