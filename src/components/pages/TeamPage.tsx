@@ -105,12 +105,8 @@ export const TeamPage: React.FC<TeamPageProps> = ({
                       }
                     }}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/20 to-transparent pointer-events-none" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/20 to-transparent pointer-events-none" />
 
-                  {/* Top Protocol Badge */}
-                  <span className="absolute top-3 right-3 text-[10px] font-mono px-2.5 py-0.5 rounded-md bg-slate-950/85 backdrop-blur-md text-blue-300 border border-blue-800/70 font-bold shadow-lg">
-                    Protocol 0{member.order}
-                  </span>
 
                   {/* Role Title Badge */}
                   <span className="absolute bottom-3 left-3 text-xs font-mono px-3 py-1 rounded-lg bg-blue-600 text-white font-bold leading-tight shadow-xl">

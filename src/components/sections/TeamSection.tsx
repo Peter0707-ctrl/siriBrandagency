@@ -94,12 +94,8 @@ export const TeamSection: React.FC<TeamSectionProps> = ({ onSelectMember, onOpen
                       }
                     }}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent pointer-events-none" />
-                  
-                  {/* Protocol Rank Tag */}
-                  <span className="absolute top-2.5 right-2.5 text-[9.5px] font-mono px-2 py-0.5 rounded bg-slate-950/80 backdrop-blur-md text-blue-300 border border-blue-800/60 font-semibold shadow">
-                    Protocol 0{member.order}
-                  </span>
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-transparent to-transparent pointer-events-none" />
+
 
                   {/* Role Title Badge */}
                   <span className="absolute bottom-2.5 left-2.5 text-[10px] font-mono px-2 py-0.5 rounded-md bg-blue-600 text-white font-bold leading-tight shadow-md">
