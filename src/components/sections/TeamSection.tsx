@@ -37,86 +37,91 @@ export const TeamSection: React.FC<TeamSectionProps> = ({ onSelectMember, onOpen
         </div>
 
         {/* Featured Key Profiles Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-5 mb-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 mb-6">
           {teamData
             .filter((m) => m.featured)
             .map((member) => (
               <div
                 key={member.id}
-                className="agency-card p-4 sm:p-5 border-blue-600/30 rounded-xl hover:border-blue-500/50 transition-all flex flex-col justify-between"
+                className="agency-card p-4 sm:p-5 border-blue-600/30 rounded-2xl hover:border-blue-500/60 transition-all flex flex-col justify-between group"
               >
-                <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 items-start">
-                  {/* Portrait */}
-                  <div className="relative w-24 h-24 sm:w-28 sm:h-28 rounded-xl overflow-hidden border border-blue-500/40 bg-slate-900 shrink-0 mx-auto sm:mx-0">
+                <div>
+                  {/* Large High-Resolution Portrait with Focused Face */}
+                  <div className="relative w-full h-72 sm:h-80 rounded-xl overflow-hidden border border-blue-500/40 bg-slate-900 mb-4 shadow-lg">
                     <img
                       src={member.image}
                       alt={member.name}
-                      className="w-full h-full object-cover object-top"
+                      className="w-full h-full object-cover object-[center_top] group-hover:scale-105 transition-transform duration-500"
+                      onError={(e) => {
+                        const target = e.currentTarget;
+                        if (target.src.includes('/clients/')) {
+                          target.src = target.src.replace('/clients/', '/');
+                        }
+                      }}
                     />
-                    <span className="absolute bottom-1.5 left-1.5 text-[9px] font-mono px-1.5 py-0.5 rounded bg-blue-600/90 text-white font-bold leading-tight">
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent pointer-events-none" />
+                    <span className="absolute bottom-2.5 left-2.5 text-[10px] font-mono px-2 py-0.5 rounded-md bg-blue-600 text-white font-bold leading-tight shadow-md">
                       {member.id === 'sweetbert-macha'
                         ? 'Founder & CEO'
                         : member.id === 'zamda-kalema'
-                        ? 'Finance Dir.'
+                        ? 'Finance Director'
                         : member.id === 'peter-joseph'
                         ? 'Lead Software'
                         : member.id === 'chenlee-soja'
-                        ? 'Photo & Edit'
+                        ? 'Photographer & Editor'
                         : member.id === 'nathan-kwilasa'
-                        ? 'Social Media'
-                        : 'Marketing Head'}
+                        ? 'Head of Social Media'
+                        : 'Head of Marketing'}
                     </span>
                   </div>
 
                   {/* Information */}
-                  <div className="space-y-1.5 flex-1 min-w-0">
+                  <div className="space-y-2">
                     <div className="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-blue-950/80 border border-blue-800/40 text-blue-400 text-[10px] font-mono font-semibold truncate max-w-full">
                       <Code2 className="w-3 h-3 shrink-0" />
                       <span className="truncate">{member.department}</span>
                     </div>
 
-                    <h3 className="text-base sm:text-lg font-bold text-white tracking-tight truncate">
+                    <h3 className="text-lg sm:text-xl font-bold text-white tracking-tight">
                       {member.name}
                     </h3>
 
-                    <p className="text-xs font-semibold text-blue-400 line-clamp-1">
+                    <p className="text-xs font-semibold text-blue-400">
                       {member.role}
                     </p>
 
                     {/* Exact Bio */}
-                    <p className="text-xs text-slate-300 leading-relaxed font-normal line-clamp-2">
+                    <p className="text-xs text-slate-300 leading-relaxed font-normal">
                       "{member.bio}"
                     </p>
 
                     {/* Tech Stack Pills (top 3) */}
-                    <div className="pt-1">
-                      <div className="flex flex-wrap gap-1">
-                        {member.skills.slice(0, 3).map((skill, i) => (
-                          <span
-                            key={i}
-                            className="text-[10px] px-2 py-0.5 rounded bg-slate-900/90 border border-slate-800 text-slate-300"
-                          >
-                            {skill}
-                          </span>
-                        ))}
-                        {member.skills.length > 3 && (
-                          <span className="text-[10px] px-1.5 py-0.5 rounded bg-slate-900/60 text-slate-400">
-                            +{member.skills.length - 3}
-                          </span>
-                        )}
-                      </div>
+                    <div className="pt-1 flex flex-wrap gap-1">
+                      {member.skills.slice(0, 3).map((skill, i) => (
+                        <span
+                          key={i}
+                          className="text-[10px] px-2 py-0.5 rounded bg-slate-900 border border-slate-800 text-slate-300 font-medium"
+                        >
+                          {skill}
+                        </span>
+                      ))}
+                      {member.skills.length > 3 && (
+                        <span className="text-[10px] px-1.5 py-0.5 rounded bg-slate-900/60 text-slate-400 font-mono">
+                          +{member.skills.length - 3}
+                        </span>
+                      )}
                     </div>
                   </div>
                 </div>
 
                 {/* Actions & Direct Contacts */}
-                <div className="pt-3 mt-3 border-t border-slate-800/80 flex flex-wrap items-center justify-between gap-2">
+                <div className="pt-3.5 mt-4 border-t border-slate-800/80 flex items-center justify-between gap-2">
                   <button
                     onClick={() => onSelectMember(member)}
-                    className="px-3 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold flex items-center gap-1.5 shadow-sm transition-colors"
+                    className="px-3.5 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-500 text-white text-xs font-semibold flex items-center gap-1.5 shadow-sm transition-colors"
                   >
                     <span>View Profile</span>
-                    <ArrowUpRight className="w-3 h-3" />
+                    <ArrowUpRight className="w-3.5 h-3.5" />
                   </button>
 
                   {/* Quick Direct Social Links */}
@@ -126,7 +131,7 @@ export const TeamSection: React.FC<TeamSectionProps> = ({ onSelectMember, onOpen
                         href={member.socials.instagram}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="p-1.5 rounded-lg bg-slate-900 border border-slate-800 text-pink-400 hover:text-white hover:bg-pink-600 hover:border-pink-500 transition-colors flex items-center justify-center"
+                        className="p-2 rounded-lg bg-slate-900 border border-slate-800 text-pink-400 hover:text-white hover:bg-pink-600 hover:border-pink-500 transition-colors flex items-center justify-center"
                         title={`Instagram ${member.name}`}
                       >
                         <InstagramIcon className="w-3.5 h-3.5" />
@@ -138,7 +143,7 @@ export const TeamSection: React.FC<TeamSectionProps> = ({ onSelectMember, onOpen
                         href={`https://wa.me/${member.socials.whatsapp}?text=Habari%20${encodeURIComponent(member.name)}!%20I%20would%20like%20to%20connect%20with%20you.`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="p-1.5 rounded-lg bg-slate-900 border border-slate-800 text-emerald-400 hover:text-white hover:bg-emerald-600 hover:border-emerald-500 transition-colors flex items-center justify-center"
+                        className="p-2 rounded-lg bg-slate-900 border border-slate-800 text-emerald-400 hover:text-white hover:bg-emerald-600 hover:border-emerald-500 transition-colors flex items-center justify-center"
                         title="WhatsApp"
                       >
                         <WhatsappIcon className="w-3.5 h-3.5" />
@@ -148,7 +153,7 @@ export const TeamSection: React.FC<TeamSectionProps> = ({ onSelectMember, onOpen
                     {member.socials.email && (
                       <a
                         href={`mailto:${member.socials.email}`}
-                        className="p-1.5 rounded-lg bg-slate-900 border border-slate-800 text-blue-400 hover:text-white hover:bg-blue-600 hover:border-blue-500 transition-colors flex items-center justify-center"
+                        className="p-2 rounded-lg bg-slate-900 border border-slate-800 text-blue-400 hover:text-white hover:bg-blue-600 hover:border-blue-500 transition-colors flex items-center justify-center"
                         title={`Email: ${member.socials.email}`}
                       >
                         <Mail className="w-3.5 h-3.5" />
@@ -158,7 +163,7 @@ export const TeamSection: React.FC<TeamSectionProps> = ({ onSelectMember, onOpen
                     {member.socials.phone && (
                       <a
                         href={`tel:${member.socials.phone}`}
-                        className="p-1.5 rounded-lg bg-slate-900 border border-slate-800 text-cyan-400 hover:text-white hover:bg-cyan-600 hover:border-cyan-500 transition-colors flex items-center justify-center"
+                        className="p-2 rounded-lg bg-slate-900 border border-slate-800 text-cyan-400 hover:text-white hover:bg-cyan-600 hover:border-cyan-500 transition-colors flex items-center justify-center"
                         title="Call directly"
                       >
                         <Phone className="w-3.5 h-3.5" />

@@ -41,13 +41,13 @@ export const TeamMemberModal: React.FC<TeamMemberModalProps> = ({
         <div className="p-6 sm:p-8 space-y-6 max-h-[80vh] overflow-y-auto custom-scrollbar">
           {/* Top Profile Card */}
           <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
-            <div className="relative w-28 h-28 sm:w-32 sm:h-32 rounded-2xl overflow-hidden border-2 border-blue-500/50 bg-slate-900 shadow-xl shrink-0">
+            <div className="relative w-36 h-44 sm:w-48 sm:h-56 rounded-2xl overflow-hidden border-2 border-blue-500/50 bg-slate-900 shadow-2xl shrink-0">
               {member.image ? (
                 <>
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-full object-cover object-top"
+                    className="w-full h-full object-cover object-[center_top]"
                     onError={(e) => {
                       const target = e.currentTarget;
                       if (target.src.includes('/clients/')) {
@@ -55,7 +55,7 @@ export const TeamMemberModal: React.FC<TeamMemberModalProps> = ({
                       }
                     }}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent pointer-events-none" />
                 </>
               ) : (
                 <div className="w-full h-full bg-gradient-to-br from-blue-950 via-slate-900 to-slate-950 flex flex-col items-center justify-center text-blue-400 font-mono font-bold border border-blue-800/40">
