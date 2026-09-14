@@ -238,25 +238,6 @@ export const TeamPage: React.FC<TeamPageProps> = ({
             </div>
           ))}
         </div>
-
-        {/* Bottom CTA for Team Recruitment */}
-        <div className="mt-16 p-8 rounded-2xl bg-gradient-to-r from-blue-950/40 via-slate-900/60 to-slate-950 border border-blue-900/40 text-center space-y-4">
-          <h2 className="text-2xl sm:text-3xl font-bold text-white">
-            Want to Join the SiriBrand Team?
-          </h2>
-          <p className="text-xs sm:text-sm text-slate-300 max-w-xl mx-auto leading-relaxed">
-            We are always looking for exceptional software engineers, creative directors, photographers, and growth marketers to join our team in Tanzania.
-          </p>
-          <div className="pt-2">
-            <button
-              onClick={() => onOpenContact('Join SiriBrand Agency Team')}
-              className="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold uppercase tracking-wider transition-all shadow-lg shadow-blue-600/30"
-            >
-              Get In Touch With Leadership
-            </button>
-          </div>
-        </div>
-
       </div>
     </div>
   );
