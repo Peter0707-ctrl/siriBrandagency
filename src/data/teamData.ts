@@ -85,7 +85,6 @@ export const teamData: TeamMember[] = [
     tagline: "Building High-Performance Web Applications, Systems Architecture & Digital Platforms",
     bio: "Architects scalable software applications, custom management systems, web ecosystems, and secure database infrastructures.",
     extendedBio: "Peter Joseph leads technology innovation and software engineering at Siribrand Agency TZ. He designs and deploys high-performance web applications, custom management portals, and digital tools that power seamless operations for modern enterprises.",
-    leadershipVision: "Leveraging rigorous software engineering to build reliable, high-performance digital platforms that solve real-world industry challenges.",
     projects: [
       {
         name: "Copetra Platform",
