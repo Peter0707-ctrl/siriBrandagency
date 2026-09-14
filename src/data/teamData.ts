@@ -33,10 +33,10 @@ export const teamData: TeamMember[] = [
   {
     id: "sweetbert-macha",
     name: "SWEETBERT MACHA",
-    role: "Founder & Chief Executive Officer (CEO)",
+    role: "Founder & Managing Director",
     department: "Executive Leadership & Corporate Governance",
     category: "Executive",
-    tagline: "Visionary Leadership • Corporate Strategy & Brand Governance",
+    tagline: "Visionary Leadership • Corporate Strategy & Managing Direction",
     bio: "Directs overall corporate vision, enterprise client partnerships, and strategic market expansion across East Africa.",
     extendedBio: "Sweetbert Macha steers corporate governance and creative business strategy at Siribrand Agency TZ, helping organizations scale market dominance through premium branding and digital innovation.",
     leadershipVision: "To establish Siribrand Agency as East Africa's leading benchmark for high-impact branding, media production, and digital solutions.",
@@ -52,7 +52,7 @@ export const teamData: TeamMember[] = [
         tag: "Commercial Expansion"
       }
     ],
-    image: "/clients/sweetbert-macha.png",
+    image: "/clients/sweetbert-macha.jpg",
     skills: [
       "Executive Brand Strategy",
       "Corporate Governance",

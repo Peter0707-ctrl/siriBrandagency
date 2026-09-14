@@ -115,7 +115,7 @@ export const TeamPage: React.FC<TeamPageProps> = ({
                   {/* Role Title Badge */}
                   <span className="absolute bottom-3 left-3 text-xs font-mono px-3 py-1 rounded-lg bg-blue-600 text-white font-bold leading-tight shadow-xl">
                     {member.id === 'sweetbert-macha'
-                      ? 'Founder & CEO'
+                      ? 'Founder & Managing Director'
                       : member.id === 'zamda-kalema'
                       ? 'Finance Director'
                       : member.id === 'peter-joseph'
