@@ -3,54 +3,36 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://siribrandagency.click/</loc>
-    <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://siribrandagency.click/assets/logo/siribrand-logo.png</image:loc>
-      <image:title>Siribrand Agency TZ Logo</image:title>
+      <image:title>Siribrand Agency TZ Official Logo</image:title>
     </image:image>
-  </url>
-  <url>
-    <loc>https://siribrandagency.click/#services</loc>
-    <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://siribrandagency.click/#work</loc>
-    <lastmod>2026-09-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://siribrandagency.click/#team</loc>
-    <lastmod>2026-09-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://siribrandagency.click/#about</loc>
-    <lastmod>2026-09-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://siribrandagency.click/#process</loc>
-    <lastmod>2026-09-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://siribrandagency.click/#why-us</loc>
-    <lastmod>2026-09-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://siribrandagency.click/#contact</loc>
-    <lastmod>2026-09-13</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://siribrandagency.click/clients/sweetbert-macha.png</image:loc>
+      <image:title>Sweetbert Macha - Founder and CEO Siribrand Agency TZ</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://siribrandagency.click/clients/peter-joseph.png</image:loc>
+      <image:title>Peter Joseph Msira - Computer Scientist, AI and Software Developer Siribrand Agency TZ</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://siribrandagency.click/clients/chenlee-soja.png</image:loc>
+      <image:title>Chenlee Soja Mkuvassa - Photographer and Editor Siribrand Agency TZ</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://siribrandagency.click/clients/nathan-kwilasa.jpg</image:loc>
+      <image:title>Nathan Kwilasa - Head of Social Media Management Siribrand Agency TZ</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://siribrandagency.click/clients/paulina-wambura.png</image:loc>
+      <image:title>Paulina Yohana Wambura - Marketing Head Siribrand Agency TZ</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://siribrandagency.click/clients/zamda-kalema.jpg</image:loc>
+      <image:title>Zamda Yusuph Kalema - Finance Director Siribrand Agency TZ</image:title>
+    </image:image>
   </url>
 </urlset>
