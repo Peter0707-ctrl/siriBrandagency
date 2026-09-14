@@ -53,11 +53,11 @@ export const TeamSection: React.FC<TeamSectionProps> = ({ onSelectMember, onOpen
         {/* Department Protocol Filter Pills */}
         <div className="flex items-center gap-2 overflow-x-auto pb-2 mb-6 no-scrollbar">
           {[
-            { id: 'All', label: 'All Departments (6)' },
+            { id: 'All', label: `All Departments (${teamData.length})` },
             { id: 'Executive', label: 'Executive & Finance' },
             { id: 'Technology', label: 'Technology & Engineering' },
             { id: 'Marketing', label: 'Marketing & Growth' },
-            { id: 'Creative', label: 'Visual & Photography' },
+            { id: 'Creative', label: 'Visual & Video Production' },
           ].map((tab) => (
             <button
               key={tab.id}
@@ -113,7 +113,9 @@ export const TeamSection: React.FC<TeamSectionProps> = ({ onSelectMember, onOpen
                       ? 'Head of Marketing'
                       : member.id === 'nathan-kwilasa'
                       ? 'Head of Social Media'
-                      : 'Head of Visual Media'}
+                      : member.id === 'chenlee-soja'
+                      ? 'Head of Visual Media'
+                      : 'Video Editor & Content Creator'}
                   </span>
                 </div>
 

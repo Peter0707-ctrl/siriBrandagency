@@ -344,5 +344,56 @@ export const teamData: TeamMember[] = [
     },
     featured: true,
     order: 6
+  },
+  {
+    id: "coly-noah",
+    name: "COLY NOAH",
+    role: "Video Editor & Content Creator",
+    department: "Video Production, Editing & Digital Content",
+    category: "Creative",
+    tagline: "Dynamic Video Editing • Creative Visuals & High-Retention Content",
+    bio: "Crafts high-engagement commercial video edits, motion visuals, brand reels, and dynamic social media content.",
+    extendedBio: "Coly Noah leads video post-production, dynamic motion editing, and creative storytelling at Siribrand Agency TZ. Specializing in high-retention video rhythms, cinematic color grading, and creative transitions, Coly turns raw brand footage into compelling video content that drives audience attention across digital platforms.",
+    leadershipVision: "Elevating African digital video storytelling through fast-paced, cinematic, and high-converting video editing standards.",
+    projects: [
+      {
+        name: "Commercial Video Edits & Reels",
+        description: "Editing fast-paced social media reels, commercial ads, and dynamic campaign videos.",
+        tag: "Video Post-Production"
+      },
+      {
+        name: "Brand Storytelling & Motion Cuts",
+        description: "Crafting impactful brand narratives with synchronized audio, visual effects, and typography overlays.",
+        tag: "Motion Editing"
+      },
+      {
+        name: "Multi-Platform Digital Content",
+        description: "Creating tailored short-form and long-form video content optimized for Instagram, TikTok, and YouTube.",
+        tag: "Content Creation"
+      }
+    ],
+    image: "/clients/coly-noah.jpg",
+    skills: [
+      "Commercial Video Editing",
+      "Dynamic Content Creation",
+      "Color Grading & Audio Sync",
+      "Motion Graphics & Titles",
+      "High-Retention Storytelling",
+      "Social Media Video Strategy"
+    ],
+    technologies: [
+      "Adobe Premiere Pro",
+      "DaVinci Resolve",
+      "Adobe After Effects",
+      "CapCut Pro & Motion Tools",
+      "Sound Design & Color Science",
+      "Cinema Camera Workflows"
+    ],
+    socials: {
+      email: "siribrandagencytz@gmail.com",
+      whatsapp: "255692590012"
+    },
+    featured: true,
+    order: 7
   }
 ];
