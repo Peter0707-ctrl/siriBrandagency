@@ -1,5 +1,5 @@
 import React from 'react';
-import { X, Code2, Cpu, ShieldCheck, Mail, Globe, ArrowRight, MessageSquare, User, Phone, GraduationCap, Sparkles, Rocket } from 'lucide-react';
+import { X, Code2, Cpu, ShieldCheck, Mail, Globe, ArrowRight, MessageSquare, User, Phone, Sparkles, Rocket } from 'lucide-react';
 import { LinkedinIcon, GithubIcon, InstagramIcon } from './SocialIcons';
 import { TeamMember } from '../../data/teamData';
 
@@ -81,27 +81,6 @@ export const TeamMemberModal: React.FC<TeamMemberModalProps> = ({
               </p>
             </div>
           </div>
-
-          {/* Academic Credentials / Education */}
-          {member.education && member.education.length > 0 && (
-            <div className="space-y-3 pt-4 border-t border-slate-800">
-              <h3 className="text-xs font-mono uppercase tracking-wider text-slate-400 flex items-center gap-2">
-                <GraduationCap className="w-4 h-4 text-emerald-400" />
-                Academic & Postgraduate Credentials
-              </h3>
-              <div className="space-y-2">
-                {member.education.map((edu, idx) => (
-                  <div
-                    key={idx}
-                    className="flex items-start gap-3 p-3 rounded-xl bg-slate-900/70 border border-slate-800 text-xs sm:text-sm text-slate-200"
-                  >
-                    <span className="w-2 h-2 rounded-full bg-emerald-400 mt-1.5 shrink-0" />
-                    <span>{edu}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
 
           {/* Bio Overview */}
           <div className="space-y-3 pt-4 border-t border-slate-800">

@@ -5,7 +5,6 @@ export interface TeamMember {
   department: string;
   category: 'Executive' | 'Technology' | 'Creative' | 'Operations';
   tagline: string;
-  education?: string[];
   bio: string;
   extendedBio?: string;
   leadershipVision?: string;
@@ -37,25 +36,37 @@ export const teamData: TeamMember[] = [
     role: "Founder & Chief Executive Officer (CEO)",
     department: "Executive Leadership & Brand Strategy",
     category: "Executive",
-    tagline: "Visionary Leadership • Strategic Brand Growth & Corporate Governance",
-    bio: "Leading Siribrand Agency TZ with a strategic vision to transform African enterprises and global brands into high-impact market leaders through creative storytelling, cutting-edge technology, and strategic brand execution.",
-    extendedBio: "Sweetbert Macha steers the overarching corporate direction, client partnerships, and strategic expansion of Siribrand Agency TZ. With deep expertise in brand governance, business development, and market dynamics in East Africa, he ensures every agency initiative creates tangible commercial value, executive prestige, and sustainable brand equity for our clients.",
-    leadershipVision: "To establish Siribrand Agency as East Africa's benchmark creative powerhouse, setting new standards in corporate branding, luxury visual production, and digital market dominance.",
+    tagline: "Visionary Leadership • Corporate Strategy & Brand Governance",
+    bio: "Directs overall corporate vision, enterprise client partnerships, and strategic market expansion across East Africa.",
+    extendedBio: "Sweetbert Macha steers corporate governance and creative business strategy at Siribrand Agency TZ, helping organizations scale market dominance through premium branding and digital innovation.",
+    leadershipVision: "To establish Siribrand Agency as East Africa's leading benchmark for high-impact branding, media production, and digital solutions.",
+    projects: [
+      {
+        name: "Enterprise Brand Architecture",
+        description: "Leading corporate repositioning and brand identity overhauls for top Tanzanian enterprises.",
+        tag: "Brand Governance"
+      },
+      {
+        name: "Strategic Market Alliances",
+        description: "Forming multi-sector commercial partnerships across government, tourism, and private sectors.",
+        tag: "Commercial Expansion"
+      }
+    ],
     image: "/clients/sweetbert-macha.png",
     skills: [
       "Executive Brand Strategy",
-      "Business Growth & Operations",
-      "Client Partnership Governance",
-      "Market Expansion & Vision",
+      "Corporate Governance",
+      "Client Partnership Strategy",
+      "Market Expansion",
       "Commercial Media Direction",
-      "Corporate Positioning"
+      "Enterprise Positioning"
     ],
     technologies: [
-      "Strategic Planning",
+      "Strategic Planning Systems",
       "Enterprise Management",
       "Financial Strategy",
       "Brand Architecture",
-      "Multi-Channel Campaign Strategy"
+      "Multi-Channel Campaigns"
     ],
     socials: {
       linkedin: "https://linkedin.com",
@@ -68,61 +79,58 @@ export const teamData: TeamMember[] = [
   {
     id: "peter-joseph",
     name: "PETER JOSEPH",
-    role: "Computer Scientist | Software Developer | AI & Machine Learning Specialist | IT Architect",
-    department: "Technology, Data Structures & Artificial Intelligence",
+    role: "Computer Scientist | Software Developer | AI & Machine Learning Specialist",
+    department: "Technology, Artificial Intelligence & Software Systems",
     category: "Technology",
-    tagline: "Pioneering Intelligent Systems, High-Performance Software & Machine Learning Innovation",
-    bio: "Peter Joseph is a Computer Scientist, Software Developer, AI enthusiast, and technology entrepreneur focused on building practical digital solutions through software engineering, artificial intelligence, automation, and emerging technologies.",
-    extendedBio: "Peter Joseph brings deep algorithmic rigor, machine learning architecture, and robust full-stack engineering to Siribrand Agency. As a technology entrepreneur, he designs and deploys scalable platforms combining software engineering, AI automation, and data-driven decision-making.",
-    leadershipVision: "Passionate about leveraging artificial intelligence and computational engineering to solve real-world problems, modernize digital services, and build scalable technology products that compete globally across African and international markets.",
+    tagline: "Pioneering Intelligent Systems, Software Architecture & Machine Learning",
+    bio: "Architects scalable software applications, AI automation pipelines, web ecosystems, and secure database infrastructures.",
+    extendedBio: "Peter Joseph leads technology innovation and software engineering at Siribrand Agency TZ. He designs and deploys high-performance web applications, algorithmic AI solutions, and automated business tools that drive digital transformation for modern enterprises.",
+    leadershipVision: "Leveraging cutting-edge software engineering and machine learning to build world-class digital platforms that solve real-world industry challenges.",
     projects: [
       {
         name: "Copetra AI",
-        description: "AI assistant project focused on intelligent interaction, learning, and practical digital assistance.",
+        description: "Intelligent digital assistant focused on automated business operations and real-time task learning.",
         tag: "Artificial Intelligence"
       },
       {
         name: "CopetraNovaX",
-        description: "AI/ML-powered trading technology project focused on algorithmic market analysis and automated trading signals.",
-        tag: "AI / Machine Learning & FinTech"
+        description: "Machine learning algorithms engineered for automated financial market data analysis.",
+        tag: "AI & FinTech"
       },
       {
         name: "Ajira Market",
-        description: "High-scale digital platform designed to connect talent with employment and HR-related opportunities.",
-        tag: "Enterprise Web Platform"
+        description: "Scalable recruitment ecosystem connecting modern African talent with verified opportunities.",
+        tag: "Enterprise Platform"
       },
       {
-        name: "Siribrand Agency",
-        description: "Modern digital ecosystem, web architecture, and branding platform engine.",
-        tag: "Digital Ecosystem"
+        name: "Siribrand Platform",
+        description: "High-performance digital ecosystem and interactive agency web application.",
+        tag: "Web Engineering"
       },
       {
-        name: "Secured Academic Result Portal",
-        description: "Academic management system designed to securely manage student results, attendance, grading algorithms, teachers, parents, and administrators.",
-        tag: "Cybersecurity & Academic Systems"
+        name: "Secured Academic Portal",
+        description: "Automated student record and academic grading system with secure authentication protocols.",
+        tag: "Secure Systems"
       }
     ],
     image: "/clients/peter-joseph.png",
     skills: [
       "Artificial Intelligence & Machine Learning",
-      "Data Structures & Algorithms",
-      "Software Development & Systems Architecture",
-      "Web Application Engineering",
-      "IT Support & Systems Maintenance",
-      "API & Payment Integration",
-      "Database Systems & Cloud Infrastructure",
-      "Cybersecurity & Secure Systems",
-      "Automation & Intelligent Applications"
+      "Data Structures & Systems Architecture",
+      "Full-Stack Web Development",
+      "API & Payment Gateways",
+      "Database & Cloud Infrastructure",
+      "Cybersecurity & Application Security",
+      "Process Automation"
     ],
     technologies: [
       "Python / AI & ML Frameworks",
-      "Data Structures & Algorithms",
       "React / Next.js / TypeScript",
-      "Node.js & Express / FastAPI",
+      "Node.js / Express / FastAPI",
       "PostgreSQL / MongoDB / Redis",
-      "Tailwind CSS & UI/UX Design",
+      "Tailwind CSS & UI/UX Systems",
       "RESTful APIs & GraphQL",
-      "Linux / Docker & Cloud Systems"
+      "Docker / Linux & Cloud Deployments"
     ],
     socials: {
       linkedin: "https://linkedin.com",
@@ -141,10 +149,10 @@ export const teamData: TeamMember[] = [
     role: "Photographer & Editor | Visual Media Specialist",
     department: "Photography, Cinematography & Visual Editing",
     category: "Creative",
-    tagline: "High-End Visual Production • Editorial Retouching & Cinematic Storytelling",
-    bio: "Chenlee Soja Mkuvassa is a creative photographer and professional visual editor at Siribrand Agency TZ, specializing in high-fashion studio shoots, commercial product photography, corporate portraits, and advanced digital editing.",
-    extendedBio: "Chenlee leads visual storytelling through the lens at Siribrand Agency TZ. With expert mastery in studio lighting, color theory, composition, and high-end post-production retouching, Chenlee produces striking visual content for corporate brands, lifestyle campaigns, executive portraits, and events across Tanzania and East Africa.",
-    leadershipVision: "Elevating African visual aesthetics and digital storytelling to global industry standards through precision photography, cinematic lighting, and cutting-edge digital editing.",
+    tagline: "High-End Visual Production • Studio Photography & Master Retouching",
+    bio: "Specializes in high-fashion studio shoots, commercial brand photography, corporate portraits, and advanced digital retouching.",
+    extendedBio: "Chenlee Soja Mkuvassa leads visual photography and digital post-production at Siribrand Agency TZ. With expert mastery in lighting, composition, and color science, Chenlee produces striking visual assets for corporate brands, lifestyle campaigns, and media productions across Tanzania.",
+    leadershipVision: "Setting new benchmarks in African commercial photography and cinematic visual art through precision lighting and master retouching.",
     projects: [
       {
         name: "Studio & Commercial Shoots",
@@ -153,31 +161,31 @@ export const teamData: TeamMember[] = [
       },
       {
         name: "Event & Documentary Coverage",
-        description: "Live event media, corporate galas, and documentary photography capturing high-impact real-time moments.",
+        description: "Live event media, corporate galas, and documentary photography capturing high-impact moments.",
         tag: "Visual Media"
       },
       {
         name: "Post-Production & Color Grading",
-        description: "Master-level digital retouching, color grading, and creative compositing for editorial and digital publications.",
+        description: "Master-level digital retouching, color grading, and creative compositing for digital publications.",
         tag: "Digital Editing"
       }
     ],
     image: "/clients/chenlee-soja.png",
     skills: [
       "Studio & Commercial Photography",
-      "Digital Photo Retouching & Editing",
+      "High-End Photo Retouching",
       "Cinematic Lighting & Composition",
       "Color Grading & Post-Production",
-      "Visual Storytelling & Art Direction",
-      "Event & Executive Portraiture"
+      "Visual Storytelling",
+      "Executive Portraiture"
     ],
     technologies: [
       "Adobe Photoshop",
       "Adobe Lightroom",
       "DaVinci Resolve Studio",
       "Capture One",
-      "Sony & Canon Cinema / Alpha Systems",
-      "Studio Strobe & Lighting Systems"
+      "Sony & Canon Cinema Systems",
+      "Studio Strobe Lighting"
     ],
     socials: {
       email: "siribrandagencytz@gmail.com",
@@ -190,12 +198,12 @@ export const teamData: TeamMember[] = [
     id: "nathan-kwilasa",
     name: "NATHAN KWILASA",
     role: "Head of Social Media Management & Marketing Strategist",
-    department: "Social Media Management & Digital Marketing Strategy",
+    department: "Social Media Management & Digital Growth",
     category: "Operations",
-    tagline: "Viral Brand Growth • Social Architecture & Multi-Channel Conversion Funnels",
-    bio: "Nathan Kwilasa is the Head of Social Media Management and Lead Marketing Strategist at Siribrand Agency TZ, specializing in viral audience growth, content strategy, brand community development, and performance marketing.",
-    extendedBio: "Nathan leads social media strategy, channel architecture, and growth marketing at Siribrand Agency TZ. By orchestrating data-backed social campaigns, high-engagement content calendars, and targeted conversion funnels, Nathan helps corporate enterprises, tourism operators, and lifestyle brands scale their online presence, build loyal customer communities, and maximize commercial conversions across Instagram, TikTok, Facebook, and LinkedIn.",
-    leadershipVision: "Dominating modern digital attention through strategic storytelling, high-retention content creation, and data-driven marketing systems that transform social audiences into loyal customers.",
+    tagline: "Viral Audience Growth • Social Architecture & Paid Ad Funnels",
+    bio: "Drives viral audience growth, content calendar strategy, social community engagement, and high-converting paid ad campaigns.",
+    extendedBio: "Nathan Kwilasa leads social media architecture and paid growth marketing at Siribrand Agency TZ. Combining high-retention content creation with data-driven paid advertising funnels, Nathan scales brand presence and customer conversions across Instagram, TikTok, Facebook, and LinkedIn.",
+    leadershipVision: "Maximizing digital attention and conversion rates by transforming social audiences into dedicated brand customers.",
     projects: [
       {
         name: "Omnichannel Brand Growth Campaigns",
@@ -217,17 +225,17 @@ export const teamData: TeamMember[] = [
     skills: [
       "Social Media Management & Growth",
       "Digital Marketing Strategy",
-      "Content Planning & Viral Strategy",
+      "Viral Content Strategy",
       "Paid Ads & Performance Marketing",
-      "Audience Segmentation & Analytics",
-      "Brand Community Building & PR"
+      "Audience Analytics & Segmentation",
+      "Community Building & Engagement"
     ],
     technologies: [
       "Meta Ads Manager",
       "Instagram & TikTok Algorithms",
       "Google Analytics & SEMrush",
-      "Canva & Creative Suites",
-      "Buffer / Hootsuite / Sprout",
+      "Creative Editing Suites",
+      "Social Media Scheduling Tools",
       "Conversion Rate Optimization (CRO)"
     ],
     socials: {
@@ -241,13 +249,13 @@ export const teamData: TeamMember[] = [
   {
     id: "paulina-wambura",
     name: "PAULINA YOHANA WAMBURA",
-    role: "Head of Marketing & Strategic Brand Partnerships",
-    department: "Marketing Strategy & Corporate Growth",
+    role: "Head of Marketing & Strategic Partnerships",
+    department: "Corporate Marketing Strategy & Brand Growth",
     category: "Operations",
-    tagline: "Corporate Marketing Leadership • Brand Expansion & Strategic Partnerships",
-    bio: "Paulina Yohana Wambura is the Marketing Head at Siribrand Agency TZ, leading high-impact corporate marketing strategies, brand partnerships, multi-channel growth campaigns, and market positioning across East Africa.",
-    extendedBio: "Paulina orchestrates market expansion, public relations, and high-level marketing campaigns at Siribrand Agency TZ. With rich expertise in commercial brand alignment, client relationship management, and experiential campaign execution, Paulina drives sustainable market growth, visibility, and premium brand value for corporate and enterprise clients.",
-    leadershipVision: "Positioning African brands as market benchmarks through high-impact marketing frameworks, innovative promotional campaigns, and strategic brand equity building.",
+    tagline: "Corporate Marketing Leadership • Brand Expansion & Strategic Alliances",
+    bio: "Leads corporate marketing strategy, enterprise client partnerships, public relations, and multi-channel promotional campaigns.",
+    extendedBio: "Paulina Yohana Wambura directs commercial marketing and corporate alliances at Siribrand Agency TZ. With expertise in brand positioning, public relations, and experiential marketing, Paulina expands market reach and commercial value for enterprise clients across East Africa.",
+    leadershipVision: "Positioning African enterprises as dominant market leaders through strategic marketing frameworks and high-value partnerships.",
     projects: [
       {
         name: "Enterprise Market Expansion",
@@ -294,10 +302,10 @@ export const teamData: TeamMember[] = [
     role: "Finance Director & Corporate Controller",
     department: "Corporate Finance, Accounting & Commercial Governance",
     category: "Executive",
-    tagline: "Financial Integrity • Capital Allocation & Commercial Fiscal Governance",
-    bio: "Zamda Yusuph Kalema is the Finance Director at Siribrand Agency TZ, directing agency financial planning, corporate budgeting, financial reporting, risk governance, and commercial fiscal operations.",
-    extendedBio: "Zamda oversees the fiscal architecture, financial compliance, and commercial capital allocation across Siribrand Agency TZ. With extensive background in corporate accounting, financial forecasting, agency project budgeting, and statutory tax governance in Tanzania, Zamda ensures high fiscal resilience, optimal cashflow management, and long-term financial stability for the agency and client accounts.",
-    leadershipVision: "Ensuring sustainable agency scale and investor confidence through disciplined fiscal stewardship, transparent financial reporting, and prudent capital allocation.",
+    tagline: "Fiscal Integrity • Capital Allocation & Commercial Governance",
+    bio: "Directs agency financial forecasting, corporate budgeting, statutory tax compliance, and commercial fiscal operations.",
+    extendedBio: "Zamda Yusuph Kalema oversees financial architecture, compliance, and capital allocation at Siribrand Agency TZ. With extensive expertise in corporate accounting, fiscal risk management, and statutory tax governance, Zamda ensures high financial resilience and steady growth for the agency.",
+    leadershipVision: "Ensuring sustainable agency scale and investor confidence through disciplined fiscal stewardship and transparent financial governance.",
     projects: [
       {
         name: "Corporate Budgeting & Financial Control",
@@ -325,7 +333,7 @@ export const teamData: TeamMember[] = [
       "Financial Analysis & Reporting"
     ],
     technologies: [
-      "QuickBooks / Tally ERP",
+      "Financial Accounting ERPs",
       "Financial Modeling Systems",
       "Excel Advanced Analytics",
       "Payroll & Statutory Systems",
