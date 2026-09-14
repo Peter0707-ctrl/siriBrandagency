@@ -27,71 +27,71 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialServicePr
   };
 
   return (
-    <section id="contact" className="py-20 bg-[#030712] border-b border-slate-800">
+    <section id="contact" className="py-14 sm:py-16 bg-[#030712] border-b border-slate-800">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Centered Minimalist Section Header */}
-        <div className="max-w-2xl mx-auto text-center mb-14 space-y-3">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight">
+        <div className="max-w-2xl mx-auto text-center mb-8 space-y-2">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight">
             LET'S WORK TOGETHER
           </h2>
-          <p className="text-sm sm:text-base text-slate-300 leading-relaxed font-normal">
+          <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal">
             Ready to scale your brand? Reach out directly via WhatsApp or send us a quick project brief below.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
           {/* Left Column: Direct Action & Contacts */}
-          <div className="lg:col-span-5 space-y-4">
+          <div className="lg:col-span-5 space-y-3">
             
             {/* Instant WhatsApp Priority Button */}
             <a
               href="https://wa.me/255692590012?text=Habari%20Siribrand%20Agency%20TZ!%20I%20would%20like%20to%20inquire%20about%20your%20services."
               target="_blank"
               rel="noopener noreferrer"
-              className="p-5 rounded-2xl bg-gradient-to-r from-emerald-950/70 to-emerald-900/40 border border-emerald-700/50 hover:border-emerald-500 text-white flex items-center justify-between group transition-all shadow-lg shadow-emerald-950/40"
+              className="p-3.5 sm:p-4 rounded-xl bg-gradient-to-r from-emerald-950/70 to-emerald-900/40 border border-emerald-700/50 hover:border-emerald-500 text-white flex items-center justify-between group transition-all shadow-md shadow-emerald-950/40"
             >
-              <div className="flex items-center gap-3.5">
-                <div className="w-11 h-11 rounded-xl bg-emerald-500 text-white flex items-center justify-center shadow-md shadow-emerald-600/30 shrink-0">
-                  <MessageSquare className="w-6 h-6" />
+              <div className="flex items-center gap-3">
+                <div className="w-9 h-9 rounded-lg bg-emerald-500 text-white flex items-center justify-center shadow-md shadow-emerald-600/30 shrink-0">
+                  <MessageSquare className="w-5 h-5" />
                 </div>
                 <div>
-                  <span className="text-[11px] font-mono text-emerald-400 font-semibold uppercase tracking-wider block">
+                  <span className="text-[10px] font-mono text-emerald-400 font-semibold uppercase tracking-wider block">
                     Fastest Response
                   </span>
-                  <span className="text-base font-bold text-white group-hover:text-emerald-300 transition-colors">
+                  <span className="text-sm font-bold text-white group-hover:text-emerald-300 transition-colors">
                     Chat on WhatsApp
                   </span>
                 </div>
               </div>
-              <ArrowUpRight className="w-5 h-5 text-emerald-400 group-hover:translate-x-1 transition-transform" />
+              <ArrowUpRight className="w-4 h-4 text-emerald-400 group-hover:translate-x-0.5 transition-transform" />
             </a>
 
             {/* Direct Cards */}
-            <div className="agency-card p-6 space-y-4">
+            <div className="agency-card p-4 space-y-2.5 rounded-xl">
               <a
                 href="tel:+255692590012"
-                className="flex items-center gap-3.5 p-3 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-slate-700 text-slate-300 hover:text-white transition-all group"
+                className="flex items-center gap-3 p-2.5 rounded-lg bg-slate-900/80 border border-slate-800 hover:border-slate-700 text-slate-300 hover:text-white transition-all group"
               >
-                <div className="w-9 h-9 rounded-lg bg-blue-950 border border-blue-800/60 text-blue-400 flex items-center justify-center shrink-0">
-                  <Phone className="w-4 h-4" />
+                <div className="w-8 h-8 rounded-lg bg-blue-950 border border-blue-800/60 text-blue-400 flex items-center justify-center shrink-0">
+                  <Phone className="w-3.5 h-3.5" />
                 </div>
                 <div>
-                  <span className="text-[10px] font-mono text-slate-400 uppercase block">Phone Call</span>
-                  <span className="text-sm font-semibold text-white group-hover:text-blue-400 transition-colors">+255 692 590 012</span>
+                  <span className="text-[9px] font-mono text-slate-400 uppercase block">Phone Call</span>
+                  <span className="text-xs font-semibold text-white group-hover:text-blue-400 transition-colors">+255 692 590 012</span>
                 </div>
               </a>
 
               <a
                 href="mailto:siribrandagencytz@gmail.com"
-                className="flex items-center gap-3.5 p-3 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-slate-700 text-slate-300 hover:text-white transition-all group"
+                className="flex items-center gap-3 p-2.5 rounded-lg bg-slate-900/80 border border-slate-800 hover:border-slate-700 text-slate-300 hover:text-white transition-all group"
               >
-                <div className="w-9 h-9 rounded-lg bg-blue-950 border border-blue-800/60 text-blue-400 flex items-center justify-center shrink-0">
-                  <Mail className="w-4 h-4" />
+                <div className="w-8 h-8 rounded-lg bg-blue-950 border border-blue-800/60 text-blue-400 flex items-center justify-center shrink-0">
+                  <Mail className="w-3.5 h-3.5" />
                 </div>
                 <div>
-                  <span className="text-[10px] font-mono text-blue-400 uppercase block font-semibold">@</span>
-                  <span className="text-sm font-semibold text-white group-hover:text-blue-400 transition-colors">siribrandagencytz@gmail.com</span>
+                  <span className="text-[9px] font-mono text-blue-400 uppercase block font-semibold">@</span>
+                  <span className="text-xs font-semibold text-white group-hover:text-blue-400 transition-colors truncate block">siribrandagencytz@gmail.com</span>
                 </div>
               </a>
 
@@ -109,41 +109,41 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialServicePr
 
           {/* Right Column: Clean Streamlined Form */}
           <div className="lg:col-span-7">
-            <div className="agency-card p-6 sm:p-8">
+            <div className="agency-card p-4 sm:p-6 rounded-xl">
               {submitted ? (
-                <div className="text-center py-10 space-y-4">
-                  <div className="w-14 h-14 rounded-full bg-emerald-500/20 text-emerald-400 mx-auto flex items-center justify-center">
-                    <CheckCircle2 className="w-8 h-8" />
+                <div className="text-center py-6 space-y-3">
+                  <div className="w-10 h-10 rounded-full bg-emerald-500/20 text-emerald-400 mx-auto flex items-center justify-center">
+                    <CheckCircle2 className="w-6 h-6" />
                   </div>
-                  <h3 className="text-2xl font-bold text-white">
+                  <h3 className="text-lg font-bold text-white">
                     Message Received!
                   </h3>
-                  <p className="text-sm text-slate-300 max-w-sm mx-auto">
+                  <p className="text-xs text-slate-300 max-w-sm mx-auto">
                     Thank you, <span className="text-white font-semibold">{formData.name}</span>. Our team will get back to you shortly.
                   </p>
-                  <div className="pt-2 flex flex-wrap justify-center gap-3">
+                  <div className="pt-2 flex flex-wrap justify-center gap-2.5">
                     <a
                       href={getWhatsAppLink()}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold flex items-center gap-1.5 transition-colors"
+                      className="px-4 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold flex items-center gap-1.5 transition-colors"
                     >
-                      <MessageSquare className="w-4 h-4" />
+                      <MessageSquare className="w-3.5 h-3.5" />
                       <span>Send via WhatsApp</span>
                     </a>
                     <button
                       onClick={() => setSubmitted(false)}
-                      className="px-5 py-2.5 rounded-xl bg-slate-900 border border-slate-800 text-slate-300 text-xs font-semibold hover:text-white"
+                      className="px-4 py-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 text-xs font-semibold hover:text-white"
                     >
                       Send Another
                     </button>
                   </div>
                 </div>
               ) : (
-                <form onSubmit={handleSubmit} className="space-y-4 text-left">
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <form onSubmit={handleSubmit} className="space-y-3 text-left">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     <div>
-                      <label className="block text-xs font-semibold text-slate-300 mb-1.5">
+                      <label className="block text-[11px] font-semibold text-slate-300 mb-1">
                         Your Name *
                       </label>
                       <input
@@ -152,12 +152,12 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialServicePr
                         placeholder="e.g. Baraka Juma"
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className="w-full px-3.5 py-2.5 rounded-xl bg-slate-900/90 border border-slate-800 text-white text-sm focus:outline-none focus:border-blue-500 transition-colors"
+                        className="w-full px-3 py-2 rounded-lg bg-slate-900/90 border border-slate-800 text-white text-xs focus:outline-none focus:border-blue-500 transition-colors"
                       />
                     </div>
 
                     <div>
-                      <label className="block text-xs font-semibold text-slate-300 mb-1.5">
+                      <label className="block text-[11px] font-semibold text-slate-300 mb-1">
                         Phone / WhatsApp *
                       </label>
                       <input
@@ -166,7 +166,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ initialServicePr
                         placeholder="+255 7XX XXX XXX"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        className="w-full px-3.5 py-2.5 rounded-xl bg-slate-900/90 border border-slate-800 text-white text-sm focus:outline-none focus:border-blue-500 transition-colors"
+                        className="w-full px-3 py-2 rounded-lg bg-slate-900/90 border border-slate-800 text-white text-xs focus:outline-none focus:border-blue-500 transition-colors"
                       />
                     </div>
                   </div>

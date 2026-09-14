@@ -16,37 +16,37 @@ export const TestimonialsSection: React.FC = () => {
   const activeTestimonial = testimonialsData[currentIndex];
 
   return (
-    <section className="relative py-20 bg-[#030712] text-slate-100 overflow-hidden border-t border-slate-800">
+    <section className="relative py-14 sm:py-16 bg-[#030712] text-slate-100 overflow-hidden border-t border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12 space-y-2">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-blue-950/80 border border-blue-800/60 text-blue-400 text-xs font-semibold">
+        <div className="text-center max-w-3xl mx-auto mb-8 space-y-2">
+          <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md bg-blue-950/80 border border-blue-800/60 text-blue-400 text-xs font-semibold">
             <Quote className="w-3.5 h-3.5" />
             <span>Client Feedback & Reviews</span>
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-white tracking-tight">
             WHAT OUR CLIENTS SAY
           </h2>
-          <p className="text-slate-400 text-sm">
+          <p className="text-slate-400 text-xs sm:text-sm">
             Trusted by founders, executives, and organizations across Tanzania and East Africa.
           </p>
         </div>
 
         {/* Testimonial Spotlight Deck */}
-        <div className="max-w-4xl mx-auto">
-          <div className="p-8 sm:p-14 rounded-3xl bg-glass-card border border-slate-700/60 shadow-2xl relative overflow-hidden transition-all duration-500">
+        <div className="max-w-3xl mx-auto">
+          <div className="p-5 sm:p-8 rounded-2xl bg-glass-card border border-slate-700/60 shadow-xl relative overflow-hidden transition-all duration-500">
             {/* Large Quote Mark Watermark */}
-            <Quote className="absolute top-6 right-8 w-24 h-24 text-blue-500/10 pointer-events-none" />
+            <Quote className="absolute top-4 right-6 w-16 h-16 text-blue-500/10 pointer-events-none" />
 
-            <div className="space-y-8 relative z-10">
+            <div className="space-y-5 relative z-10">
               {/* Project Type Badge */}
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-blue-950/60 text-blue-400 border border-blue-800/40 text-xs font-mono">
-                <CheckCircle2 className="w-3.5 h-3.5" />
+              <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md bg-blue-950/60 text-blue-400 border border-blue-800/40 text-[11px] font-mono">
+                <CheckCircle2 className="w-3 h-3" />
                 <span>Verified Engagement • {activeTestimonial.projectType}</span>
               </div>
 
               {/* Exact Quote text */}
-              <p className="text-xl sm:text-3xl font-syne font-medium text-white leading-relaxed tracking-tight">
+              <p className="text-base sm:text-xl font-syne font-medium text-white leading-relaxed tracking-tight">
                 "{activeTestimonial.quote}"
               </p>
 

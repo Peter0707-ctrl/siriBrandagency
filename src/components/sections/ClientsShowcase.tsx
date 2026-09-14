@@ -10,14 +10,14 @@ export const ClientsShowcase: React.FC<ClientsShowcaseProps> = ({ onOpenContact 
   const floatStyles = ['float-card', 'float-card-delayed', 'float-card-slow', 'float-card', 'float-card-delayed'];
 
   return (
-    <section id="clients" className="py-20 bg-[#02050e] border-b border-slate-800/80 relative overflow-hidden">
+    <section id="clients" className="py-14 sm:py-16 bg-[#02050e] border-b border-slate-800/80 relative overflow-hidden">
       {/* Background ambient lighting */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-blue-600/5 blur-[120px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12 space-y-3">
+        <div className="text-center max-w-3xl mx-auto mb-8 space-y-2">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-950/80 border border-blue-800/60 text-blue-400 text-xs font-semibold">
             <ShieldCheck className="w-3.5 h-3.5 text-blue-400" />
             <span>Trusted Partnerships & Clients</span>
@@ -33,15 +33,15 @@ export const ClientsShowcase: React.FC<ClientsShowcaseProps> = ({ onOpenContact 
         </div>
 
         {/* 7 Real Clients & Products Logo Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3.5 sm:gap-4">
           {clientPartnersList.map((client, index) => {
             const floatAnim = floatStyles[index % floatStyles.length];
             return (
               <div
                 key={client.id}
-                className={`agency-card ${floatAnim} p-5 flex flex-col justify-between group hover:border-blue-500/80 hover:bg-slate-900/95 transition-all text-left relative overflow-hidden`}
+                className={`agency-card ${floatAnim} p-3.5 sm:p-4 rounded-xl flex flex-col justify-between group hover:border-blue-500/80 hover:bg-slate-900/95 transition-all text-left relative overflow-hidden`}
               >
-                <div className="space-y-4">
+                <div className="space-y-3">
                   {/* Top Bar: Tag & Verified Badge */}
                   <div className="flex items-center justify-between gap-1 text-[10px] font-mono">
                     <span className="px-2 py-0.5 rounded bg-blue-950/90 text-blue-400 border border-blue-800/60 font-semibold uppercase tracking-wider">
@@ -53,11 +53,11 @@ export const ClientsShowcase: React.FC<ClientsShowcaseProps> = ({ onOpenContact 
                   </div>
 
                   {/* High-Impact Logo Display Box */}
-                  <div className={`w-full h-28 rounded-xl ${client.bgStyle || 'bg-white p-3'} border border-slate-700/60 flex items-center justify-center group-hover:border-blue-500/50 group-hover:shadow-lg group-hover:shadow-blue-500/10 transition-all overflow-hidden relative`}>
+                  <div className={`w-full h-20 sm:h-24 rounded-lg ${client.bgStyle || 'bg-white p-2.5'} border border-slate-700/60 flex items-center justify-center group-hover:border-blue-500/50 group-hover:shadow-lg group-hover:shadow-blue-500/10 transition-all overflow-hidden relative`}>
                     <img
                       src={client.logo}
                       alt={client.name}
-                      className="max-h-full max-w-full object-contain filter contrast-105 group-hover:scale-105 transition-transform duration-300 rounded-lg"
+                      className="max-h-full max-w-full object-contain filter contrast-105 group-hover:scale-105 transition-transform duration-300 rounded-md"
                       loading="lazy"
                     />
                   </div>

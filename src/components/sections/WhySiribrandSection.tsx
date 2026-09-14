@@ -14,10 +14,10 @@ export const WhySiribrandSection: React.FC = () => {
   const floatStyles = ['float-card', 'float-card-delayed', 'float-card-slow'];
 
   return (
-    <section id="why-us" className="py-16 bg-[#040814] border-b border-slate-800">
+    <section id="why-us" className="py-14 bg-[#040814] border-b border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-10 space-y-2">
+        <div className="text-center max-w-2xl mx-auto mb-8 space-y-2">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-md bg-blue-950/80 border border-blue-800/60 text-blue-400 text-xs font-semibold">
             <ShieldCheck className="w-3.5 h-3.5" />
             <span>Why Work With Us</span>
@@ -31,13 +31,13 @@ export const WhySiribrandSection: React.FC = () => {
         </div>
 
         {/* 5 Distinct Direct Feature Cards - Compact & Floating */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5 sm:gap-4">
           {whyUsData.map((item, index) => {
             const floatAnim = floatStyles[index % 3];
             return (
               <div
                 key={item.id}
-                className={`agency-card ${floatAnim} p-4 sm:p-5 flex flex-col justify-between`}
+                className={`agency-card ${floatAnim} p-3.5 sm:p-4 rounded-xl flex flex-col justify-between`}
               >
                 <div>
                   <div className="flex items-center justify-between mb-3">

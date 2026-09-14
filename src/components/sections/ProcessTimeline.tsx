@@ -6,10 +6,10 @@ export const ProcessTimeline: React.FC = () => {
   const floatStyles = ['float-card', 'float-card-delayed', 'float-card-slow', 'float-card', 'float-card-delayed'];
 
   return (
-    <section id="process" className="py-16 bg-[#040814] border-b border-slate-800">
+    <section id="process" className="py-14 bg-[#040814] border-b border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-2xl mx-auto mb-10 space-y-2">
+        <div className="text-center max-w-2xl mx-auto mb-8 space-y-2">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight">
             FROM IDEA TO IMPACT
           </h2>
@@ -19,13 +19,13 @@ export const ProcessTimeline: React.FC = () => {
         </div>
 
         {/* Compact & Floating 5-Step Process Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3.5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-3.5">
           {processSteps.map((step, index) => {
             const floatAnim = floatStyles[index % floatStyles.length];
             return (
               <div
                 key={step.step}
-                className={`agency-card ${floatAnim} p-3.5 sm:p-4 flex flex-col justify-between`}
+                className={`agency-card ${floatAnim} p-3 sm:p-3.5 rounded-xl flex flex-col justify-between`}
               >
                 <div>
                   <div className="flex items-center justify-between mb-2">
