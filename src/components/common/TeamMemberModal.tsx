@@ -1,5 +1,5 @@
 import React from 'react';
-import { X, Code2, Cpu, ShieldCheck, Mail, Globe, ArrowRight, MessageSquare, User, Phone, Sparkles, Rocket } from 'lucide-react';
+import { X, Code2, Cpu, ShieldCheck, Mail, Globe, ArrowRight, MessageSquare, User, Phone, Compass, Layers } from 'lucide-react';
 import { LinkedinIcon, GithubIcon, InstagramIcon } from './SocialIcons';
 import { TeamMember } from '../../data/teamData';
 
@@ -23,30 +23,31 @@ export const TeamMemberModal: React.FC<TeamMemberModalProps> = ({
       <div className="relative w-full max-w-3xl bg-[#0b0f19] border border-slate-700/60 rounded-2xl shadow-2xl overflow-hidden z-10 my-auto">
         {/* Header */}
         <div className="flex items-center justify-between px-6 py-4 border-b border-slate-800 bg-slate-900/50">
-          <span className="text-xs font-mono uppercase tracking-widest text-blue-400 flex items-center gap-2">
-            <Cpu className="w-4 h-4 text-blue-400" />
-            {member.department}
-          </span>
+          <div className="flex items-center gap-2">
+            <span className="w-2.5 h-2.5 rounded-full bg-blue-500 animate-pulse" />
+            <span className="text-xs font-mono font-bold text-slate-300 uppercase tracking-wider">
+              {member.category} • Professional Profile
+            </span>
+          </div>
           <button
             onClick={onClose}
-            className="p-2 rounded-full text-slate-400 hover:text-white hover:bg-slate-800 transition-colors"
-            aria-label="Close modal"
+            className="p-1.5 rounded-lg bg-slate-800 text-slate-400 hover:text-white hover:bg-slate-700 transition-colors"
           >
             <X className="w-5 h-5" />
           </button>
         </div>
 
-        {/* Content */}
-        <div className="p-6 md:p-8 max-h-[80vh] overflow-y-auto space-y-6">
+        {/* Modal Body */}
+        <div className="p-6 sm:p-8 space-y-6 max-h-[80vh] overflow-y-auto custom-scrollbar">
           {/* Top Profile Card */}
           <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
-            <div className="relative w-28 h-28 sm:w-36 sm:h-36 rounded-2xl overflow-hidden border-2 border-blue-500/40 shadow-xl shrink-0 bg-slate-900 flex items-center justify-center">
+            <div className="relative w-28 h-28 sm:w-32 sm:h-32 rounded-2xl overflow-hidden border-2 border-blue-500/50 bg-slate-900 shadow-xl shrink-0">
               {member.image ? (
                 <>
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-top"
                     onError={(e) => {
                       const target = e.currentTarget;
                       if (target.src.includes('/clients/')) {
@@ -101,7 +102,7 @@ export const TeamMemberModal: React.FC<TeamMemberModalProps> = ({
           {member.leadershipVision && (
             <div className="space-y-2 pt-4 border-t border-slate-800">
               <h3 className="text-xs font-mono uppercase tracking-wider text-slate-400 flex items-center gap-2">
-                <Sparkles className="w-4 h-4 text-amber-400" />
+                <Compass className="w-4 h-4 text-amber-400" />
                 Leadership & Vision
               </h3>
               <div className="p-3.5 rounded-xl bg-amber-950/20 border border-amber-800/40 text-xs sm:text-sm text-amber-200/90 leading-relaxed">
@@ -114,7 +115,7 @@ export const TeamMemberModal: React.FC<TeamMemberModalProps> = ({
           {member.projects && member.projects.length > 0 && (
             <div className="space-y-3 pt-4 border-t border-slate-800">
               <h3 className="text-xs font-mono uppercase tracking-wider text-slate-400 flex items-center gap-2">
-                <Rocket className="w-4 h-4 text-cyan-400" />
+                <Layers className="w-4 h-4 text-cyan-400" />
                 Selected Key Projects & Digital Platforms
               </h3>
               <div className="grid grid-cols-1 gap-2.5">

@@ -59,7 +59,7 @@ export const TeamSection: React.FC<TeamSectionProps> = ({ onSelectMember, onOpen
                         : member.id === 'zamda-kalema'
                         ? 'Finance Dir.'
                         : member.id === 'peter-joseph'
-                        ? 'Lead AI & Web'
+                        ? 'Lead Software'
                         : member.id === 'chenlee-soja'
                         ? 'Photo & Edit'
                         : member.id === 'nathan-kwilasa'
@@ -71,7 +71,7 @@ export const TeamSection: React.FC<TeamSectionProps> = ({ onSelectMember, onOpen
                   {/* Information */}
                   <div className="space-y-1.5 flex-1 min-w-0">
                     <div className="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-blue-950/80 border border-blue-800/40 text-blue-400 text-[10px] font-mono font-semibold truncate max-w-full">
-                      <Cpu className="w-3 h-3 shrink-0" />
+                      <Code2 className="w-3 h-3 shrink-0" />
                       <span className="truncate">{member.department}</span>
                     </div>
 

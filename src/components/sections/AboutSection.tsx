@@ -86,7 +86,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenContact }) => 
               </div>
               <div className="p-2.5 rounded-xl bg-slate-900 border border-slate-800">
                 <span className="text-base font-bold text-emerald-400 block">Technology</span>
-                <span className="text-slate-400 text-[10px]">Fast Web & AI Systems</span>
+                <span className="text-slate-400 text-[10px]">Fast Web & Software Systems</span>
               </div>
               <div className="p-2.5 rounded-xl bg-slate-900 border border-slate-800">
                 <span className="text-base font-bold text-cyan-400 block">Results</span>

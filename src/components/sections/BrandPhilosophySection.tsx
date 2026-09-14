@@ -19,7 +19,7 @@ const philosophyPillars = [
   },
   {
     word: 'TECHNOLOGY',
-    desc: 'Leveraging digital platforms, AI, and modern web architecture.',
+    desc: 'Leveraging digital platforms, modern web architecture, and systems.',
     icon: <Cpu className="w-5 h-5 text-emerald-400" />
   },
   {

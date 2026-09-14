@@ -88,7 +88,7 @@ const capabilities: TypewriterPhrase[] = [
     prefix: "We Engineer High-End",
     typed: "POS, Web & Mobile Apps.",
     title: 'POS Systems, Web & App Development',
-    desc: 'Custom Point of Sale (POS) management systems, ultra-fast business websites, iOS/Android mobile applications, and AI integrations.',
+    desc: 'Custom Point of Sale (POS) management systems, ultra-fast business websites, iOS/Android mobile applications, and modern database systems.',
     image: '/clients/copetra-ai.jpg',
     slides: [
       '/clients/copetra-ai.jpg',

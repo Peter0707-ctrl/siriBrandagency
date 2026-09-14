@@ -102,12 +102,12 @@ export const clientPartnersList = [
     verified: true
   },
   {
-    id: "copetra-ai",
-    name: "Copetra AI",
-    shortName: "PJ Copetranova AI Engine",
-    category: "Artificial Intelligence & Academic Technology",
-    tag: "AI & Tech Product",
-    description: "Next-generation academic AI engine, intelligent mathematics & software development solver, progressive web platform, and modern interactive UI/UX architecture.",
+    id: "copetra-platform",
+    name: "Copetra Platform",
+    shortName: "PJ Copetranova System",
+    category: "Academic & Systems Software",
+    tag: "Software Platform",
+    description: "Advanced computational system, educational problem solver, progressive web platform, and modern interactive UI/UX architecture.",
     logo: "/clients/copetra-ai.png",
     bgStyle: "bg-slate-950 p-1",
     link: "https://miraculous-forgiveness-production-10d4.up.railway.app/",

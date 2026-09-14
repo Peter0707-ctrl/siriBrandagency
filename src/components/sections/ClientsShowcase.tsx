@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckCircle2, ArrowUpRight, ShieldCheck, Sparkles } from 'lucide-react';
+import { CheckCircle2, ArrowUpRight, ShieldCheck } from 'lucide-react';
 import { clientPartnersList } from '../../data/portfolioData';
 
 interface ClientsShowcaseProps {
@@ -89,7 +89,7 @@ export const ClientsShowcase: React.FC<ClientsShowcaseProps> = ({ onOpenContact 
                 {/* Card Footer */}
                 <div className="pt-3 mt-4 border-t border-slate-800/80 flex items-center justify-between text-[11px]">
                   <span className="text-emerald-400 font-semibold flex items-center gap-1">
-                    Verified {client.id === 'copetra-ai' ? 'Product' : client.id === 'ajiramarket' ? 'Co-Built' : 'Client'}
+                    Verified {client.id === 'copetra-platform' ? 'Platform' : client.id === 'ajiramarket' ? 'Co-Built' : 'Client'}
                   </span>
                   {client.link ? (
                     <a
@@ -117,9 +117,9 @@ export const ClientsShowcase: React.FC<ClientsShowcaseProps> = ({ onOpenContact 
         </div>
 
         {/* Quick Logo Ticker / Trust Strip */}
-        <div className="mt-12 p-4 rounded-2xl bg-slate-900/40 border border-slate-800/70 flex flex-wrap items-center justify-between gap-4">
+        <div className="mt-8 p-3.5 sm:p-4 rounded-xl bg-slate-900/40 border border-slate-800/70 flex flex-wrap items-center justify-between gap-3">
           <div className="flex items-center gap-2 text-xs font-mono text-slate-400">
-            <Sparkles className="w-4 h-4 text-blue-400" />
+            <ShieldCheck className="w-4 h-4 text-blue-400" />
             <span>Proven Track Record Across Diplomatic, Academic, Tourism & Commercial Sectors</span>
           </div>
 

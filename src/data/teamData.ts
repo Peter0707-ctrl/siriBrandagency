@@ -79,23 +79,23 @@ export const teamData: TeamMember[] = [
   {
     id: "peter-joseph",
     name: "PETER JOSEPH",
-    role: "Computer Scientist | Software Developer | AI & Machine Learning Specialist",
-    department: "Technology, Artificial Intelligence & Software Systems",
+    role: "Computer Scientist & Full-Stack Software Developer",
+    department: "Technology & Software Engineering",
     category: "Technology",
-    tagline: "Pioneering Intelligent Systems, Software Architecture & Machine Learning",
-    bio: "Architects scalable software applications, AI automation pipelines, web ecosystems, and secure database infrastructures.",
-    extendedBio: "Peter Joseph leads technology innovation and software engineering at Siribrand Agency TZ. He designs and deploys high-performance web applications, algorithmic AI solutions, and automated business tools that drive digital transformation for modern enterprises.",
-    leadershipVision: "Leveraging cutting-edge software engineering and machine learning to build world-class digital platforms that solve real-world industry challenges.",
+    tagline: "Building High-Performance Web Applications, Systems Architecture & Digital Platforms",
+    bio: "Architects scalable software applications, custom management systems, web ecosystems, and secure database infrastructures.",
+    extendedBio: "Peter Joseph leads technology innovation and software engineering at Siribrand Agency TZ. He designs and deploys high-performance web applications, custom management portals, and digital tools that power seamless operations for modern enterprises.",
+    leadershipVision: "Leveraging rigorous software engineering to build reliable, high-performance digital platforms that solve real-world industry challenges.",
     projects: [
       {
-        name: "Copetra AI",
-        description: "Intelligent digital assistant focused on automated business operations and real-time task learning.",
-        tag: "Artificial Intelligence"
+        name: "Copetra Platform",
+        description: "Enterprise management system focused on automated business operations and task workflows.",
+        tag: "Software Systems"
       },
       {
         name: "CopetraNovaX",
-        description: "Machine learning algorithms engineered for automated financial market data analysis.",
-        tag: "AI & FinTech"
+        description: "Analytical computational platform engineered for market data visualization.",
+        tag: "FinTech Platform"
       },
       {
         name: "Ajira Market",
@@ -115,8 +115,8 @@ export const teamData: TeamMember[] = [
     ],
     image: "/clients/peter-joseph.png",
     skills: [
-      "Artificial Intelligence & Machine Learning",
-      "Data Structures & Systems Architecture",
+      "Software Systems Architecture",
+      "Data Structures & Algorithm Design",
       "Full-Stack Web Development",
       "API & Payment Gateways",
       "Database & Cloud Infrastructure",
@@ -124,7 +124,7 @@ export const teamData: TeamMember[] = [
       "Process Automation"
     ],
     technologies: [
-      "Python / AI & ML Frameworks",
+      "Python / Backend Engineering",
       "React / Next.js / TypeScript",
       "Node.js / Express / FastAPI",
       "PostgreSQL / MongoDB / Redis",
