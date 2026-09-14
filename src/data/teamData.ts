@@ -395,5 +395,56 @@ export const teamData: TeamMember[] = [
     },
     featured: true,
     order: 7
+  },
+  {
+    id: "maulid-zulu",
+    name: "MAULID ZULU",
+    role: "Graphics Designer",
+    department: "Graphic Design, Brand Identity & Visual Assets",
+    category: "Creative",
+    tagline: "Creative Visual Identity • Graphic Design & Brand Communication",
+    bio: "Designs iconic corporate brand identities, marketing collateral, digital visual assets, and high-impact graphic design.",
+    extendedBio: "Maulid Zulu leads graphic design and visual brand communication at Siribrand Agency TZ. Specializing in brand identity systems, typography, advertising banners, and promotional graphics, Maulid translates brand messages into visually striking graphics that capture market attention.",
+    leadershipVision: "Creating timeless visual identities and graphic design concepts that elevate brand prestige and market recognition.",
+    projects: [
+      {
+        name: "Corporate Identity & Brand Books",
+        description: "Designing full corporate visual identity packages, logos, color guidelines, and brand books.",
+        tag: "Brand Identity"
+      },
+      {
+        name: "Advertising & Campaign Collateral",
+        description: "Crafting print and digital marketing collateral for enterprise marketing campaigns.",
+        tag: "Graphic Design"
+      },
+      {
+        name: "Digital & Social Media Graphics",
+        description: "Creating custom visual assets, promotional banners, and high-converting graphic templates.",
+        tag: "Visual Assets"
+      }
+    ],
+    image: "/clients/maulid-zulu.png",
+    skills: [
+      "Graphic Design & Typography",
+      "Corporate Brand Identity",
+      "Logo & Vector Illustration",
+      "Marketing Collateral Design",
+      "Digital Art & Composition",
+      "Print Production & Layout"
+    ],
+    technologies: [
+      "Adobe Photoshop",
+      "Adobe Illustrator",
+      "Adobe InDesign",
+      "Figma",
+      "Canva Pro",
+      "CorelDRAW"
+    ],
+    socials: {
+      email: "siribrandagencytz@gmail.com",
+      whatsapp: "255692590012"
+    },
+    featured: true,
+    order: 8
   }
 ];
