@@ -61,7 +61,9 @@ export const TeamSection: React.FC<TeamSectionProps> = ({ onSelectMember, onOpen
                           ? 'Lead AI & Web'
                           : member.id === 'chenlee-soja'
                           ? 'Photographer & Editor'
-                          : 'Social Media & Growth Lead'}
+                          : member.id === 'nathan-kwilasa'
+                          ? 'Social Media & Growth Lead'
+                          : 'Marketing Head'}
                       </span>
                     </div>
                   </div>

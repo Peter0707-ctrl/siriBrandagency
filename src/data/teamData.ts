@@ -241,5 +241,55 @@ export const teamData: TeamMember[] = [
     },
     featured: true,
     order: 4
+  },
+  {
+    id: "paulina-wambura",
+    name: "PAULINA YOHANA WAMBURA",
+    role: "Head of Marketing & Strategic Brand Partnerships",
+    department: "Marketing Strategy & Corporate Growth",
+    category: "Operations",
+    tagline: "Corporate Marketing Leadership • Brand Expansion & Strategic Partnerships",
+    bio: "Paulina Yohana Wambura is the Marketing Head at Siribrand Agency TZ, leading high-impact corporate marketing strategies, brand partnerships, multi-channel growth campaigns, and market positioning across East Africa.",
+    extendedBio: "Paulina orchestrates market expansion, public relations, and high-level marketing campaigns at Siribrand Agency TZ. With rich expertise in commercial brand alignment, client relationship management, and experiential campaign execution, Paulina drives sustainable market growth, visibility, and premium brand value for corporate and enterprise clients.",
+    leadershipVision: "Positioning African brands as market benchmarks through high-impact marketing frameworks, innovative promotional campaigns, and strategic brand equity building.",
+    projects: [
+      {
+        name: "Enterprise Market Expansion",
+        description: "Spearheading multi-sector brand positioning and commercial marketing campaigns for corporate clients.",
+        tag: "Market Strategy"
+      },
+      {
+        name: "Brand Partnerships & PR",
+        description: "Securing strategic alliances, sponsor alignments, and public relations campaigns.",
+        tag: "Strategic Partnerships"
+      },
+      {
+        name: "Experiential Campaign Delivery",
+        description: "Orchestrating interactive marketing roadshows, innovation summits, and premium brand experiences.",
+        tag: "Brand Experience"
+      }
+    ],
+    image: "/clients/paulina-wambura.png",
+    skills: [
+      "Corporate Marketing Strategy",
+      "Brand Positioning & PR",
+      "Market Research & Consumer Insights",
+      "Strategic Brand Partnerships",
+      "Campaign Management & Growth",
+      "Experiential Marketing"
+    ],
+    technologies: [
+      "Market Analytics Tools",
+      "CRM & Client Management",
+      "Omnichannel Marketing Systems",
+      "Media Strategy Platforms",
+      "Performance Metrics Reporting"
+    ],
+    socials: {
+      email: "siribrandagencytz@gmail.com",
+      whatsapp: "255692590012"
+    },
+    featured: true,
+    order: 5
   }
 ];
