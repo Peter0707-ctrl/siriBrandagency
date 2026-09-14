@@ -33,7 +33,7 @@ export const teamData: TeamMember[] = [
   {
     id: "sweetbert-macha",
     name: "SWEETBERT MACHA",
-    role: "Founder & Managing Director",
+    role: "Managing Director (MD)",
     department: "Executive Leadership & Corporate Governance",
     category: "Executive",
     tagline: "Visionary Leadership • Corporate Strategy & Managing Direction",
@@ -124,12 +124,114 @@ export const teamData: TeamMember[] = [
       whatsapp: "255692590012"
     },
     featured: true,
-    order: 2
+    order: 3
+  },
+  {
+    id: "paulina-wambura",
+    name: "PAULINA YOHANA WAMBURA",
+    role: "Head of Marketing & Strategic Partnerships",
+    department: "Corporate Marketing Strategy & Brand Growth",
+    category: "Operations",
+    tagline: "Corporate Marketing Leadership • Brand Expansion & Strategic Alliances",
+    bio: "Leads corporate marketing strategy, enterprise client partnerships, public relations, and multi-channel promotional campaigns.",
+    extendedBio: "Paulina Yohana Wambura directs commercial marketing and corporate alliances at Siribrand Agency TZ. With expertise in brand positioning, public relations, and experiential marketing, Paulina expands market reach and commercial value for enterprise clients across East Africa.",
+    leadershipVision: "Positioning African enterprises as dominant market leaders through strategic marketing frameworks and high-value partnerships.",
+    projects: [
+      {
+        name: "Enterprise Market Expansion",
+        description: "Spearheading multi-sector brand positioning and commercial marketing campaigns for corporate clients.",
+        tag: "Market Strategy"
+      },
+      {
+        name: "Brand Partnerships & PR",
+        description: "Securing strategic alliances, sponsor alignments, and public relations campaigns.",
+        tag: "Strategic Partnerships"
+      },
+      {
+        name: "Experiential Campaign Delivery",
+        description: "Orchestrating interactive marketing roadshows, innovation summits, and premium brand experiences.",
+        tag: "Brand Experience"
+      }
+    ],
+    image: "/clients/paulina-wambura.png",
+    skills: [
+      "Corporate Marketing Strategy",
+      "Brand Positioning & PR",
+      "Market Research & Consumer Insights",
+      "Strategic Brand Partnerships",
+      "Campaign Management & Growth",
+      "Experiential Marketing"
+    ],
+    technologies: [
+      "Market Analytics Tools",
+      "CRM & Client Management",
+      "Omnichannel Marketing Systems",
+      "Media Strategy Platforms",
+      "Performance Metrics Reporting"
+    ],
+    socials: {
+      email: "siribrandagencytz@gmail.com",
+      whatsapp: "255692590012"
+    },
+    featured: true,
+    order: 4
+  },
+  {
+    id: "nathan-kwilasa",
+    name: "NATHAN KWILASA",
+    role: "Head of Social Media & Digital Strategy",
+    department: "Social Media Management & Digital Growth",
+    category: "Operations",
+    tagline: "Viral Audience Growth • Social Architecture & Paid Ad Funnels",
+    bio: "Drives viral audience growth, content calendar strategy, social community engagement, and high-converting paid ad campaigns.",
+    extendedBio: "Nathan Kwilasa leads social media architecture and paid growth marketing at Siribrand Agency TZ. Combining high-retention content creation with data-driven paid advertising funnels, Nathan scales brand presence and customer conversions across Instagram, TikTok, Facebook, and LinkedIn.",
+    leadershipVision: "Maximizing digital attention and conversion rates by transforming social audiences into dedicated brand customers.",
+    projects: [
+      {
+        name: "Omnichannel Brand Growth Campaigns",
+        description: "Executing viral social media growth and engagement strategies for corporate and lifestyle brands.",
+        tag: "Social Media Strategy"
+      },
+      {
+        name: "Performance Paid Ads & Funnels",
+        description: "Designing high-converting meta and social ad campaigns with precise audience segmentation and ROI tracking.",
+        tag: "Performance Marketing"
+      },
+      {
+        name: "Content Calendars & Community Management",
+        description: "Managing daily editorial calendars, community engagement, brand tone, and customer touchpoint optimization.",
+        tag: "Community Governance"
+      }
+    ],
+    image: "/clients/nathan-kwilasa.jpg",
+    skills: [
+      "Social Media Management & Growth",
+      "Digital Marketing Strategy",
+      "Viral Content Strategy",
+      "Paid Ads & Performance Marketing",
+      "Audience Analytics & Segmentation",
+      "Community Building & Engagement"
+    ],
+    technologies: [
+      "Meta Ads Manager",
+      "Instagram & TikTok Algorithms",
+      "Google Analytics & SEMrush",
+      "Creative Editing Suites",
+      "Social Media Scheduling Tools",
+      "Conversion Rate Optimization (CRO)"
+    ],
+    socials: {
+      instagram: "https://instagram.com/nathan_e.k",
+      email: "siribrandagencytz@gmail.com",
+      whatsapp: "255692590012"
+    },
+    featured: true,
+    order: 5
   },
   {
     id: "peter-joseph",
     name: "PETER JOSEPH",
-    role: "Head of Technology & Software Engineering | Computer Scientist",
+    role: "Technology Director | Computer Scientist",
     department: "Technology, Software Systems & Digital Platforms",
     category: "Technology",
     tagline: "Building High-Performance Web Applications, Systems Architecture & Digital Platforms",
@@ -190,114 +292,12 @@ export const teamData: TeamMember[] = [
       phone: "+255673190931"
     },
     featured: true,
-    order: 3
-  },
-  {
-    id: "paulina-wambura",
-    name: "PAULINA YOHANA WAMBURA",
-    role: "Head of Marketing & Strategic Partnerships",
-    department: "Corporate Marketing Strategy & Brand Growth",
-    category: "Operations",
-    tagline: "Corporate Marketing Leadership • Brand Expansion & Strategic Alliances",
-    bio: "Leads corporate marketing strategy, enterprise client partnerships, public relations, and multi-channel promotional campaigns.",
-    extendedBio: "Paulina Yohana Wambura directs commercial marketing and corporate alliances at Siribrand Agency TZ. With expertise in brand positioning, public relations, and experiential marketing, Paulina expands market reach and commercial value for enterprise clients across East Africa.",
-    leadershipVision: "Positioning African enterprises as dominant market leaders through strategic marketing frameworks and high-value partnerships.",
-    projects: [
-      {
-        name: "Enterprise Market Expansion",
-        description: "Spearheading multi-sector brand positioning and commercial marketing campaigns for corporate clients.",
-        tag: "Market Strategy"
-      },
-      {
-        name: "Brand Partnerships & PR",
-        description: "Securing strategic alliances, sponsor alignments, and public relations campaigns.",
-        tag: "Strategic Partnerships"
-      },
-      {
-        name: "Experiential Campaign Delivery",
-        description: "Orchestrating interactive marketing roadshows, innovation summits, and premium brand experiences.",
-        tag: "Brand Experience"
-      }
-    ],
-    image: "/clients/paulina-wambura.png",
-    skills: [
-      "Corporate Marketing Strategy",
-      "Brand Positioning & PR",
-      "Market Research & Consumer Insights",
-      "Strategic Brand Partnerships",
-      "Campaign Management & Growth",
-      "Experiential Marketing"
-    ],
-    technologies: [
-      "Market Analytics Tools",
-      "CRM & Client Management",
-      "Omnichannel Marketing Systems",
-      "Media Strategy Platforms",
-      "Performance Metrics Reporting"
-    ],
-    socials: {
-      email: "siribrandagencytz@gmail.com",
-      whatsapp: "255692590012"
-    },
-    featured: true,
-    order: 4
-  },
-  {
-    id: "nathan-kwilasa",
-    name: "NATHAN KWILASA",
-    role: "Head of Social Media Management & Marketing Strategist",
-    department: "Social Media Management & Digital Growth",
-    category: "Operations",
-    tagline: "Viral Audience Growth • Social Architecture & Paid Ad Funnels",
-    bio: "Drives viral audience growth, content calendar strategy, social community engagement, and high-converting paid ad campaigns.",
-    extendedBio: "Nathan Kwilasa leads social media architecture and paid growth marketing at Siribrand Agency TZ. Combining high-retention content creation with data-driven paid advertising funnels, Nathan scales brand presence and customer conversions across Instagram, TikTok, Facebook, and LinkedIn.",
-    leadershipVision: "Maximizing digital attention and conversion rates by transforming social audiences into dedicated brand customers.",
-    projects: [
-      {
-        name: "Omnichannel Brand Growth Campaigns",
-        description: "Executing viral social media growth and engagement strategies for corporate and lifestyle brands.",
-        tag: "Social Media Strategy"
-      },
-      {
-        name: "Performance Paid Ads & Funnels",
-        description: "Designing high-converting meta and social ad campaigns with precise audience segmentation and ROI tracking.",
-        tag: "Performance Marketing"
-      },
-      {
-        name: "Content Calendars & Community Management",
-        description: "Managing daily editorial calendars, community engagement, brand tone, and customer touchpoint optimization.",
-        tag: "Community Governance"
-      }
-    ],
-    image: "/clients/nathan-kwilasa.jpg",
-    skills: [
-      "Social Media Management & Growth",
-      "Digital Marketing Strategy",
-      "Viral Content Strategy",
-      "Paid Ads & Performance Marketing",
-      "Audience Analytics & Segmentation",
-      "Community Building & Engagement"
-    ],
-    technologies: [
-      "Meta Ads Manager",
-      "Instagram & TikTok Algorithms",
-      "Google Analytics & SEMrush",
-      "Creative Editing Suites",
-      "Social Media Scheduling Tools",
-      "Conversion Rate Optimization (CRO)"
-    ],
-    socials: {
-      instagram: "https://instagram.com/nathan_e.k",
-      email: "siribrandagencytz@gmail.com",
-      whatsapp: "255692590012"
-    },
-    featured: true,
-    order: 5
+    order: 6
   },
   {
     id: "chenlee-soja",
     name: "CHENLEE SOJA MKUVASSA",
-    role: "Head of Photography & Creative Editing | Visual Media Lead",
+    role: "Creative Director – Photography & Editing",
     department: "Photography, Cinematography & Visual Editing",
     category: "Creative",
     tagline: "High-End Visual Production • Studio Photography & Master Retouching",
@@ -343,63 +343,12 @@ export const teamData: TeamMember[] = [
       whatsapp: "255692590012"
     },
     featured: true,
-    order: 6
-  },
-  {
-    id: "coly-noah",
-    name: "COLY NOAH",
-    role: "Video Editor & Content Creator",
-    department: "Video Production, Editing & Digital Content",
-    category: "Creative",
-    tagline: "Dynamic Video Editing • Creative Visuals & High-Retention Content",
-    bio: "Crafts high-engagement commercial video edits, motion visuals, brand reels, and dynamic social media content.",
-    extendedBio: "Coly Noah leads video post-production, dynamic motion editing, and creative storytelling at Siribrand Agency TZ. Specializing in high-retention video rhythms, cinematic color grading, and creative transitions, Coly turns raw brand footage into compelling video content that drives audience attention across digital platforms.",
-    leadershipVision: "Elevating African digital video storytelling through fast-paced, cinematic, and high-converting video editing standards.",
-    projects: [
-      {
-        name: "Commercial Video Edits & Reels",
-        description: "Editing fast-paced social media reels, commercial ads, and dynamic campaign videos.",
-        tag: "Video Post-Production"
-      },
-      {
-        name: "Brand Storytelling & Motion Cuts",
-        description: "Crafting impactful brand narratives with synchronized audio, visual effects, and typography overlays.",
-        tag: "Motion Editing"
-      },
-      {
-        name: "Multi-Platform Digital Content",
-        description: "Creating tailored short-form and long-form video content optimized for Instagram, TikTok, and YouTube.",
-        tag: "Content Creation"
-      }
-    ],
-    image: "/clients/coly-noah.jpg",
-    skills: [
-      "Commercial Video Editing",
-      "Dynamic Content Creation",
-      "Color Grading & Audio Sync",
-      "Motion Graphics & Titles",
-      "High-Retention Storytelling",
-      "Social Media Video Strategy"
-    ],
-    technologies: [
-      "Adobe Premiere Pro",
-      "DaVinci Resolve",
-      "Adobe After Effects",
-      "CapCut Pro & Motion Tools",
-      "Sound Design & Color Science",
-      "Cinema Camera Workflows"
-    ],
-    socials: {
-      email: "siribrandagencytz@gmail.com",
-      whatsapp: "255692590012"
-    },
-    featured: true,
     order: 7
   },
   {
     id: "maulid-zulu",
     name: "MAULID ZULU",
-    role: "Graphics Designer",
+    role: "Graphic Designer",
     department: "Graphic Design, Brand Identity & Visual Assets",
     category: "Creative",
     tagline: "Creative Visual Identity • Graphic Design & Brand Communication",
@@ -446,5 +395,56 @@ export const teamData: TeamMember[] = [
     },
     featured: true,
     order: 8
+  },
+  {
+    id: "coly-noah",
+    name: "COLY NOAH",
+    role: "Content Creator | Video Editor",
+    department: "Video Production, Editing & Digital Content",
+    category: "Creative",
+    tagline: "Dynamic Video Editing • Creative Visuals & High-Retention Content",
+    bio: "Crafts high-engagement commercial video edits, motion visuals, brand reels, and dynamic social media content.",
+    extendedBio: "Coly Noah leads video post-production, dynamic motion editing, and creative storytelling at Siribrand Agency TZ. Specializing in high-retention video rhythms, cinematic color grading, and creative transitions, Coly turns raw brand footage into compelling video content that drives audience attention across digital platforms.",
+    leadershipVision: "Elevating African digital video storytelling through fast-paced, cinematic, and high-converting video editing standards.",
+    projects: [
+      {
+        name: "Commercial Video Edits & Reels",
+        description: "Editing fast-paced social media reels, commercial ads, and dynamic campaign videos.",
+        tag: "Video Post-Production"
+      },
+      {
+        name: "Brand Storytelling & Motion Cuts",
+        description: "Crafting impactful brand narratives with synchronized audio, visual effects, and typography overlays.",
+        tag: "Motion Editing"
+      },
+      {
+        name: "Multi-Platform Digital Content",
+        description: "Creating tailored short-form and long-form video content optimized for Instagram, TikTok, and YouTube.",
+        tag: "Content Creation"
+      }
+    ],
+    image: "/clients/coly-noah.jpg",
+    skills: [
+      "Commercial Video Editing",
+      "Dynamic Content Creation",
+      "Color Grading & Audio Sync",
+      "Motion Graphics & Titles",
+      "High-Retention Storytelling",
+      "Social Media Video Strategy"
+    ],
+    technologies: [
+      "Adobe Premiere Pro",
+      "DaVinci Resolve",
+      "Adobe After Effects",
+      "CapCut Pro & Motion Tools",
+      "Sound Design & Color Science",
+      "Cinema Camera Workflows"
+    ],
+    socials: {
+      email: "siribrandagencytz@gmail.com",
+      whatsapp: "255692590012"
+    },
+    featured: true,
+    order: 9
   }
 ];

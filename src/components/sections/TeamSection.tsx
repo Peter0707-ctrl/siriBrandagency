@@ -104,21 +104,21 @@ export const TeamSection: React.FC<TeamSectionProps> = ({ onSelectMember, onOpen
                   {/* Role Title Badge */}
                   <span className="absolute bottom-2.5 left-2.5 text-[10px] font-mono px-2 py-0.5 rounded-md bg-blue-600 text-white font-bold leading-tight shadow-md">
                     {member.id === 'sweetbert-macha'
-                      ? 'Founder & Managing Director'
+                      ? 'Managing Director (MD)'
                       : member.id === 'zamda-kalema'
                       ? 'Finance Director'
-                      : member.id === 'peter-joseph'
-                      ? 'Head of Technology'
                       : member.id === 'paulina-wambura'
                       ? 'Head of Marketing'
                       : member.id === 'nathan-kwilasa'
                       ? 'Head of Social Media'
+                      : member.id === 'peter-joseph'
+                      ? 'Technology Director'
                       : member.id === 'chenlee-soja'
-                      ? 'Head of Visual Media'
-                      : member.id === 'coly-noah'
-                      ? 'Video Editor & Content Creator'
+                      ? 'Creative Director'
                       : member.id === 'maulid-zulu'
-                      ? 'Graphics Designer'
+                      ? 'Graphic Designer'
+                      : member.id === 'coly-noah'
+                      ? 'Content Creator'
                       : member.role}
                   </span>
                 </div>
