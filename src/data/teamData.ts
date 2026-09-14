@@ -77,6 +77,57 @@ export const teamData: TeamMember[] = [
     order: 1
   },
   {
+    id: "jerome-kaaya",
+    name: "JEROME KAAYA",
+    role: "Project Manager",
+    department: "Operations & Project Delivery Management",
+    category: "Operations",
+    tagline: "Project Governance • Timely Delivery & Cross-Functional Operations",
+    bio: "Directs agency project lifecycles, cross-functional team workflows, client delivery milestones, and operational excellence.",
+    extendedBio: "Jerome Kaaya oversees project planning, operational coordination, and milestone delivery at Siribrand Agency TZ. With expertise in agile workflow systems and quality assurance, Jerome ensures all corporate branding, software development, and media campaigns are executed seamlessly on time and within budget.",
+    leadershipVision: "Driving agency operational excellence and timely project delivery through structured agile management and rigorous quality control.",
+    projects: [
+      {
+        name: "Agile Project Operations",
+        description: "Managing multi-disciplinary project delivery pipelines from concept to client handover.",
+        tag: "Project Governance"
+      },
+      {
+        name: "Resource & Timeline Optimization",
+        description: "Optimizing project sprints, resource allocation, and budget tracking for corporate clients.",
+        tag: "Operational Delivery"
+      },
+      {
+        name: "Quality Assurance & Client Delivery",
+        description: "Setting quality benchmarks and standard operating procedures for high-impact agency deliverables.",
+        tag: "Quality Control"
+      }
+    ],
+    image: "/clients/jerome-kaaya.jpg",
+    skills: [
+      "Project Lifecycle Management",
+      "Agile & Scrum Methodologies",
+      "Cross-Functional Team Leadership",
+      "Resource & Budget Planning",
+      "Client Milestone Delivery",
+      "Quality Assurance & Risk Control"
+    ],
+    technologies: [
+      "Jira & Trello Systems",
+      "Asana / Monday.com",
+      "Notion Project Suites",
+      "Gantt & Sprint Analytics",
+      "Slack & Enterprise Comms",
+      "Google Workspace"
+    ],
+    socials: {
+      email: "siribrandagencytz@gmail.com",
+      whatsapp: "255692590012"
+    },
+    featured: true,
+    order: 2
+  },
+  {
     id: "zamda-kalema",
     name: "ZAMDA YUSUPH KALEMA",
     role: "Finance Director & Corporate Controller",

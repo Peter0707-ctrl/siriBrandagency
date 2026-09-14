@@ -112,6 +112,8 @@ export const TeamPage: React.FC<TeamPageProps> = ({
                   <span className="absolute bottom-3 left-3 text-xs font-mono px-3 py-1 rounded-lg bg-blue-600 text-white font-bold leading-tight shadow-xl">
                     {member.id === 'sweetbert-macha'
                       ? 'Managing Director (MD)'
+                      : member.id === 'jerome-kaaya'
+                      ? 'Project Manager'
                       : member.id === 'zamda-kalema'
                       ? 'Finance Director'
                       : member.id === 'paulina-wambura'
