@@ -67,7 +67,7 @@ export const teamData: TeamMember[] = [
   },
   {
     id: "peter-joseph",
-    name: "PETER JOSEPH MSIRA",
+    name: "PETER JOSEPH",
     role: "Computer Scientist | Software Developer | AI & Machine Learning Specialist | IT Architect",
     department: "Technology, Data Structures & Artificial Intelligence",
     category: "Technology",
@@ -76,7 +76,7 @@ export const teamData: TeamMember[] = [
       "Master of Computer Science (MSc) — Specializing in Data Structures and Artificial Intelligence at University of Dar es Salaam (UDSM) (Pursuing)",
       "Bachelor of Computer Science — Kampala International University (KIU)"
     ],
-    bio: "Peter Joseph Msira is a Computer Scientist, Software Developer, AI enthusiast, and technology entrepreneur focused on building practical digital solutions through software engineering, artificial intelligence, automation, and emerging technologies.",
+    bio: "Peter Joseph is a Computer Scientist, Software Developer, AI enthusiast, and technology entrepreneur focused on building practical digital solutions through software engineering, artificial intelligence, automation, and emerging technologies.",
     extendedBio: "Holding a Bachelor of Computer Science from Kampala International University and currently pursuing his Master of Computer Science (MSc) with specialization in Data Structures and Artificial Intelligence at the University of Dar es Salaam (UDSM), Peter brings deep algorithmic rigor, machine learning architecture, and robust full-stack engineering to Siribrand Agency. As a technology entrepreneur, he designs and deploys scalable platforms combining software engineering, AI automation, and data-driven decision-making.",
     leadershipVision: "Passionate about leveraging artificial intelligence and computational engineering to solve real-world problems, modernize digital services, and build scalable technology products that compete globally across African and international markets.",
     projects: [
