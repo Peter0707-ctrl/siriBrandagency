@@ -34,7 +34,7 @@ export const teamData: TeamMember[] = [
     id: "sweetbert-macha",
     name: "SWEETBERT MACHA",
     role: "Founder & Chief Executive Officer (CEO)",
-    department: "Executive Leadership & Brand Strategy",
+    department: "Executive Leadership & Corporate Governance",
     category: "Executive",
     tagline: "Visionary Leadership • Corporate Strategy & Brand Governance",
     bio: "Directs overall corporate vision, enterprise client partnerships, and strategic market expansion across East Africa.",
@@ -77,10 +77,60 @@ export const teamData: TeamMember[] = [
     order: 1
   },
   {
+    id: "zamda-kalema",
+    name: "ZAMDA YUSUPH KALEMA",
+    role: "Finance Director & Corporate Controller",
+    department: "Corporate Finance, Accounting & Commercial Governance",
+    category: "Executive",
+    tagline: "Fiscal Integrity • Capital Allocation & Commercial Governance",
+    bio: "Directs agency financial forecasting, corporate budgeting, statutory tax compliance, and commercial fiscal operations.",
+    extendedBio: "Zamda Yusuph Kalema oversees financial architecture, compliance, and capital allocation at Siribrand Agency TZ. With extensive expertise in corporate accounting, fiscal risk management, and statutory tax governance, Zamda ensures high financial resilience and steady growth for the agency.",
+    leadershipVision: "Ensuring sustainable agency scale and investor confidence through disciplined fiscal stewardship and transparent financial governance.",
+    projects: [
+      {
+        name: "Corporate Budgeting & Financial Control",
+        description: "Designing multi-department financial forecasts, expenditure controls, and agency fiscal frameworks.",
+        tag: "Financial Control"
+      },
+      {
+        name: "Commercial Contract & Retainer Governance",
+        description: "Structuring client billing schedules, enterprise retainers, and procurement governance.",
+        tag: "Corporate Finance"
+      },
+      {
+        name: "Statutory & Tax Compliance Architecture",
+        description: "Ensuring regulatory audit readiness, TRA compliance, and corporate financial transparency.",
+        tag: "Fiscal Compliance"
+      }
+    ],
+    image: "/clients/zamda-kalema.jpg",
+    skills: [
+      "Corporate Financial Planning",
+      "Budgeting & Cost Optimization",
+      "Statutory & Tax Compliance",
+      "Risk Management & Auditing",
+      "Cashflow Forecasting",
+      "Financial Analysis & Reporting"
+    ],
+    technologies: [
+      "Financial Accounting ERPs",
+      "Financial Modeling Systems",
+      "Excel Advanced Analytics",
+      "Payroll & Statutory Systems",
+      "Enterprise Billing Platforms"
+    ],
+    socials: {
+      email: "siribrandagencytz@gmail.com",
+      whatsapp: "255692590012"
+    },
+    featured: true,
+    order: 2
+  },
+  {
     id: "peter-joseph",
     name: "PETER JOSEPH",
-    role: "Computer Scientist & Full-Stack Software Developer",
-    department: "Technology & Software Engineering",
+    role: "Head of Technology & Software Engineering | Computer Scientist",
+    department: "Technology, Software Systems & Digital Platforms",
     category: "Technology",
     tagline: "Building High-Performance Web Applications, Systems Architecture & Digital Platforms",
     bio: "Architects scalable software applications, custom management systems, web ecosystems, and secure database infrastructures.",
@@ -140,58 +190,57 @@ export const teamData: TeamMember[] = [
       phone: "+255673190931"
     },
     featured: true,
-    order: 2
+    order: 3
   },
   {
-    id: "chenlee-soja",
-    name: "CHENLEE SOJA MKUVASSA",
-    role: "Photographer & Editor | Visual Media Specialist",
-    department: "Photography, Cinematography & Visual Editing",
-    category: "Creative",
-    tagline: "High-End Visual Production • Studio Photography & Master Retouching",
-    bio: "Specializes in high-fashion studio shoots, commercial brand photography, corporate portraits, and advanced digital retouching.",
-    extendedBio: "Chenlee Soja Mkuvassa leads visual photography and digital post-production at Siribrand Agency TZ. With expert mastery in lighting, composition, and color science, Chenlee produces striking visual assets for corporate brands, lifestyle campaigns, and media productions across Tanzania.",
-    leadershipVision: "Setting new benchmarks in African commercial photography and cinematic visual art through precision lighting and master retouching.",
+    id: "paulina-wambura",
+    name: "PAULINA YOHANA WAMBURA",
+    role: "Head of Marketing & Strategic Partnerships",
+    department: "Corporate Marketing Strategy & Brand Growth",
+    category: "Operations",
+    tagline: "Corporate Marketing Leadership • Brand Expansion & Strategic Alliances",
+    bio: "Leads corporate marketing strategy, enterprise client partnerships, public relations, and multi-channel promotional campaigns.",
+    extendedBio: "Paulina Yohana Wambura directs commercial marketing and corporate alliances at Siribrand Agency TZ. With expertise in brand positioning, public relations, and experiential marketing, Paulina expands market reach and commercial value for enterprise clients across East Africa.",
+    leadershipVision: "Positioning African enterprises as dominant market leaders through strategic marketing frameworks and high-value partnerships.",
     projects: [
       {
-        name: "Studio & Commercial Shoots",
-        description: "High-end studio photography sessions for corporate executives, fashion campaigns, and commercial brands.",
-        tag: "Studio Photography"
+        name: "Enterprise Market Expansion",
+        description: "Spearheading multi-sector brand positioning and commercial marketing campaigns for corporate clients.",
+        tag: "Market Strategy"
       },
       {
-        name: "Event & Documentary Coverage",
-        description: "Live event media, corporate galas, and documentary photography capturing high-impact moments.",
-        tag: "Visual Media"
+        name: "Brand Partnerships & PR",
+        description: "Securing strategic alliances, sponsor alignments, and public relations campaigns.",
+        tag: "Strategic Partnerships"
       },
       {
-        name: "Post-Production & Color Grading",
-        description: "Master-level digital retouching, color grading, and creative compositing for digital publications.",
-        tag: "Digital Editing"
+        name: "Experiential Campaign Delivery",
+        description: "Orchestrating interactive marketing roadshows, innovation summits, and premium brand experiences.",
+        tag: "Brand Experience"
       }
     ],
-    image: "/clients/chenlee-soja.png",
+    image: "/clients/paulina-wambura.png",
     skills: [
-      "Studio & Commercial Photography",
-      "High-End Photo Retouching",
-      "Cinematic Lighting & Composition",
-      "Color Grading & Post-Production",
-      "Visual Storytelling",
-      "Executive Portraiture"
+      "Corporate Marketing Strategy",
+      "Brand Positioning & PR",
+      "Market Research & Consumer Insights",
+      "Strategic Brand Partnerships",
+      "Campaign Management & Growth",
+      "Experiential Marketing"
     ],
     technologies: [
-      "Adobe Photoshop",
-      "Adobe Lightroom",
-      "DaVinci Resolve Studio",
-      "Capture One",
-      "Sony & Canon Cinema Systems",
-      "Studio Strobe Lighting"
+      "Market Analytics Tools",
+      "CRM & Client Management",
+      "Omnichannel Marketing Systems",
+      "Media Strategy Platforms",
+      "Performance Metrics Reporting"
     ],
     socials: {
       email: "siribrandagencytz@gmail.com",
       whatsapp: "255692590012"
     },
     featured: true,
-    order: 3
+    order: 4
   },
   {
     id: "nathan-kwilasa",
@@ -243,100 +292,51 @@ export const teamData: TeamMember[] = [
       whatsapp: "255692590012"
     },
     featured: true,
-    order: 4
-  },
-  {
-    id: "paulina-wambura",
-    name: "PAULINA YOHANA WAMBURA",
-    role: "Head of Marketing & Strategic Partnerships",
-    department: "Corporate Marketing Strategy & Brand Growth",
-    category: "Operations",
-    tagline: "Corporate Marketing Leadership • Brand Expansion & Strategic Alliances",
-    bio: "Leads corporate marketing strategy, enterprise client partnerships, public relations, and multi-channel promotional campaigns.",
-    extendedBio: "Paulina Yohana Wambura directs commercial marketing and corporate alliances at Siribrand Agency TZ. With expertise in brand positioning, public relations, and experiential marketing, Paulina expands market reach and commercial value for enterprise clients across East Africa.",
-    leadershipVision: "Positioning African enterprises as dominant market leaders through strategic marketing frameworks and high-value partnerships.",
-    projects: [
-      {
-        name: "Enterprise Market Expansion",
-        description: "Spearheading multi-sector brand positioning and commercial marketing campaigns for corporate clients.",
-        tag: "Market Strategy"
-      },
-      {
-        name: "Brand Partnerships & PR",
-        description: "Securing strategic alliances, sponsor alignments, and public relations campaigns.",
-        tag: "Strategic Partnerships"
-      },
-      {
-        name: "Experiential Campaign Delivery",
-        description: "Orchestrating interactive marketing roadshows, innovation summits, and premium brand experiences.",
-        tag: "Brand Experience"
-      }
-    ],
-    image: "/clients/paulina-wambura.png",
-    skills: [
-      "Corporate Marketing Strategy",
-      "Brand Positioning & PR",
-      "Market Research & Consumer Insights",
-      "Strategic Brand Partnerships",
-      "Campaign Management & Growth",
-      "Experiential Marketing"
-    ],
-    technologies: [
-      "Market Analytics Tools",
-      "CRM & Client Management",
-      "Omnichannel Marketing Systems",
-      "Media Strategy Platforms",
-      "Performance Metrics Reporting"
-    ],
-    socials: {
-      email: "siribrandagencytz@gmail.com",
-      whatsapp: "255692590012"
-    },
-    featured: true,
     order: 5
   },
   {
-    id: "zamda-kalema",
-    name: "ZAMDA YUSUPH KALEMA",
-    role: "Finance Director & Corporate Controller",
-    department: "Corporate Finance, Accounting & Commercial Governance",
-    category: "Executive",
-    tagline: "Fiscal Integrity • Capital Allocation & Commercial Governance",
-    bio: "Directs agency financial forecasting, corporate budgeting, statutory tax compliance, and commercial fiscal operations.",
-    extendedBio: "Zamda Yusuph Kalema oversees financial architecture, compliance, and capital allocation at Siribrand Agency TZ. With extensive expertise in corporate accounting, fiscal risk management, and statutory tax governance, Zamda ensures high financial resilience and steady growth for the agency.",
-    leadershipVision: "Ensuring sustainable agency scale and investor confidence through disciplined fiscal stewardship and transparent financial governance.",
+    id: "chenlee-soja",
+    name: "CHENLEE SOJA MKUVASSA",
+    role: "Head of Photography & Creative Editing | Visual Media Lead",
+    department: "Photography, Cinematography & Visual Editing",
+    category: "Creative",
+    tagline: "High-End Visual Production • Studio Photography & Master Retouching",
+    bio: "Specializes in high-fashion studio shoots, commercial brand photography, corporate portraits, and advanced digital retouching.",
+    extendedBio: "Chenlee Soja Mkuvassa leads visual photography and digital post-production at Siribrand Agency TZ. With expert mastery in lighting, composition, and color science, Chenlee produces striking visual assets for corporate brands, lifestyle campaigns, and media productions across Tanzania.",
+    leadershipVision: "Setting new benchmarks in African commercial photography and cinematic visual art through precision lighting and master retouching.",
     projects: [
       {
-        name: "Corporate Budgeting & Financial Control",
-        description: "Designing multi-department financial forecasts, expenditure controls, and agency fiscal frameworks.",
-        tag: "Financial Control"
+        name: "Studio & Commercial Shoots",
+        description: "High-end studio photography sessions for corporate executives, fashion campaigns, and commercial brands.",
+        tag: "Studio Photography"
       },
       {
-        name: "Commercial Contract & Retainer Governance",
-        description: "Structuring client billing schedules, enterprise retainers, and procurement governance.",
-        tag: "Corporate Finance"
+        name: "Event & Documentary Coverage",
+        description: "Live event media, corporate galas, and documentary photography capturing high-impact moments.",
+        tag: "Visual Media"
       },
       {
-        name: "Statutory & Tax Compliance Architecture",
-        description: "Ensuring regulatory audit readiness, TRA compliance, and corporate financial transparency.",
-        tag: "Fiscal Compliance"
+        name: "Post-Production & Color Grading",
+        description: "Master-level digital retouching, color grading, and creative compositing for digital publications.",
+        tag: "Digital Editing"
       }
     ],
-    image: "/clients/zamda-kalema.jpg",
+    image: "/clients/chenlee-soja.png",
     skills: [
-      "Corporate Financial Planning",
-      "Budgeting & Cost Optimization",
-      "Statutory & Tax Compliance",
-      "Risk Management & Auditing",
-      "Cashflow Forecasting",
-      "Financial Analysis & Reporting"
+      "Studio & Commercial Photography",
+      "High-End Photo Retouching",
+      "Cinematic Lighting & Composition",
+      "Color Grading & Post-Production",
+      "Visual Storytelling",
+      "Executive Portraiture"
     ],
     technologies: [
-      "Financial Accounting ERPs",
-      "Financial Modeling Systems",
-      "Excel Advanced Analytics",
-      "Payroll & Statutory Systems",
-      "Enterprise Billing Platforms"
+      "Adobe Photoshop",
+      "Adobe Lightroom",
+      "DaVinci Resolve Studio",
+      "Capture One",
+      "Sony & Canon Cinema Systems",
+      "Studio Strobe Lighting"
     ],
     socials: {
       email: "siribrandagencytz@gmail.com",
