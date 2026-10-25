@@ -346,57 +346,6 @@ export const teamData: TeamMember[] = [
     order: 6
   },
   {
-    id: "chenlee-soja",
-    name: "CHENLEE SOJA MKUVASSA",
-    role: "Creative Director – Photography & Editing",
-    department: "Photography, Cinematography & Visual Editing",
-    category: "Creative",
-    tagline: "High-End Visual Production • Studio Photography & Master Retouching",
-    bio: "Specializes in high-fashion studio shoots, commercial brand photography, corporate portraits, and advanced digital retouching.",
-    extendedBio: "Chenlee Soja Mkuvassa leads visual photography and digital post-production at Siribrand Agency TZ. With expert mastery in lighting, composition, and color science, Chenlee produces striking visual assets for corporate brands, lifestyle campaigns, and media productions across Tanzania.",
-    leadershipVision: "Setting new benchmarks in African commercial photography and cinematic visual art through precision lighting and master retouching.",
-    projects: [
-      {
-        name: "Studio & Commercial Shoots",
-        description: "High-end studio photography sessions for corporate executives, fashion campaigns, and commercial brands.",
-        tag: "Studio Photography"
-      },
-      {
-        name: "Event & Documentary Coverage",
-        description: "Live event media, corporate galas, and documentary photography capturing high-impact moments.",
-        tag: "Visual Media"
-      },
-      {
-        name: "Post-Production & Color Grading",
-        description: "Master-level digital retouching, color grading, and creative compositing for digital publications.",
-        tag: "Digital Editing"
-      }
-    ],
-    image: "/clients/chenlee-soja.png",
-    skills: [
-      "Studio & Commercial Photography",
-      "High-End Photo Retouching",
-      "Cinematic Lighting & Composition",
-      "Color Grading & Post-Production",
-      "Visual Storytelling",
-      "Executive Portraiture"
-    ],
-    technologies: [
-      "Adobe Photoshop",
-      "Adobe Lightroom",
-      "DaVinci Resolve Studio",
-      "Capture One",
-      "Sony & Canon Cinema Systems",
-      "Studio Strobe Lighting"
-    ],
-    socials: {
-      email: "siribrandagencytz@gmail.com",
-      whatsapp: "255692590012"
-    },
-    featured: true,
-    order: 7
-  },
-  {
     id: "maulid-zulu",
     name: "MAULID ZULU",
     role: "Graphic Designer",
@@ -445,7 +394,7 @@ export const teamData: TeamMember[] = [
       whatsapp: "255692590012"
     },
     featured: true,
-    order: 8
+    order: 7
   },
   {
     id: "coly-noah",
@@ -496,6 +445,6 @@ export const teamData: TeamMember[] = [
       whatsapp: "255692590012"
     },
     featured: true,
-    order: 9
+    order: 8
   }
 ];

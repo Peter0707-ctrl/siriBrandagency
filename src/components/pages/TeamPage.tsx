@@ -122,8 +122,6 @@ export const TeamPage: React.FC<TeamPageProps> = ({
                       ? 'Head of Social Media'
                       : member.id === 'peter-joseph'
                       ? 'Technology Director'
-                      : member.id === 'chenlee-soja'
-                      ? 'Creative Director'
                       : member.id === 'maulid-zulu'
                       ? 'Graphic Designer'
                       : member.id === 'coly-noah'

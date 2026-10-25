@@ -111,8 +111,6 @@ export const TeamSection: React.FC<TeamSectionProps> = ({ onSelectMember, onOpen
                       ? 'Head of Social Media'
                       : member.id === 'peter-joseph'
                       ? 'Technology Director'
-                      : member.id === 'chenlee-soja'
-                      ? 'Creative Director'
                       : member.id === 'maulid-zulu'
                       ? 'Graphic Designer'
                       : member.id === 'coly-noah'
